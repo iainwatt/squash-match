@@ -1,5 +1,5 @@
 
-app.controller('CentreController', function($scope, $http, CentreService, CourtService){
+app.controller('CentreController', function($scope, $http, $timeout, CentreService, CourtService){
   
   CentreService.getCentres()
   .then(function(response) {
@@ -8,7 +8,7 @@ app.controller('CentreController', function($scope, $http, CentreService, CourtS
   });
 
 
-$scope.courts = []
+  $scope.courts = []
 
   CentreService.getCentres()
     .then(function(response) {
@@ -25,14 +25,57 @@ $scope.courts = []
     // console.log(response.data)
   })
 
-  var time = displayTime();
-  $scope.dispalyTime = time
-  console.log($scope.dispalyTime)
+  // passing the displayTime() function from moment.js file so we can display a clock
 
-  $scope.displayTime = function(time) {
-    $scope.dispalyTime = time;
-    console.log($scope.dispalyTime)
+  // var time = displayTime();
+  // $scope.displayTime = time;
+  var updateTime = function() {
+    $scope.displayTime = displayTime();
+    $timeout(function() {
+      updateTime();
+    }, 1000);
   }
+  updateTime();
+
+  // function hello() {
+  //   setInterval(function(){
+  //   console.log("hello");
+  //   hello();
+  //   }, 1000);
+  // };
+  // hello()
+  
+  // console.log($scope.dispalyTime)
+
+  // function to filter courts by availability 
+
+  CourtService.getCourts()
+  .then(function(response){
+    console.log(response.data)
+    $scope.temp = response.data
+    angular.forEach($scope.temp, function(value, key){ 
+      console.log(value.availability, value.centre.location);  
+    });
+  })
+
+
+// $.each(array, (index, court) {
+//   if(court is free){
+
+//   }else
+
+// })
+
+// _.each(array, (index, court, xxxx){
+
+// })
+
+  // $scope.displayTime = function(time) {
+  //   $scope.displayTime = time;
+  //   console.log($scope.dispalyTime)
+  // }
+
+  // function to display what courst are available by time
 
   // JSON.parse // this turns umanageable data back into js objects
   // helper.js file in services to put helper funcitons
