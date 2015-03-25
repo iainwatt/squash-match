@@ -1,0 +1,16 @@
+// #= depend_on_asset "index.html"
+
+var app = angular.module('SquinderApp', ['ngRoute', 'ngAnimate', 'ngMap'])
+
+
+
+  app.config(function($routeProvider) {
+    $routeProvider
+    .when('/', {
+      controller: 'CentreController',
+      templateUrl: "<%= asset_path('index.html') %>"
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
+  });

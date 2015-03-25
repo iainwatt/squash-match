@@ -1,0 +1,13 @@
+<h1>Squinder App</h1>
+
+<map style="display: block; height: 500px;"
+      zoom="12"
+      center="London, United Kingdom">
+          <!--  <marker position="51.5072,0.1275"></marker> -->
+       <marker ng-repeat="centre in centres" position="{{ centre.location }}"></marker>
+</map> 
+
+<div class="main-info">
+  <p ng-bind="displayTime">{{ time }}</p>
+ <!--  <p ng-repeat="court in allcourts">{{ court.id }}</p> -->
+</div>
