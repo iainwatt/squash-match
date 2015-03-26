@@ -1,7 +1,10 @@
 
-
-<div ng-controller="ProfileController">
-  <p>{{ user.id }}</p>
-
-</div>   
+<div class="profile" ng-controller="ProfileController">
 <h1>User Profile page</h1>
+  <img class="user-image" ng-src="{{ user.user_image.url }}"/>
+  <p>{{ user.first_name }} {{ user.last_name}}</p>
+ <!--  <p>{{ user.last_name}}</p> -->
+  <p>{{ user.profile_name}}</p>
+  <p>level: {{ user.level }}</p>
+  
+</div>   
