@@ -96,7 +96,59 @@ c43 = Court.create(centre_id:3, time:"21.00-21.45", start_time:'2015-03-24 21:00
 c44 = Court.create(centre_id:3, time:"21.00-21.45", start_time:'2015-03-24 21:00:00 +0000', end_time:'2015-03-24 21:45:00 +0000',  court_no:2, availability: "free")
 c45 = Court.create(centre_id:3, time:"21.00-21.45", start_time:'2015-03-24 21:00:00 +0000', end_time:'2015-03-24 21:45:00 +0000',  court_no:3, availability: "free")
 
-    
+u1 = User.create(
+  first_name: "Jack",
+  last_name: "Bush",
+  profile_name: "bushyjack",
+  email:"jack@email.com",
+  password: "password",
+  password_confirmation: "password",
+  )
+u1.save
+
+u2 = User.create(
+  first_name: "Iain",
+  last_name: "Watt",
+  profile_name: "iainwatt",
+  email:"iain@email.com",
+  password: "password",
+  password_confirmation: "password",
+  )
+u2.save
+
+u3 = User.create(
+  first_name: "Oli",
+  last_name: "Cairns",
+  profile_name: "optimusprime",
+  email:"oli@email.com",
+  password: "password",
+  password_confirmation: "password",
+  )
+u3.save
+
+u4 = User.create(
+  first_name: "Alex",
+  last_name: "Karim",
+  profile_name: "KarimTime",
+  email:"alex@email.com",
+  password: "password",
+  password_confirmation: "password",
+  )
+u4.save
+
+ch1 = Challenge.create(player1_id:1)    
+ch2 = Challenge.create(player1_id:2)    
+ch3 = Challenge.create(player1_id:3)    
+ch4 = Challenge.create(player1_id:3)    
+ch5 = Challenge.create(player1_id:3)    
+ch6 = Challenge.create(player1_id:4) 
+ch7 = Challenge.create(player1_id:4)    
+ch8 = Challenge.create(player1_id:4)    
+ch9 = Challenge.create(player1_id:4)    
+
+
+
+
 
 
 

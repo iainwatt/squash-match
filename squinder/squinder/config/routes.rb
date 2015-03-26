@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :centres
   resources :courts
+  resources :challenges
 
   get 'users/current_user_profile' => 'users#current_user_profile'
   

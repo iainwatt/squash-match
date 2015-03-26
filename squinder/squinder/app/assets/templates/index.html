@@ -15,7 +15,13 @@
   <button type="button" class="btn btn-primary btn-lg">Find a Court</button>
   <button type="button" class="btn btn-default btn-lg">Find an Opponent</button>
 </p>
-<button ng-controller="ChallengeController" ng-click="challengeUser(user.id)" type="button" class="btn btn-default btn-lg" >Issue Challenge</button>
- 
+<!-- <button ng-controller="ChallengeController" ng-click="challengeUser(user.id)" type="button" class="btn btn-default btn-lg" >Issue Challenge</button> -->
+<!-- we need to tell the Challenge controller that we are submitting user.id as player1_id -->
+ <button ng-controller="ChallengeController" ng-click="newChallenge(user.id)" ng-model="challengeUser.player1_id" type="button" class="btn btn-default btn-lg" >Issue Challenge</button>
 </div>
 
+<!-- in this our function is run on submit, the $cahllengeUser passes thorugh value of 1 as player1_id   -->
+<form ng-controller="ChallengeController" name="challengeForm" ng-submit="newChallenge()" > 
+        <input type="text" ng-model="challengeUser.player1_id" ><br>
+        <button>Submit</button>
+      </form>
