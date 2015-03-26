@@ -1,10 +1,19 @@
 Rails.application.routes.draw do
 
 
+  devise_for :users
+  get "/test/*path" => "static#index"
   root 'static#index'
 
   resources :centres
   resources :courts
+
+
+  
+  get '/test/home' => 'static#index', as: 'home'
+
+
+
 
 
 

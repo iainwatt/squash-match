@@ -1,5 +1,5 @@
 
-app.controller('CentreController', function($scope, $http, $timeout, CentreService, CourtService){
+app.controller('CentreController', function($scope, $http, $timeout, $location, CentreService, CourtService, NavigatorGeolocation, GeoCoder){
   
   CentreService.getCentres()
   .then(function(response) {
@@ -7,9 +7,9 @@ app.controller('CentreController', function($scope, $http, $timeout, CentreServi
     // console.log($scope.centre);
   });
 
+  // filter all the courts  
 
   $scope.courts = []
-
   CentreService.getCentres()
     .then(function(response) {
       $scope.centre = response.data;
@@ -20,15 +20,14 @@ app.controller('CentreController', function($scope, $http, $timeout, CentreServi
     // console.log($scope.allcourts); 
   });
 
+
   CourtService.getCourts()
   .then(function(response){
     // console.log(response.data)
   })
 
-  // passing the displayTime() function from moment.js file so we can display a clock
+  // passing the displayTime() function from moment.js file so we can display a clock, and including the $timeout Angular service
 
-  // var time = displayTime();
-  // $scope.displayTime = time;
   var updateTime = function() {
     $scope.displayTime = displayTime();
     $timeout(function() {
@@ -37,48 +36,46 @@ app.controller('CentreController', function($scope, $http, $timeout, CentreServi
   }
   updateTime();
 
-  // function hello() {
-  //   setInterval(function(){
-  //   console.log("hello");
-  //   hello();
-  //   }, 1000);
-  // };
-  // hello()
-  
-  // console.log($scope.dispalyTime)
+
 
   // function to filter courts by availability 
-
+  $scope.av = []
   CourtService.getCourts()
   .then(function(response){
-    console.log(response.data)
+    // console.log(response.data)
     $scope.temp = response.data
     angular.forEach($scope.temp, function(value, key){ 
-      console.log(value.availability, value.centre.location);  
+      // Here we create a new variable with only courts that are free
+      if (value.availability == 'free')
+        $scope.av.push(value);
     });
+    console.log($scope.av);
+    angular.forEach($scope.av, function(value, key){ 
+      console.log(value.availability, value.centre.location, value.court_no, basicFormat(value.start_time), basicFormat(value.end_time));
+      });
   })
 
+  //function MyMarker(){
 
-// $.each(array, (index, court) {
-//   if(court is free){
+NavigatorGeolocation.getCurrentPosition()
+   .then(function(position) {
+    $scope.me = position.coords.latitude, lng = position.coords.longitude;
+     // console.log(lat, lng);
+   });
 
-//   }else
 
-// })
+    GeoCoder.geocode({address: 'the cn tower'}).then(function(result) {
+    console.log(result[0].geometry.location.D );
+  });
 
-// _.each(array, (index, court, xxxx){
 
-// })
+// getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2)
 
-  // $scope.displayTime = function(time) {
-  //   $scope.displayTime = time;
-  //   console.log($scope.dispalyTime)
-  // }
 
-  // function to display what courst are available by time
 
-  // JSON.parse // this turns umanageable data back into js objects
-  // helper.js file in services to put helper funcitons
+
+
+
 
 
 

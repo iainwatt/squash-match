@@ -13,4 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require moment
+//= require angular-route-1-2-0
 //= require_tree .

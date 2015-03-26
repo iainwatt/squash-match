@@ -6,5 +6,7 @@ function displayTime() {
     return moment().format('HH:mm:ss');
 }
 
-
+function basicFormat(t) {
+  return moment(t).format('HH.mm')
+}
  

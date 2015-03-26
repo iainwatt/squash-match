@@ -12,5 +12,9 @@ class ApplicationController < ActionController::Base
   def verified_request?
     super || valid_authenticity_token?(session, request.headers['X-XSRF-TOKEN'])
   end
+
+  def after_sign_in_path_for(resources)
+    home_path
+  end
   
 end
