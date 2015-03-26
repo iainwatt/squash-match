@@ -6,7 +6,7 @@ app.controller('ProfileController', function($scope, $http, $routeParams, Profil
  .success(function(data){
   // console.log(data);
   $scope.user = data
-  console.log($scope.user);
+  console.log($scope.user.id);
  })
 
 

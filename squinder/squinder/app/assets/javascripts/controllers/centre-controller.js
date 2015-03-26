@@ -49,9 +49,9 @@ app.controller('CentreController', function($scope, $http, $timeout, $location, 
       if (value.availability == 'free')
         $scope.av.push(value);
     });
-    console.log($scope.av);
+    // console.log($scope.av);
     angular.forEach($scope.av, function(value, key){ 
-      console.log(value.availability, value.centre.location, value.court_no, basicFormat(value.start_time), basicFormat(value.end_time));
+      // console.log(value.availability, value.centre.location, value.court_no, basicFormat(value.start_time), basicFormat(value.end_time));
       });
   })
 
@@ -72,7 +72,11 @@ NavigatorGeolocation.getCurrentPosition()
 // getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2)
 
 
-
+// Getting the current user id 
+$http.get('/users/current_user_profile')
+ .success(function(data){
+  $scope.user = data
+ })
 
 
 
