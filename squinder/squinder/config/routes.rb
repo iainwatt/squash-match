@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :centres
   resources :courts
 
-
+  get 'users/current_user_profile' => 'users#current_user_profile'
   
   get '/test/home' => 'static#index', as: 'home'
 

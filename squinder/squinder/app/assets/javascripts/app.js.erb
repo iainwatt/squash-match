@@ -10,6 +10,10 @@ var app = angular.module('SquinderApp', ['ngRoute', 'ngAnimate', 'ngMap'])
       controller: 'CentreController',
       templateUrl: "<%= asset_path('index.html') %>"
     })
+    .when('/profile', {
+      controller: 'ProfileController',
+      templateUrl: "<%= asset_path('profile.html') %>"   
+      })
     .otherwise({
       redirectTo: '/home'
     });

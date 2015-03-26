@@ -4,6 +4,26 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.text_field :first_name, :placeholder => "First Name" %>
+  </div>
+  
+  <div class="field">
+  <%= f.text_field :last_name, :placeholder => "Surname" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :profile_name, :placeholder => "Profile Name" %>
+  </div>
+
+  <div class="field">
+    <%= f.file_field :user_image, :placeholder => "Image" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :level, :placeholder => "Level..beginner/advanced?..." %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>

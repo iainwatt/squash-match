@@ -16,5 +16,18 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resources)
     home_path
   end
+
+   def configure_permitted_parameters
+    devise_parameter_sanitizer.for(:sign_up) << :first_name
+    devise_parameter_sanitizer.for(:account_update) << :first_name
+    devise_parameter_sanitizer.for(:sign_up) << :last_name
+    devise_parameter_sanitizer.for(:account_update) << :last_name
+    devise_parameter_sanitizer.for(:sign_up) << :profile_name
+    devise_parameter_sanitizer.for(:account_update) << :profile_name
+    devise_parameter_sanitizer.for(:sign_up) << :user_image
+    devise_parameter_sanitizer.for(:account_update) << :user_name
+    devise_parameter_sanitizer.for(:sign_up) << :level
+    devise_parameter_sanitizer.for(:account_update) << :level
+  end
   
 end
