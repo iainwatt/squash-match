@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.1.4'
 # Default Gems
 gem 'rails', '4.2.0'
 gem 'pg'
@@ -21,6 +22,7 @@ gem 'carrierwave', '0.9.0'
 gem 'gravtastic'
 gem 'rmagick'
 gem 'fog'
+gem 'rails_12factor'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
