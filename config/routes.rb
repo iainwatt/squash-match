@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   resources :courts
   resources :challenges
 
+  get 'users/get_all_users' => 'users#get_all_users'
+
   get 'users/current_user_profile' => 'users#current_user_profile'
   
   get '/test/home' => 'static#index', as: 'home'

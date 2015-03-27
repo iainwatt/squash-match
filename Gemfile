@@ -23,6 +23,8 @@ gem 'gravtastic'
 gem 'rmagick'
 gem 'fog'
 gem 'rails_12factor'
+gem 'gon'
+
 # gem 'ngannotate-rails'
 
 group :development, :test do

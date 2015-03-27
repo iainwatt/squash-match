@@ -15,8 +15,9 @@
     <button ng-controller="CourtController" type="button" class="btn btn-primary btn-lg" ng-click="findCourts()">Find a Court</button>
     <button type="button" class="btn btn-default btn-lg">Find an Opponent</button>
   </p>
+
   <form ng-controller="ChallengeController" name="challengeForm" ng-submit="newChallenge()" > 
-    <input type="text" ng-model="challengeUser.player1_id" ><br>
+    <input type="hidden" ng-model="challengeUser.player1_id" ><br>
     <button>Submit</button>
   </form>
 </div>
@@ -31,11 +32,11 @@
 
 
 <!-- this shows what courts are available -->
-<!-- <div ng-controller="CourtController">
+<div class="court-info" ng-controller="CourtController">
   <ul>
-    <li ng-repeat="court in allavailableCourts">{{ court.availability }} | {{ court.centre.location }} | {{ court.court_no }} | {{ basicformat(court.start_time)}} </li>
+    <li ng-repeat="court in allavailableCourts">{{ court.availability }} | {{ court.centre.location }} | {{ court.court_no }} | {{ basicformat(court.start_time)}} <button type="button" class="btn btn-default btn-sm active">Book Now</button> </li>
   </ul>
-</div> -->
+</div>
 
 
 

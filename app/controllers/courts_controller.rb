@@ -5,4 +5,8 @@ class CourtsController < ApplicationController
     render json: courts
   end 
 
+  # def book_a_court
+  #   book_court = Court.find
+  # end
+
 end

@@ -6,7 +6,7 @@ app.factory('ChallengeService', ['$http', function($http) {
       return $http.get('/challenges');
     },
     createChallenge: function(challenge) {
-      return $http.post('/challenges', challenge);
+      return $http.post('/challenges', {challenges:{player1_id:challenge}});
     }
   };
 

@@ -1,13 +1,21 @@
 
 
-app.controller('ChallengeController', ['$scope', '$http', 'ChallengeService', function($scope, $http, ChallengeService){
+app.controller('ChallengeController', ['$scope', '$http', 'ChallengeService', 'UserService', function($scope, $http, ChallengeService, UserService){
+
+// getting all challenge data with userinfo attached
+// UserService.getUsers()
+// .then(function(response) {
+//   $scope.users = response.data
+//   console.log($scope.users)
+// })
+
 
 
 // getting all challenge data
   ChallengeService.getChallenges()
   .then(function(response) {
     $scope.challenges = response.data
-    // console.log($scope.challenges);
+    console.log($scope.challenges);
   });
 
 
@@ -30,7 +38,9 @@ app.controller('ChallengeController', ['$scope', '$http', 'ChallengeService', fu
   // };
 
  $scope.newChallenge = function() {
-  ChallengeService.createChallenge($scope.challengeUser)
+  // $scope.challengeUser = $scope.user.id
+  console.log($scope.user.id)
+  ChallengeService.createChallenge($scope.user.id)
   .then(function(response){
   // console.log(response);
   });
