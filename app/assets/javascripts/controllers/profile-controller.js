@@ -1,5 +1,5 @@
 
-app.controller('ProfileController', function($scope, $http, $routeParams, ProfileService){
+app.controller('ProfileController', ['$scope', '$http', '$routeParams', 'ProfileService', function($scope, $http, $routeParams, ProfileService){
 
   var controller = this;
   $http.get('/users/current_user_profile')
@@ -11,4 +11,4 @@ app.controller('ProfileController', function($scope, $http, $routeParams, Profil
 
 
   
-});
+}]);

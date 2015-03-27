@@ -1,5 +1,5 @@
 
-app.controller('CentreController', function($scope, $http, $timeout, $location, CentreService, CourtService, NavigatorGeolocation, GeoCoder){
+app.controller('CentreController', ['$scope', '$http', '$timeout', '$location', 'CentreService', 'CourtService', 'NavigatorGeolocation', 'GeoCoder', function($scope, $http, $timeout, $location, CentreService, CourtService, NavigatorGeolocation, GeoCoder){
   
   CentreService.getCentres()
   .then(function(response) {
@@ -86,4 +86,4 @@ $http.get('/users/current_user_profile')
  
 
 
-});
+}]);

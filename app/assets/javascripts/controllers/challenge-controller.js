@@ -1,6 +1,6 @@
 
 
-app.controller('ChallengeController', function($scope, $http, ChallengeService){
+app.controller('ChallengeController', ['$scope', '$http', 'ChallengeService', function($scope, $http, ChallengeService){
 
 
 // getting all challenge data
@@ -45,7 +45,7 @@ app.controller('ChallengeController', function($scope, $http, ChallengeService){
   // }
 
 
-});
+}]);
 
 
 

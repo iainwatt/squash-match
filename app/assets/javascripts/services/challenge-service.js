@@ -1,5 +1,5 @@
 
-app.factory('ChallengeService', function($http) {
+app.factory('ChallengeService', ['$http', function($http) {
 
   var ChallengeService = {
     getChallenges: function() {
@@ -12,4 +12,4 @@ app.factory('ChallengeService', function($http) {
 
   return ChallengeService;
 
-});
+}]);

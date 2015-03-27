@@ -1,5 +1,5 @@
 
-app.controller('CourtController', function($scope, $http, CourtService){
+app.controller('CourtController', ['$scope', '$http', 'CourtService', function($scope, $http, CourtService){
 
 // gets all court data 
   $scope.avbCourts = []
@@ -43,4 +43,4 @@ app.controller('CourtController', function($scope, $http, CourtService){
 
 
 
-});
+}]);
