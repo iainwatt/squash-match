@@ -5,8 +5,8 @@ app.factory('CourtService', ['$http', function($http) {
     getCourts: function() {
       return $http.get('/courts');
     },
-    putCourts: function(court) {
-      return $http.put('/courts/book_a_court', court);
+    putCourts: function(court, user) {
+      return $http.put('/courts/book_a_court/'+court, {court:{user_id:user}});
     }
    }; 
   return CourtService

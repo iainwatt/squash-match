@@ -6,7 +6,6 @@ class ChallengesController < ApplicationController
   render json: challenges
  end
 
-# (:include => [:player1_id, :player2_id]) 
 
  def create
   challenge = Challenge.create(params.require(:challenges).permit(:player1_id))

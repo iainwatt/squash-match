@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get 'users/get_all_users' => 'users#get_all_users'
 
+  put 'courts/book_a_court/:id' => 'courts#book_a_court'
+
   get 'users/current_user_profile' => 'users#current_user_profile'
   
   get '/test/home' => 'static#index', as: 'home'
