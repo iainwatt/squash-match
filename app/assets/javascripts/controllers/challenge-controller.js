@@ -2,14 +2,6 @@
 
 app.controller('ChallengeController', ['$scope', '$http', 'ChallengeService', 'UserService', function($scope, $http, ChallengeService, UserService){
 
-// getting all challenge data with userinfo attached
-// UserService.getUsers()
-// .then(function(response) {
-//   $scope.users = response.data
-//   console.log($scope.users)
-// })
-
-
 
 // getting all challenge data
   ChallengeService.getChallenges()
@@ -18,6 +10,7 @@ app.controller('ChallengeController', ['$scope', '$http', 'ChallengeService', 'U
     console.log($scope.challenges);
   });
 
+// other cheat method would be to get centre[:id]
 
 
 // getting the user data through http request so that i can have access to that id 
@@ -37,14 +30,16 @@ app.controller('ChallengeController', ['$scope', '$http', 'ChallengeService', 'U
   //   });
   // };
 
- $scope.newChallenge = function() {
-  // $scope.challengeUser = $scope.user.id
-  console.log($scope.user.id)
-  ChallengeService.createChallenge($scope.user.id)
-  .then(function(response){
-  // console.log(response);
-  });
-};
+
+
+//  $scope.newChallenge = function() {
+//   // $scope.challengeUser = $scope.user.id
+//   console.log($scope.user.id)
+//   ChallengeService.createChallenge($scope.user.id)
+//   .then(function(response){
+//   // console.log(response);
+//   });
+// };
 
 
   // $scope.newChallenge = function() {

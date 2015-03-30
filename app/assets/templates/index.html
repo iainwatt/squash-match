@@ -17,6 +17,11 @@
   </p>
   <div ng-controller="ChallengeController">
      <button type="button" class="btn btn-default btn-lg" ng-click="newChallenge(user.id)">Create Challenge</button>
+
+     <!-- this shows what challenge are pending -->
+     <!-- <ul>
+       <li ng-repeat="challenge in challenges"> {{ challenge.court.start_time }} | {{ challenge.centre.location }}</li>
+     </ul> -->
   </div>
 </div>
 
@@ -27,9 +32,11 @@
   </ul> -->
 
 <!-- this shows all the courts with a user_id..so courts that have been booked by SqTinder users -->
+
+<!-- THIS LETS YOU ISSUES CHALLENGES ONCE YOU HAVE BOOKED A COURT -->
   <ul>
   <h2>My booked courts</h2>
-    <li ng-repeat="court in bookedbyus"> {{ court.centre.name}} | {{ court.start_time}} | {{ court.user_id }} <button type="button" class="btn btn-default btn-sm active">Issue Challenge</button> </li>
+    <li ng-repeat="court in bookedbyus"> {{ court.centre.name}} | centre_id: {{ court.centre.id}} | {{ court.start_time}} | Court_id: {{ court.id }} | {{ court.user_id }} <button type="button" class="btn btn-default btn-sm active" ng-click="issueChallengewithCourt(court)">Issue Challenge</button> </li>
   </ul>
 
 </div>
