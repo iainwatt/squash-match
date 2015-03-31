@@ -8,6 +8,9 @@ app.factory('ChallengeService', ['$http', function($http) {
     createChallenge: function(challenge, court, centre) {
       return $http.post('/challenges', {challenges:{player1_id:challenge, court_id:court, centre_id:centre}});
                                         // is 'challenges related to require:challenges and for {player1_id:challenge} challenge must be the user_id passed from newChallenge so could be court.' so now do we need function(challenge, court, centre) and {challenges:{player1_id:challenge, :court_id:court, :centre_id:centre}}
+    },
+    putChallenge: function(challenge, user) {
+    return $http.put('/challenges/accept_challenge/'+challenge, {challenge:{player2_id:user}});
     }
     // putCourts: function(court, user) {
     //   // where does the variable user come from, have we renamed ($scope.court_id, $scope.user_id) as court and user then renamed user(id) as user_id

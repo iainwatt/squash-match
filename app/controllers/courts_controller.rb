@@ -6,6 +6,7 @@ class CourtsController < ApplicationController
   end 
 
   def book_a_court
+
     book_court = Court.find(params[:id])
     book_court.availability = "booked"
     book_court.user_id = params[:court][:user_id]

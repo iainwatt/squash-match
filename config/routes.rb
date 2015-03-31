@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   
   get '/test/home' => 'static#index', as: 'home'
 
-
+  put 'challenges/accept_challenge/:id' => 'challenges#accept_challenge' 
 
 
 

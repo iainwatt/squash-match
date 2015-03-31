@@ -55,21 +55,7 @@ app.controller('CentreController', ['$scope', '$http', '$timeout', '$location', 
       });
   })
 
-  //function MyMarker(){
 
-NavigatorGeolocation.getCurrentPosition()
-   .then(function(position) {
-    $scope.me = position.coords.latitude, lng = position.coords.longitude;
-     // console.log(lat, lng);
-   });
-
-
-    GeoCoder.geocode({address: 'the cn tower'}).then(function(result) {
-    console.log(result[0].geometry.location.D );
-  });
-
-
-// getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2)
 
 
 // Getting the current user id 
