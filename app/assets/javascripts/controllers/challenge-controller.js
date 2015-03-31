@@ -8,13 +8,16 @@ console.log(gps.userLon);
 
 
 // ### getting all challenge data and calculating its distance ### \\
+$scope.findOpponent = function() {
   $scope.challengeHelp = []
   ChallengeService.getChallenges()
   .then(function(response) {
     $scope.challenges = response.data
-    angular.forEach($scope.challengs, function(value, key){ 
+    console.log($scope.challenges);
+    angular.forEach($scope.challenges, function(value, key){ 
     $scope.centres.push(value);
     });
+    // console.log($scope.centres)
     angular.forEach($scope.centres, function(value, key){ 
     // console.log(getDistanceFromLatLonInKm(value.latitude, value.longitude , gps.userLat ,gps.userLon));
       if (getDistanceFromLatLonInKm(value.latitude, value.longitude , gps.userLat ,gps.userLon) > 5) {
@@ -24,7 +27,7 @@ console.log(gps.userLon);
       }
     });
   });
-
+}
 
 
 // ### trying to factor out current locaiton into a service ### \\

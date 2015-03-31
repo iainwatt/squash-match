@@ -2,7 +2,7 @@ class ChallengesController < ApplicationController
 
 
  def index
-  challenges = Challenge.all.to_json(:include => [:court, :centre])
+  challenges = Challenge.all.to_json(:include => [:court, :centre, :player1])
   render json: challenges
  end
 

@@ -64,10 +64,7 @@ $scope.bookCourt = function(court) {
   CourtService.putCourts($scope.court_id, $scope.user_id)
   .then(function(response){
     console.log(response)
-    $scope.bc = response.data
-    for (i = 0; i < $scope.bc.length; i++) { 
-      $scope.bc[i].start_time = basicFormat($scope.bc[i].start_time)
-    }
+    $scope.bookedCourt = response.data
   });
 };
 

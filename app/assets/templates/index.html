@@ -12,34 +12,38 @@
 <div class="main-info">
   <p>{{ displayTime }}</p>
   <p>
-    <button ng-controller="CourtController" type="button" class="btn btn-primary btn-lg" ng-click="findCourts()">Find a Court</button>
-    <button type="button" class="btn btn-default btn-lg">Find an Opponent</button>
+
   </p>
 </div>
-
-
- <div ng-controller="ChallengeController">
-    <!--  <button type="button" class="btn btn-default btn-lg" ng-click="newChallenge(user.id)">Create Challenge</button> -->
-
-     <!-- this shows what challenge are pending -->
-     <ul>
-     <!-- <h2>Pending Challenges</h2>
-       <li class="court-info" ng-repeat="challenge in challenges"> {{ challenge.court.start_time }} | {{ challenge.centre.location }} | {{ challenge.player1_id }} | challenge_id: {{ challenge.id }} <button type="button" class="btn btn-default btn-sm active" ng-click="acceptChallenge(challenge)">Play</button></li>
-     </ul> -->
-  </div>
 
 <!-- ######## this shows what courts are available  - ng-show / not working ##### -->
 <div class="court-info" ng-controller="CourtController">
  <button type="button" class="btn btn-primary btn-lg" ng-click="findCourts()">Find a Court</button>
-  <h2>Available courts to book</h2>
     <ul ng-hide="bookedCourt">
+<!--       <h2>Available courts to book</h2> -->
       <li ng-repeat="court in allavailableCourts">{{ court.availability }} | {{ court.id }}<button type="button" class="btn btn-default btn-sm active" ng-click="bookCourt(court)">Book Now</button>
       </li>
     </ul>
-    <div ng-show="bookedCourt"> Court Booked: {{ bookedCourt }} <button>SHARE</button></div>
+    <div ng-show="bookedCourt"> Court Booked by {{current_user.profile_name}} | {{ bookedCourt.centre_id }} | {{ bookedCourt.time }} | court_no: {{ bookedCourt.court_no}} </br> <button>SHARE</button> | <button>Find Opponent</button> | <button>End</button></div>
   </div>
-
   <!-- ######## this shows what courts are available  - ng-show / not working ##### -->
+
+
+<!-- ######### this shows all the pending challenges ########### -->
+  <div class="court-info" ng-controller="ChallengeController">
+   <button type="button" class="btn btn-default btn-lg" ng-click="findOpponent()">Find an Opponent</button>
+     <ul>
+     <h2>Pending Challenges</h2>
+       <li ng-repeat="challenge in challenges"> {{ challenge.court.start_time | customtime }} | {{ challenge.centre.location }} | {{ challenge.player1.profile_name }} | level: {{ challenge.player1.level }} <button type="button" class="btn btn-default btn-sm active" ng-click="acceptChallenge(challenge)">Play</button></li>
+     </ul>
+  </div>
+  <!-- ######### this shows all the pending challenges ########### -->
+
+
+
+
+
+
 
 
 
