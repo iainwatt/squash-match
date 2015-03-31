@@ -14,7 +14,7 @@ app.controller('CourtController', ['$scope', '$http', 'CourtService', 'Challenge
       if ($scope.temptwo[i].availability == 'free')
       $scope.allavailableCourts.push($scope.temptwo[i])
     }
-    console.log($scope.allavailableCourts);
+    // console.log($scope.allavailableCourts);
   });
   
   // Getting all the courts that have been booked by users of this app //

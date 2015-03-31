@@ -2,7 +2,10 @@
 
 var app = angular.module('SquinderApp', ['ngRoute', 'ngAnimate', 'ngMap']);
 
-
+app.value( 'gps', { 
+  userLat: '51.520151399999996',
+  userLon: '-0.0704819'
+});
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   $routeProvider

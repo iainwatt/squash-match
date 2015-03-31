@@ -1,25 +1,46 @@
 
 
-app.controller('ChallengeController', ['$route', '$scope', '$http', 'ChallengeService', 'UserService', function($route, $scope, $http, ChallengeService, UserService){
+app.controller('ChallengeController', ['$route', '$scope', '$http', 'ChallengeService', 'UserService', 'GeolocationService', 'gps', function($route, $scope, $http, ChallengeService, UserService, geolocation, gps){
+
+// ### the app.value in app.js works! ### \\\\
+console.log(gps.userLat);
+console.log(gps.userLon);
 
 
-// getting all challenge data
+// ### getting all challenge data and calculating its distance ### \\
   $scope.challengeHelp = []
   ChallengeService.getChallenges()
   .then(function(response) {
-    // console.log(response.data);
     $scope.challenges = response.data
-    $scope.challengeHelp.push($scope.challenges);
-    for (i = 0; i < $scope.challenges.length; i++) {
-      // console.log($scope.challenges[i].player1_id);
-      // if ($scope.challenges[i].player1_id !== gon.current_user.id)
-      //   $scope.player1Challenges = $scope.challenges[i]
-    };
-    // console.log($scope.player1Challenges);
-    
+    angular.forEach($scope.challengs, function(value, key){ 
+    $scope.centres.push(value);
+    });
+    angular.forEach($scope.centres, function(value, key){ 
+    // console.log(getDistanceFromLatLonInKm(value.latitude, value.longitude , gps.userLat ,gps.userLon));
+      if (getDistanceFromLatLonInKm(value.latitude, value.longitude , gps.userLat ,gps.userLon) > 5) {
+          console.log("too far")
+      } else {
+        console.log(getDistanceFromLatLonInKm(value.latitude, value.longitude , gps.userLat ,gps.userLon));
+      }
+    });
   });
 
-console.log(gon.current_user.id);
+
+
+// ### trying to factor out current locaiton into a service ### \\
+geolocation().then(function (position) {
+  $scope.position = position;
+  gon.userLat = $scope.position.coords.latitude
+  gon.userLon = $scope.position.coords.longitude 
+});
+
+
+
+
+
+
+
+// console.log(gon.current_user.id);
 // player2 offering to play player1 \\
   $scope.acceptChallenge = function(challenge) {
     console.log(gon.current_user.id);
@@ -49,7 +70,12 @@ console.log(gon.current_user.id);
 
 
 
-
+// for (i = 0; i < $scope.challenges.length; i++) {
+//       // $scope.centres = $scope.challenges[i].centre
+//       // console.log($scope.challenges[i].centre);
+//       // if ($scope.challenges[i].player1_id !== gon.current_user.id)
+//       //   $scope.player1Challenges = $scope.challenges[i]
+//     };
 
 
 

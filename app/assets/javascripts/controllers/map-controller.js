@@ -7,8 +7,8 @@ app.controller('MapController', ['$scope', '$http', '$timeout', '$location',  'N
    .then(function(position) {
     $scope.meLat = position.coords.latitude, 
     $scope.meLong = position.coords.longitude;
-     console.log($scope.meLat);
-     console.log($scope.meLong);
+     // console.log($scope.meLat);
+     // console.log($scope.meLong);
    });
 
 
@@ -19,17 +19,8 @@ app.controller('MapController', ['$scope', '$http', '$timeout', '$location',  'N
   });
 
 
-CentreService.getCentres()
-  .then(function(response) {
-    $scope.centres = response.data;
-    // console.log($scope.centre);
-  });
 
 
-
-getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
-
-};
 
 
 
