@@ -3,19 +3,22 @@ app.controller('CourtController', ['$scope', '$http', 'CourtService', 'Challenge
 
 
 
-
-// Getting all challenge data //
-  $scope.allavailableCourts = []
+ $scope.allavailableCourts = []
   $scope.avbtwoCourts = []
-  CourtService.getCourts()
-  .then(function(response){
-    $scope.temptwo = response.data
-    for (i = 0; i < $scope.temptwo.length; i++) { 
-      if ($scope.temptwo[i].availability == 'free')
-      $scope.allavailableCourts.push($scope.temptwo[i])
-    }
-    // console.log($scope.allavailableCourts);
-  });
+// Getting all challenge data //
+  $scope.findCourts = function () {
+    CourtService.getCourts()
+    .then(function(response){
+      $scope.temptwo = response.data
+      for (i = 0; i < $scope.temptwo.length; i++) { 
+        $scope.temptwo[i].start_time = basicFormat($scope.temptwo[i].start_time)
+        if ($scope.temptwo[i].availability == 'free')
+        $scope.allavailableCourts.push($scope.temptwo[i])
+      }
+      console.log($scope.allavailableCourts);
+    });
+  }
+ 
   
   // Getting all the courts that have been booked by users of this app //
   
@@ -24,12 +27,18 @@ app.controller('CourtController', ['$scope', '$http', 'CourtService', 'Challenge
   CourtService.getCourts()
   .then(function(response){
     $scope.bbu = response.data
+    // console.log($scope.bbu);
     for (i = 0; i < $scope.bbu.length; i++) {
+      $scope.bbu[i].start_time = basicFormat($scope.bbu[i].start_time)
+      // console.log(basicFormat($scope.bbu[i].start_time));
       if ($scope.bbu[i].user_id !== null)
-        $scope.bookedbyus.push($scope.bbu[i])       
+        $scope.bookedbyus.push($scope.bbu[i]);       
     };
     // console.log($scope.bookedbyus);
+
   });
+
+  
 
   // issuing a challenge that is associated with the courts that this person has booked //
   // create challenge request with the id of this court that is booked and the centre
@@ -54,6 +63,11 @@ $scope.bookCourt = function(court) {
   // console.log($scope.selectedCourt)
   CourtService.putCourts($scope.court_id, $scope.user_id)
   .then(function(response){
+    console.log(response)
+    $scope.bc = response.data
+    for (i = 0; i < $scope.bc.length; i++) { 
+      $scope.bc[i].start_time = basicFormat($scope.bc[i].start_time)
+    }
   });
 };
 
