@@ -103,7 +103,7 @@ u1 = User.create(
   email:"jack@email.com",
   password: "password",
   password_confirmation: "password",
-  level: "beginner",
+  level: "6",
   )
 u1.save
 
@@ -114,7 +114,7 @@ u2 = User.create(
   email:"iain@email.com",
   password: "password",
   password_confirmation: "password",
-  level: "advanced",
+  level: "4",
   )
 u2.save
 
@@ -125,7 +125,7 @@ u3 = User.create(
   email:"oli@email.com",
   password: "password",
   password_confirmation: "password",
-  level: "intermediate",
+  level: "8",
   )
 u3.save
 
@@ -136,7 +136,7 @@ u4 = User.create(
   email:"alex@email.com",
   password: "password",
   password_confirmation: "password",
-  level: "beginner",
+  level: "9",
   )
 u4.save
 
@@ -147,7 +147,7 @@ u5 = User.create(
   email:"matt@email.com",
   password: "password",
   password_confirmation: "password",
-  level: "advanced",
+  level: "10",
   )
 u5.save
 
@@ -158,7 +158,7 @@ u6 = User.create(
   email:"mary@email.com",
   password: "password",
   password_confirmation: "password",
-  level: "intermediate",
+  level: "3",
   )
 u6.save
 
@@ -169,7 +169,7 @@ u7 = User.create(
   email:"paul@email.com",
   password: "password",
   password_confirmation: "password",
-  level: "intermediate",
+  level: "3",
   )
 u7.save
 
@@ -180,30 +180,33 @@ u8 = User.create(
   email:"james@email.com",
   password: "password",
   password_confirmation: "password",
-  level: "advanced",
+  level: "5",
   )
 u8.save
 
 ch1 = Challenge.create(player1_id:1, centre_id:1,court_id:1, status: 'pending')    
-ch2 = Challenge.create(player1_id:2, centre_id:1,court_id:2, status: 'pending')    
-ch3 = Challenge.create(player1_id:3, centre_id:2,court_id:22, status: 'pending')    
-ch4 = Challenge.create(player1_id:3, centre_id:3,court_id:31, status: 'pending')    
+ch2 = Challenge.create(player1_id:1, centre_id:1,court_id:2, status: 'pending')    
+ch3 = Challenge.create(player1_id:2, centre_id:2,court_id:22, status: 'pending')    
+ch4 = Challenge.create(player1_id:2, centre_id:3,court_id:31, status: 'pending')    
 ch5 = Challenge.create(player1_id:3, centre_id:3,court_id:32, status: 'pending')    
-ch6 = Challenge.create(player1_id:4, centre_id:3,court_id:33, status: 'pending') 
+ch6 = Challenge.create(player1_id:3, centre_id:3,court_id:33, status: 'pending') 
 ch7 = Challenge.create(player1_id:4, centre_id:3,court_id:34, status: 'pending')    
 ch8 = Challenge.create(player1_id:4, centre_id:2,court_id:19, status: 'pending')    
-ch9 = Challenge.create(player1_id:4, centre_id:2,court_id:20, status: 'pending')    
+ch9 = Challenge.create(player1_id:5, centre_id:2,court_id:20, status: 'pending')    
 ch10 = Challenge.create(player1_id:5, centre_id:1,court_id:3, status: 'pending')    
-ch11 = Challenge.create(player1_id:5, centre_id:1,court_id:4, status: 'pending') 
+ch11 = Challenge.create(player1_id:6, centre_id:1,court_id:4, status: 'pending') 
 ch12 = Challenge.create(player1_id:6, centre_id:1,court_id:5, status: 'pending')    
-ch13 = Challenge.create(player1_id:6, centre_id:1,court_id:6, status: 'pending')    
+ch13 = Challenge.create(player1_id:7, centre_id:1,court_id:6, status: 'pending')    
 ch14 = Challenge.create(player1_id:7, centre_id:1,court_id:7, status: 'pending')    
-ch15 = Challenge.create(player1_id:7, centre_id:1,court_id:8, status: 'pending')    
-ch16 = Challenge.create(player1_id:8, centre_id:1,court_id:9, status: 'pending')    
-ch17 = Challenge.create(player1_id:8, centre_id:1,court_id:10, status: 'pending')    
-ch18 = Challenge.create(player1_id:6, centre_id:1,court_id:11, status: 'pending')    
-ch19 = Challenge.create(player1_id:5, centre_id:1,court_id:12, status: 'pending')    
-ch20 = Challenge.create(player1_id:4, centre_id:1,court_id:13, status: 'pending') 
+ch15 = Challenge.create(player1_id:8, centre_id:1,court_id:8, status: 'pending')    
+ch16 = Challenge.create(player1_id:8, centre_id:1,court_id:9, status: 'pending') 
+
+
+ 
+# ch17 = Challenge.create(player1_id:8, centre_id:1,court_id:10, status: 'pending')    
+# ch18 = Challenge.create(player1_id:6, centre_id:1,court_id:11, status: 'pending')    
+# ch19 = Challenge.create(player1_id:5, centre_id:1,court_id:12, status: 'pending')    
+# ch20 = Challenge.create(player1_id:4, centre_id:1,court_id:13, status: 'pending') 
 
 
 

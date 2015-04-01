@@ -1,24 +1,28 @@
 
-app.controller('CourtController', ['$scope', '$http', 'CourtService', 'ChallengeService', function($scope, $http, CourtService, ChallengeService){
+app.controller('CourtController', ['$scope', '$http', 'CourtService', 'ChallengeService', 'gps', function($scope, $http, CourtService, ChallengeService, gps){
 
 
 
- $scope.allavailableCourts = []
-  $scope.avbtwoCourts = []
-// Getting all challenge data //
-  $scope.findCourts = function () {
-    CourtService.getCourts()
-    .then(function(response){
-      $scope.temptwo = response.data
-      for (i = 0; i < $scope.temptwo.length; i++) { 
-        $scope.temptwo[i].start_time = basicFormat($scope.temptwo[i].start_time)
-        if ($scope.temptwo[i].availability == 'free')
-        $scope.allavailableCourts.push($scope.temptwo[i])
-      }
-      console.log($scope.allavailableCourts);
-    });
-  }
- 
+$scope.findCourts = function () {
+var x = []
+var y = []
+CourtService.getCourts()
+  .then(function(response){ 
+  x = response.data
+  return x
+  }).then(function(x){
+    dataArray = [];
+    for (var i = 0; i < x.length; i++) {  
+      y = getDistanceFromLatLonInKm(x[i].centre.latitude, x[i].centre.longitude, gps.userLat ,gps.userLon)
+      dataArray.push(y);
+    }
+    return dataArray
+  }).then(function(){
+    $scope.courtsAndDistances = fuckHelpMe(x, dataArray);
+  });
+}
+
+
   
   // Getting all the courts that have been booked by users of this app //
   
@@ -54,20 +58,18 @@ app.controller('CourtController', ['$scope', '$http', 'CourtService', 'Challenge
 
 
  
-// function that books a court //
-$scope.bookCourt = function(court) {
-  // console.log(gon.current_user.id)
-  // console.log(court.id);
-  $scope.court_id = court.id
-  $scope.user_id = gon.current_user.id
-  // console.log($scope.selectedCourt)
-  CourtService.putCourts($scope.court_id, $scope.user_id)
-  .then(function(response){
-    console.log(response)
-    $scope.bookedCourt = response.data
-  });
-};
-
+// ###### function that books a court ###### //
+  $scope.bookCourt = function(court) {
+    $scope.court_id = court.id
+    $scope.user_id = gon.current_user.id
+    // console.log($scope.selectedCourt)
+    CourtService.putCourts($scope.court_id, $scope.user_id)
+    .then(function(response){
+      console.log(response)
+      $scope.bookedCourt = response.data
+    });
+  };
+// ###### function that books a court ###### //
 
 }]);
 
@@ -79,7 +81,21 @@ $scope.bookCourt = function(court) {
 
 
 
-
+//  $scope.allavailableCourts = []
+//   $scope.avbtwoCourts = []
+// // Getting all challenge data //
+//   $scope.findCourts = function () {
+//     CourtService.getCourts()
+//     .then(function(response){
+//       $scope.temptwo = response.data
+//       for (i = 0; i < $scope.temptwo.length; i++) { 
+//         $scope.temptwo[i].start_time = basicFormat($scope.temptwo[i].start_time)
+//         if ($scope.temptwo[i].availability == 'free')
+//         $scope.allavailableCourts.push($scope.temptwo[i])
+//       }
+//       console.log($scope.allavailableCourts);
+//     });
+//   }
 
 
 

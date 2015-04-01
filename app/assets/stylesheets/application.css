@@ -35,6 +35,28 @@
   border: 1px solid #6B1229;
   border-radius: 50%;
 }
+.bookedCourt {
+  border: 2px black solid;
+  padding: 10px;
+  margin: 10px;
+}
+
+.challenge_list {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 3px;
+}
+
+.opponent_list {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 3px;
+}
+.all_courts {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 3px;
+}
 
 .animate-show {
   line-height: 20px;

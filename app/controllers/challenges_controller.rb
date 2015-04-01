@@ -6,6 +6,8 @@ class ChallengesController < ApplicationController
   render json: challenges
  end
 
+
+# should be called challenge_opponenet 
  def accept_challenge
 
     accept_challenge = Challenge.find(params[:id]) 
@@ -16,12 +18,18 @@ class ChallengesController < ApplicationController
     flash[:notice] = "Challenge Accepted"
   end
 
- # def get_challenge_data
- #  challenges = Challenge.all.to_json(:include => [:court, :centre])
- #  users = User.all
- #  all_challenge_data = {user: users, challenges: challenges}
- #  JSON.parse(all_challenge_data)
- # end
+  # def accept_challenge
+  #   find challenge 
+  #   overwrite all player2 data with this user id
+  # update all users view so that they now do not see this challenge 
+  # end 
+
+  # def challenge_user
+  #   update player2 with id of this user 
+  # end
+
+    
+
 
 
  def create

@@ -10,3 +10,4 @@ app.filter('customtime', function () {
     }
   };
 });
+
