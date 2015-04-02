@@ -1,8 +1,22 @@
-<h1>Squash-Tinder App</h1>
 
-<h2><a href="#/profile">Profile</a></h2>
 
-<map lazy-load style="display: block; height: 500px;"
+
+<!-- <div class="navbar my-nav phone">
+<div id="left"><a href="/test/home"><i class="fa fa-home fa-5x"></i></a></div>
+<div id="middle"><a class="brand my-logo" href="/test/home">SSSquash</a></div>
+<div id="right"><a href="profile"><i class="fa fa-user fa-5x"></i></a></div>
+</div> -->
+
+<div class="main-wrapper">
+
+<p>{{ displayTime }}</p>
+
+<a href="phone"><i class="fa fa-mobile fa-2x"></i></a>
+ 
+
+<div ng-controller="MapController"></div>
+
+<map class="map" lazy-load
       zoom="12"
       center="Old Street, London, United Kingdom">
            <marker position="{{ me }}" 
@@ -11,36 +25,45 @@
            ></marker>
        <marker ng-repeat="centre in centres" position="{{ centre.latitude }},{{ centre.longitude}}"></marker>
 </map> 
-<div class="main-info">
-  <p>{{ displayTime }}</p>
-  <p>
 
-  </p>
-</div>
+<div class="main-buttons">
 
 <!-- ######## this shows what courts are available  - ng-show / not working ##### -->
 <div class="court-info" ng-controller="CourtController">
  <button type="button" class="btn btn-primary btn-lg" ng-click="findCourts()">Find a Court</button>
     <ul ng-hide="bookedCourt">
-<!--       <h2>Available courts to book</h2> -->
-      <li class="all_courts" ng-repeat="court in courtsAndDistances | orderBy:['dist','start_time'] | filter:'!booked' " >{{ court.centre.name }} | {{ court.start_time | customtime }} | Distance: {{ court.dist | number:1 }}km's <button type="button" class="btn btn-default btn-sm active" ng-click="bookCourt(court)">Book Now</button>
+     <!--  <h2>Available courts to book</h2> -->
+      <li class="all_courts" ng-repeat="court in courtsAndDistances | orderBy:['dist','start_time'] | filter:'!booked' " >{{ court.centre.name }} | {{ court.start_time | customtime }} | Distance: {{ court.dist | number:1 }}km's <button type="button" class="btn btn-success btn-sm active" ng-click="bookCourt(court)">Book Now</button>
       </li>
     </ul>
-    <div class="bookedCourt" ng-show="bookedCourt"> Court Booked by {{current_user.profile_name}} | {{ bookedCourt.centre_id }} | {{ bookedCourt.time }} | court_no: {{ bookedCourt.court_no}} </br> <button>SHARE</button> | <button>Find Opponent</button> | <button>End</button></div>
+    <!-- **** This is the message and info that is shown once you have booked a court  **** -->
+    <div class="bookedCourt" ng-show="bookedCourt"> Court Successfully Booked! </br> {{ bookedCourt.centre_id }} | {{ bookedCourt.time }} | court_no: {{ bookedCourt.court_no}} </br>  <button type="button" class="btn btn-primary btn-sm active" ng-click="issueChallengewithCourt(bookedCourt)">Find Opponent</button> 
   </div>
   <!-- ######## this shows what courts are available  - ng-show / not working ##### -->
 
 
+
+
+
+
+
+
 <!-- ######### this shows all the pending challenges ########### -->
-  <div class="court-info" ng-controller="ChallengeController">
+  <div class="challenge-info" ng-controller="ChallengeController">
    <button type="button" class="btn btn-default btn-lg" ng-click="findOpponent()">Find an Opponent</button>
-     <ul ng-hide="challengeOffered">
-<!--      <h2>Pending Challenges</h2> -->
-       <li class="challenge_list" ng-repeat="challenge in challengesAndDistances | orderBy:'dist' | limitTo:10"> {{ challenge.court.start_time | customtime }} | {{ challenge.centre.name }} | {{ challenge.dist | number:1}}km's | {{ challenge.player1.profile_name }} | level: {{ challenge.player1.level }} <button type="button" class="btn btn-info btn-sm active" ng-click="challengePlayer1(challenge)">Play</button></li>
-     </ul>
-     <div ng-show="challengeOffered">Game On Baby! Dont be late for your match against {{ player1.name }}</div>
+   <!--  <h2 ng-hide="challengeOffered">Pending Challenges</h2> -->
+       <ul ng-hide="challengeOffered" ng-repeat="challenge in challengesAndDistances | orderBy:'dist' | limitTo:10">
+         <li class="challenge_list"> {{ challenge.court.start_time | customtime }} | {{ challenge.centre.name }} | {{ challenge.dist | number:1}}km's </li>
+         <li class="challenge_list"> {{ challenge.player1.profile_name }} | level: {{ challenge.player1.level }} <button type="button" class="btn btn-info btn-xs">View Profile</button> <button type="button" class="btn btn-info btn-xs active" ng-click="challengePlayer1(challenge)">Play</button></li>
+       </ul>
+     <div ng-show="challengeOffered">Game On Baby! Dont be late for your match! <button type="button" class="btn btn-info btn-xs active">
+     <a href=""></a>View Details</button></div>
   </div>
-  <!-- ######### this shows all the pending challenges ########### -->
+<!-- ######### this shows all the pending challenges ########### -->
+
+</div>
+
+</div>
 
 
 
@@ -49,23 +72,6 @@
 
 
 
-
-<!-- this shows all the courts with a user_id..so courts that have been booked by SqTinder users -->
-
-<!-- THIS LETS YOU ISSUES CHALLENGES ONCE YOU HAVE BOOKED A COURT -->
-  <!-- <ul> -->
-  <!-- <h2>My booked courts</h2>
-    <li ng-repeat="court in bookedbyus"> {{ court.centre.name }} | {{ court.start_time}} | {{ court.user_id }} <button type="button" class="btn btn-default btn-sm active" ng-click="issueChallengewithCourt(court)">Issue Challenge</button> </li>
-  </ul>
- -->
-<!-- </div> -->
-
-
-<div ng-controller="MapController"></div>
-
-
-<!--  <li ng-repeat="court in allavailableCourts">{{ court.availability }} | {{ court.centre.location }} | {{ court.court_no }} | {{ basicformat(court.start_time)}} <button type="button" class="btn btn-default btn-sm active" ng-click="bookCourt(gon.current_user.id); selectCourt(court)">Book Now</button></li>
-  </ul> -->
 
 
 

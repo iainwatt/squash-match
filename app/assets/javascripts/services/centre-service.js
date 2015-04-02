@@ -5,6 +5,7 @@ app.factory('CentreService', ['$http', function($http) {
     getCentres: function() {
       return $http.get('/centres');
     }
+    
   };
   return CentreService;
 }]);

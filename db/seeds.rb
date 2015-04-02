@@ -104,6 +104,10 @@ u1 = User.create(
   password: "password",
   password_confirmation: "password",
   level: "6",
+  matches_played: 100,
+  wins: 32,
+  losses: 39,
+  tagline: "you cant be serious",
   )
 u1.save
 
@@ -115,6 +119,10 @@ u2 = User.create(
   password: "password",
   password_confirmation: "password",
   level: "4",
+  matches_played: 100,
+  wins: 32,
+  losses: 79,
+  tagline: "I thought it was out....",
   )
 u2.save
 
@@ -126,6 +134,10 @@ u3 = User.create(
   password: "password",
   password_confirmation: "password",
   level: "8",
+  matches_played: 200,
+  wins: 132,
+  losses: 39,
+  tagline: "The most decorated captain in the black berets",
   )
 u3.save
 
@@ -137,6 +149,10 @@ u4 = User.create(
   password: "password",
   password_confirmation: "password",
   level: "9",
+  matches_played: 400,
+  wins: 302,
+  losses: 349,
+  tagline: "Run fast or be last",
   )
 u4.save
 
@@ -148,6 +164,10 @@ u5 = User.create(
   password: "password",
   password_confirmation: "password",
   level: "10",
+  matches_played: 600,
+  wins: 421,
+  losses: 39,
+  tagline: "Some call them opponents, I call them victims.",
   )
 u5.save
 
@@ -159,6 +179,10 @@ u6 = User.create(
   password: "password",
   password_confirmation: "password",
   level: "3",
+  matches_played: 700,
+  wins: 292,
+  losses: 39,
+  tagline: "I eat lightning and crap thunder",
   )
 u6.save
 
@@ -170,6 +194,10 @@ u7 = User.create(
   password: "password",
   password_confirmation: "password",
   level: "3",
+  matches_played: 300,
+  wins: 32,
+  losses: 99,
+  tagline: "Losers complain…champions train",
   )
 u7.save
 
@@ -181,6 +209,10 @@ u8 = User.create(
   password: "password",
   password_confirmation: "password",
   level: "5",
+  matches_played: 300,
+  wins: 62,
+  losses: 39,
+  tagline: "My warm up is your work out.",
   )
 u8.save
 

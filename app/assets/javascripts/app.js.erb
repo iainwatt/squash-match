@@ -9,6 +9,7 @@ app.value( 'gps', {
 
 
 
+
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   $routeProvider
   .when('/home', {
@@ -17,12 +18,20 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
   })
   .when('/profile', {
     controller: 'ProfileController',
-    templateUrl: "<%= asset_path('profile.html') %>"   
+    templateUrl: "<%= asset_path('my-profile.html') %>"   
     })
+  .when('/profile/:id', {
+    controller: 'UserProfileController',
+    templateUrl: "<%= asset_path('user-profile.html') %>"  
+    })
+  .when('/phone', {
+    controller: 'PhoneController',
+    templateUrl: "<%= asset_path('phone.html') %>"
+  })
   .otherwise({
     redirectTo: '/home'
   });
 
-  // $locationProvider.html5Mode(true);
+  $locationProvider.html5Mode(true);
 
 }]);

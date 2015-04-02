@@ -18,7 +18,16 @@ class ChallengesController < ApplicationController
     flash[:notice] = "Challenge Accepted"
   end
 
-  # def accept_challenge
+
+ def create
+  challenge = Challenge.create(params.require(:challenges).permit(:player1_id, :court_id, :centre_id))
+  challenge.status = "pending"
+  challenge.save
+  render json: challenge
+ end
+
+
+ # def accept_challenge
   #   find challenge 
   #   overwrite all player2 data with this user id
   # update all users view so that they now do not see this challenge 
@@ -27,16 +36,5 @@ class ChallengesController < ApplicationController
   # def challenge_user
   #   update player2 with id of this user 
   # end
-
-    
-
-
-
- def create
-  challenge = Challenge.create(params.require(:challenges).permit(:player1_id, :court_id, :centre_id))
-  challenge.status = "pending"
-  challenge.save
-  render json: challenge
- end
 
 end

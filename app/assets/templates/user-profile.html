@@ -1,0 +1,41 @@
+<h2><a href="/test/home">Home</a></h2>
+<h2><a href="profile">My Profile</a></h2>
+
+
+<h1 class="title-pen"> User Profile <span>UI</span></h1>
+
+<div class="user-profile">
+  <img class="avatar" ng-src="{{ userInfo.user_image.url }}"/>
+ <div class="username">{{ userInfo.first_name }} {{ userInfo.last_name}}</div>
+ <div class="bio">{{ userInfo.tagline }}</div>
+  <div class="description">
+      I design websites and applications
+      for the web.
+  </div>
+ <ul class="data">
+    <li>
+      W:
+      <span>{{ userInfo.wins }}</span>
+    </li>
+    <li>
+    L:
+      <span>{{ userInfo.losses }}</span>
+    </li>
+    <li>
+      <span>{{ (userInfo.losses/userInfo.wins) * 100 | number:0 }}%</span>
+    </li>
+ </ul>
+ </div> 
+
+ <!--  <img class="user-image" ng-src="{{ userInfo.user_image.url }}"/> -->
+
+
+ <!--  <p class="tagline">"{{ userInfo.tagline }}"</p> -->
+  <!-- <p>{{ userInfo.first_name }} {{ userInfo.last_name}}</p> -->
+  <!-- <p>{{ user.last_name}}</p>
+  <p> aka '{{ userInfo.profile_name}}'</p>
+  <p>level: {{ userInfo.level }}</p> -->
+
+
+
+

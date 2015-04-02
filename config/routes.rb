@@ -19,7 +19,9 @@ Rails.application.routes.draw do
 
   put 'challenges/accept_challenge/:id' => 'challenges#accept_challenge' 
 
+  get 'users/user_profile/:id' => 'users#user_profile'
 
+  get 'users/phone_profile' => 'users#phone_profile'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

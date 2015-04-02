@@ -1,14 +1,19 @@
 <h2><a href="/test/home">Home</a></h2>
-<div class="profile" ng-controller="ProfileController">
+<div class="profile">
 
   <img class="user-image" ng-src="{{ user.user_image.url }}"/>
   <p>{{ user.first_name }} {{ user.last_name}}</p>
  <!--  <p>{{ user.last_name}}</p> -->
   <p> aka '{{ user.profile_name}}'</p>
   <p>level: {{ user.level }}</p>
+  </div>  
 
-  
+
 </div>  
+
+
+<div class="my-profile-info">
+
     <div class="bookings">
       <h2>My Bookings</h2>
       <ul ng-repeat="court in myCourts | limitTo:2">
@@ -22,14 +27,16 @@
       <ul ng-repeat="challenge in myChallenges | limitTo:2">
         <li class="opponent_list"> {{ challenge.court.start_time | customtime }} | {{ challenge.centre.name }}  </li>
         <!-- this needs to send a request to the challenge controller  -->
-        <li class="opponent_list"><strong>Opponent:</strong> {{ challenge.player1.first_name }} {{ challenge.player1.last_name }} | level: {{ challenge.player1.level}} <button type="button" class="btn btn-info btn-xs">View Profile</button> <button type="button" class="btn btn-danger btn-xs">Cancel Match</button> </li>
+        <li class="opponent_list"><strong>Opponent:</strong> {{ challenge.player1.first_name }} {{ challenge.player1.last_name }} | level: {{ challenge.player1.level}} 
+        <button type="button" class="btn btn-info btn-xs" 
+        ng-click="getUserProfile(challenge.player1_id)"
+        >
+        <a href="profile/{{ challenge.player1_id }}">View Profile</a></button> 
+        <button type="button" class="btn btn-danger btn-xs">Cancel Match</button> </li>
       </ul>
-     
-    </div>
+     </div>
 
-    <!-- <div ng-controller="ChallengeController">
-      <li ng-repeat="challenge in challenges | orderBy:['court.start_time','player1.level']"> {{ challenge.court.start_time | customtime }} | {{ challenge.centre.name }} | {{ challenge.player1.profile_name }} | level: {{ challenge.player1.level }} <button type="button" class="btn btn-default btn-sm active" ng-click="challengePlayer1(challenge)">Play</button></li>
+</div>
 
-    </div>
- -->
-<!-- Show users booked courts  -->
+
+  

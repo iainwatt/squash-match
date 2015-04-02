@@ -6,6 +6,12 @@ app.controller('ChallengeController', ['$route', '$scope', '$http', 'ChallengeSe
 console.log(gps.userLat);
 console.log(gps.userLon);
 
+// getting the user data through http request so that i can have access to that id 
+  $http.get('/users/current_user_profile')
+ .success(function(data){
+  $scope.user = data
+ })
+
  
 $scope.findOpponent = function() {
 var x_allChallenges = []
@@ -28,8 +34,6 @@ ChallengeService.getChallenges()
 }
 
 
-
-
 // player2 offering to play player1 \\
   $scope.challengePlayer1 = function(challenge) {
     $scope.challenge_id = challenge.id
@@ -42,17 +46,6 @@ ChallengeService.getChallenges()
     // $route.reload();
   };
 
-// so if certain parameters are met the the match is automatically accepted. and this trigger 'its a match' animation
-
-
-
-
-// getting the user data through http request so that i can have access to that id 
-  $http.get('/users/current_user_profile')
- .success(function(data){
-  $scope.user = data
-  // console.log($scope.user);
- })
 
 
 }]);

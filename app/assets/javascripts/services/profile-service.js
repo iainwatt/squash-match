@@ -6,6 +6,9 @@ app.factory('ProfileService', ['$http', function($http) {
     getProfiles: function() {
       return $http.get('users')
     }
+    // getProfile: function(user) {
+    //   return $http.get('/users/user_profile/'+user), 
+    // }
   };
  return ProfileService
 }]);

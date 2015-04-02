@@ -7,6 +7,16 @@ app.controller('ProfileController', ['$scope', '$http', '$routeParams', 'Profile
   $scope.user = data
  })
 
+ $scope.getUserProfile = function(user) {
+  console.log(user)
+  $http.get('/users/user_profile/'+user)
+ .success(function(data){
+  $scope.userInfo = data
+  console.log($scope.userInfo)
+  })
+ };
+
+
 
 // ## -- getting the courts booked by current_user and the challenges -- ## \\
   UserService.getUsers()
@@ -24,31 +34,8 @@ app.controller('ProfileController', ['$scope', '$http', '$routeParams', 'Profile
 
 
 
-
-
-
-
   
 }]);
 
 
-
-
-
-
-
-//// #### ---- function to accept a pending challenge ---- #### \\\\
-// $scope.acceptChallenge = function(challenge) {
-//     console.log(gon.current_user.id);
-//     console.log(challenge.id);
-//     $scope.challenge_id = challenge.id
-//     $scope.user_id = gon.current_user.id
-//     ChallengeService.putChallenge($scope.challenge_id, $scope.user_id)
-//     .then(function(response){
-//      $scope.challengeOffered = response.data
-//      console.log($scope.challengeOffered);
-//     });
-//     // $route.reload();
-//   };
-  //// #### ---- function to accept a pending challenge ---- #### \\\\
 
