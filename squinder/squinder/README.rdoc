@@ -1,19 +1,8 @@
 == README
 
-Will become a heading
-==============
 
-Will become a sub heading
---------------
-
-*This will be Italic*
-
-**This will be Bold**
-
-- This will be a list item
-- This will be a list item
-
-    Add a indent and this will end up as code
+Project Squash-Tinder
+=============    
 
 **About**
 
@@ -32,33 +21,17 @@ This is a project initiated while I (Iain Watt) was a student at GA. The idea is
 
 This was my first Angular.js project so please excuse some best-practice transgressions that have certainly been committed. It was built on rails, a choice made as it was a framework I was most familiar with at the time.   
 
-**Getting Started**
+**To run locally:
 
+Install the above dependencies, clone and run:
 
-- Forking from Github?
-- Commands to enter?
-- Setting up a DB?
-- Contributions?
+  $ bundle
+  $ rake db:create
+  $ rake db:migrate
+  $ rake db:seed
+  $ rails s
 
+App will be served on localhost:3000 by default.
 
-
-**Database creation** 
-
-
-rake db:create
-This is the command run in the bash when the free postgreSQL version 9.4.0 is available
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* System dependencies
-
-* Configuration
-
-
+*
 
