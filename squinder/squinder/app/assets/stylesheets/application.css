@@ -13,11 +13,150 @@
  *= require_tree .
  *= require_self
  */
+@import url(http://fonts.googleapis.com/css?family=Raleway|Varela+Round|Coda);
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+.title-pen {
+  color: #333;
+  font-family: "Coda", sans-serif;
+  text-align: center;
+}
+.title-pen span {
+  color: #55acee;
+}
+
+.user-profile {
+  margin: auto;
+  width: 25em; 
+  height: 15em;
+  background: #fff;
+  border-radius: .3em;
+  border: .3em solid #daebea;
+}
+
+.user-profile  .username {
+  margin: auto;
+  margin-top: -4.40em;
+  margin-left: 5.80em;
+  color: #658585;
+  font-size: 1.53em;
+  font-family: "Coda", sans-serif;
+  font-weight: bold;
+}
+.user-profile  .bio {
+  margin: auto;
+  display: inline-block;
+  margin-left: 10.43em;
+  color: #e76043; 
+  font-size: .87em;
+  font-family: "varela round", sans-serif;
+}
+.user-profile > .description {
+  margin: auto;
+  margin-top: 1.35em;
+  margin-right: 4.43em;
+  width: 14em;
+  color: #c0c5c5; 
+  font-size: .87em;
+  font-family: "varela round", sans-serif;
+}
+.user-profile > img.avatar {
+  padding: .7em;
+  margin-left: .3em;
+  margin-top: .3em;
+  height: 6.23em;
+  width: 6.23em;
+  border-radius: 18em;
+}
+.user-profile ul.data {
+  margin: 2em auto;
+  height: 3.70em;
+  background: #4eb6b6;
+  text-align: center;
+  border-radius: 0 0 .3em .3em;
+
+}
+.user-profile li {
+  margin: 0 auto;
+  padding: 1.30em; 
+  width: 33.33334%;
+  display: table-cell;
+  text-align: center;
+}
+
+.user-profile span {
+  font-family: "varela round", sans-serif;
+  color: #e3eeee;
+  white-space: nowrap;
+  font-size: 1.27em;
+  font-weight: bold;
+}
+.user-profile span:hover {
+  color: #daebea;
+}
+
+.my-profile-info {
+  margin-left: 3em;
+  margin-right: auto;
+  
+}
+.nav > li > a {
+  padding: 0;
+}
+
+
+
+.nav_container {
+  width: 90%;
+}
+
+.my-nav {
+  border: 2px solid #D4D4D4;
+  border-radius: 5px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: visible;
+  background-color: #F9F9F9;
+}
+
+.my-logo {
+  font-size: 3em;
+  padding-left: 4.5em;
+}
+
+
+
+
+
+.my-right-nav ul {
+margin: 0;
+padding: 0;
+list-style-type: none;
+text-align: center;
+}
+
+.my-right-nav ul li {
+  display: inline;
+}
+
+
+
+.proflie tagline {
+  font-size: .5em;
+}
 
 .main-info {
   text-align: center;
   font-size: 3em;
 }
+
 
 .profile {
   text-align: center;
@@ -29,5 +168,193 @@
   height: 200px;
   border: 1px solid #6B1229;
   border-radius: 50%;
+}
+.bookedCourt {
+  border: .2em black solid;
+  width: 800px;
+  padding: 10px;
+  margin: 10px;
+  margin-right: 0;
+  margin-left: 2.5em;
+  font-size: 2em;
 
 }
+
+.challenge_list {
+  text-decoration: none;
+  list-style-type: none;
+  padding: .5em;
+  font-size: 2em;
+}
+.challenge_list opponent {
+  margin-right: 1em;
+  padding-right: 2em;
+}
+
+.opponent_list {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 3px;
+}
+.all_courts {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 3px;
+  margin-top: 1em;
+  font-size: 2em;
+}
+
+.animate-show {
+  line-height: 20px;
+  opacity: 1;
+  padding: 10px;
+  border: 1px solid black;
+  background: white;
+}
+
+.animate-show.ng-hide-add.ng-hide-add-active,
+.animate-show.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+
+.animate-show.ng-hide {
+  line-height: 0;
+  opacity: 0;
+  padding: 0 10px;
+}
+
+.check-element {
+  padding: 10px;
+  border: 1px solid black;
+  background: white;
+}
+
+
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.iphone {
+  position: relative;
+  background: linear-gradient(135deg, rgba(76,76,76,1) 0%, rgba(77,77,77,1) 10%, rgba(44,44,44,1) 32%, rgba(0,0,0,1) 44%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 80%, rgba(19,19,19,1) 100%);
+  width: 45%;
+  height: 0;
+  padding-top: 95%;
+  margin: 0 auto;
+  border: 5px solid #43b3ed;
+  border-radius: 3rem;
+  box-shadow: 12px 15px 25px 5px rgba(0,0,0,0.45);
+}
+
+.camera {
+  position: absolute;
+  top: 4%;
+  left: 48.5%;
+  background: #202020;
+  width: 3%;
+  height: 0;
+  padding-top: 3%;
+  border-radius: 50%;
+}
+.speaker {
+  position: absolute;
+  top: 7%;
+  left: 42.5%;
+  background: linear-gradient(178deg, rgba(32,32,32,1) 0%, rgba(32,32,32,1) 56%, rgba(102,102,102,1) 100%);
+  width: 15%;
+  height: 0;
+  padding-top: 3%;
+  border-radius: 1em;
+}
+.inside {
+  position: absolute;
+  top: 25%;
+  left: 7%;
+  background: #202020;
+  width: 85%;
+  height: 60%;
+  border-radius: 1em;
+}
+
+.screen {
+  background-color: #f5f5f5;
+  width: 90%;
+  height: 75%;
+  position: absolute;
+  top: 12.5%;
+  left: 5%;
+  box-shadow: inset 1px 2px 8px 0px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+.map {
+  display: block;
+   height: 300px; 
+   width: 800px;
+   margin-left: auto;
+  margin-right: auto;
+   margin-bottom: 2em;
+   padding-left: 0;
+   padding-right: 1em;
+}
+
+.main-wrapper {
+  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  /*border: 1em solid black;*/
+}
+
+.main-buttons {
+
+  margin-left: auto;
+  margin-right: auto;
+}
+.court-info {
+  text-align: center;
+  font-size: 1em;
+  text-decoration: none;
+
+}
+.challenge-info {
+  text-align: center;
+  font-size: 1em;
+  text-decoration: none;
+
+}
+.top-wrapper {
+  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1em solid black;
+  border-radius: .5em;
+}
+
+.bookings  {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.court-button {
+  width: 20em;
+  font-size: 2.8em;
+}
+.opponent-button {
+  width: 20em;
+  font-size: 2.8em;
+  margin-bottom: 1em;
+}
+.booked-courts-list {
+  font-size: 2.5em;
+  text-decoration: none;
+  list-style-type: none;
+
+}
+
+
+
+
+
+
+

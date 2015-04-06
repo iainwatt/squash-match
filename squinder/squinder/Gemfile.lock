@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    CFPropertyList (2.3.1)
     actionmailer (4.2.0)
       actionpack (= 4.2.0)
       actionview (= 4.2.0)
@@ -36,7 +37,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
-    angularjs-rails (1.3.14)
+    angularjs-rails (1.3.15)
     arel (6.0.0)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
@@ -66,14 +67,105 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     erubis (2.7.0)
+    excon (0.45.0)
     execjs (2.4.0)
     faker (1.4.3)
       i18n (~> 0.5)
+    fission (0.5.0)
+      CFPropertyList (~> 2.2)
+    fog (1.28.0)
+      fog-atmos
+      fog-aws (~> 0.0)
+      fog-brightbox (~> 0.4)
+      fog-core (~> 1.27, >= 1.27.3)
+      fog-ecloud
+      fog-json
+      fog-profitbricks
+      fog-radosgw (>= 0.0.2)
+      fog-riakcs
+      fog-sakuracloud (>= 0.0.4)
+      fog-serverlove
+      fog-softlayer
+      fog-storm_on_demand
+      fog-terremark
+      fog-vmfusion
+      fog-voxel
+      fog-xml (~> 0.1.1)
+      ipaddress (~> 0.5)
+      nokogiri (~> 1.5, >= 1.5.11)
+    fog-atmos (0.1.0)
+      fog-core
+      fog-xml
+    fog-aws (0.1.1)
+      fog-core (~> 1.27)
+      fog-json (~> 1.0)
+      fog-xml (~> 0.1)
+      ipaddress (~> 0.8)
+    fog-brightbox (0.7.1)
+      fog-core (~> 1.22)
+      fog-json
+      inflecto (~> 0.0.2)
+    fog-core (1.29.0)
+      builder
+      excon (~> 0.38)
+      formatador (~> 0.2)
+      mime-types
+      net-scp (~> 1.1)
+      net-ssh (>= 2.1.3)
+    fog-ecloud (0.0.2)
+      fog-core
+      fog-xml
+    fog-json (1.0.0)
+      multi_json (~> 1.0)
+    fog-profitbricks (0.0.2)
+      fog-core
+      fog-xml
+      nokogiri
+    fog-radosgw (0.0.3)
+      fog-core (>= 1.21.0)
+      fog-json
+      fog-xml (>= 0.0.1)
+    fog-riakcs (0.1.0)
+      fog-core
+      fog-json
+      fog-xml
+    fog-sakuracloud (1.0.0)
+      fog-core
+      fog-json
+    fog-serverlove (0.1.1)
+      fog-core
+      fog-json
+    fog-softlayer (0.4.1)
+      fog-core
+      fog-json
+    fog-storm_on_demand (0.1.0)
+      fog-core
+      fog-json
+    fog-terremark (0.0.4)
+      fog-core
+      fog-xml
+    fog-vmfusion (0.0.1)
+      fission
+      fog-core
+    fog-voxel (0.0.2)
+      fog-core
+      fog-xml
+    fog-xml (0.1.1)
+      fog-core
+      nokogiri (~> 1.5, >= 1.5.11)
+    formatador (0.2.5)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
+    gon (5.2.3)
+      actionpack (>= 2.3.0)
+      json
+      multi_json
+      request_store (>= 1.0.5)
     gravtastic (3.2.6)
     hike (1.2.3)
     i18n (0.7.0)
+    inflecto (0.0.2)
+    ipaddress (0.8.0)
     jbuilder (2.2.12)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -93,6 +185,9 @@ GEM
     momentjs-rails (2.9.0)
       railties (>= 3.1)
     multi_json (1.11.0)
+    net-scp (1.2.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.9.2)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
@@ -128,6 +223,11 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.4)
+    rails_stdout_logging (0.0.3)
     railties (4.2.0)
       actionpack (= 4.2.0)
       activesupport (= 4.2.0)
@@ -136,8 +236,10 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
+    request_store (1.1.0)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
+    rmagick (2.13.4)
     sass (3.4.13)
     sass-rails (5.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -187,6 +289,8 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   faker
+  fog
+  gon
   gravtastic
   jbuilder (~> 2.0)
   jquery-rails
@@ -195,6 +299,8 @@ DEPENDENCIES
   pry-byebug
   pry-rails
   rails (= 4.2.0)
+  rails_12factor
+  rmagick
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring

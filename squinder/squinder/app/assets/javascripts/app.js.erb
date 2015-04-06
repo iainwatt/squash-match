@@ -1,23 +1,37 @@
 // #= depend_on_asset "index.html"
 
-var app = angular.module('SquinderApp', ['ngRoute', 'ngAnimate', 'ngMap'])
+var app = angular.module('SquinderApp', ['ngRoute', 'ngAnimate', 'ngMap']);
+
+app.value( 'gps', { 
+  userLat: '51.520151399999996',
+  userLon: '-0.0704819'
+});
 
 
 
-  app.config(function($routeProvider, $locationProvider) {
-    $routeProvider
-    .when('/home', {
-      controller: 'CentreController',
-      templateUrl: "<%= asset_path('index.html') %>"
+
+app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+  $routeProvider
+  .when('/home', {
+    controller: 'CentreController',
+    templateUrl: "<%= asset_path('index.html') %>"
+  })
+  .when('/profile', {
+    controller: 'ProfileController',
+    templateUrl: "<%= asset_path('my-profile.html') %>"   
     })
-    .when('/profile', {
-      controller: 'ProfileController',
-      templateUrl: "<%= asset_path('profile.html') %>"   
-      })
-    .otherwise({
-      redirectTo: '/home'
-    });
-
-    $locationProvider.html5Mode(true);
-
+  .when('/profile/:id', {
+    controller: 'UserProfileController',
+    templateUrl: "<%= asset_path('user-profile.html') %>"  
+    })
+  .when('/phone', {
+    controller: 'PhoneController',
+    templateUrl: "<%= asset_path('phone.html') %>"
+  })
+  .otherwise({
+    redirectTo: '/home'
   });
+
+  $locationProvider.html5Mode(true);
+
+}]);

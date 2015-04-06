@@ -1,10 +1,13 @@
 
 
-app.factory('CourtService', function($http){
+app.factory('CourtService', ['$http', function($http) {
   var CourtService = {
     getCourts: function() {
-      return $http.get('http://localhost:3000/courts');
+      return $http.get('/courts');
+    },
+    putCourts: function(court, user) {
+      return $http.put('/courts/book_a_court/'+court, {court:{user_id:user}});
     }
-  };
+   }; 
   return CourtService
-})
+}]);

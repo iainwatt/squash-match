@@ -103,6 +103,11 @@ u1 = User.create(
   email:"jack@email.com",
   password: "password",
   password_confirmation: "password",
+  level: "6",
+  matches_played: 100,
+  wins: 32,
+  losses: 39,
+  tagline: "you cant be serious",
   )
 u1.save
 
@@ -113,6 +118,11 @@ u2 = User.create(
   email:"iain@email.com",
   password: "password",
   password_confirmation: "password",
+  level: "4",
+  matches_played: 100,
+  wins: 32,
+  losses: 79,
+  tagline: "I thought it was out....",
   )
 u2.save
 
@@ -123,6 +133,11 @@ u3 = User.create(
   email:"oli@email.com",
   password: "password",
   password_confirmation: "password",
+  level: "8",
+  matches_played: 200,
+  wins: 132,
+  losses: 39,
+  tagline: "The most decorated captain in the black berets",
   )
 u3.save
 
@@ -133,20 +148,97 @@ u4 = User.create(
   email:"alex@email.com",
   password: "password",
   password_confirmation: "password",
+  level: "9",
+  matches_played: 400,
+  wins: 302,
+  losses: 349,
+  tagline: "Run fast or be last",
   )
 u4.save
 
-ch1 = Challenge.create(player1_id:1)    
-ch2 = Challenge.create(player1_id:2)    
-ch3 = Challenge.create(player1_id:3)    
-ch4 = Challenge.create(player1_id:3)    
-ch5 = Challenge.create(player1_id:3)    
-ch6 = Challenge.create(player1_id:4) 
-ch7 = Challenge.create(player1_id:4)    
-ch8 = Challenge.create(player1_id:4)    
-ch9 = Challenge.create(player1_id:4)    
+u5 = User.create(
+  first_name: "Matt",
+  last_name: "Hawley",
+  profile_name: "MattHawley",
+  email:"matt@email.com",
+  password: "password",
+  password_confirmation: "password",
+  level: "10",
+  matches_played: 600,
+  wins: 421,
+  losses: 39,
+  tagline: "Some call them opponents, I call them victims.",
+  )
+u5.save
+
+u6 = User.create(
+  first_name: "Mary",
+  last_name: "Weiz",
+  profile_name: "WeizMary",
+  email:"mary@email.com",
+  password: "password",
+  password_confirmation: "password",
+  level: "3",
+  matches_played: 700,
+  wins: 292,
+  losses: 39,
+  tagline: "I eat lightning and crap thunder",
+  )
+u6.save
+
+u7 = User.create(
+  first_name: "Paul",
+  last_name: "Recende",
+  profile_name: "Recend_Winner",
+  email:"paul@email.com",
+  password: "password",
+  password_confirmation: "password",
+  level: "3",
+  matches_played: 300,
+  wins: 32,
+  losses: 99,
+  tagline: "Losers complain…champions train",
+  )
+u7.save
+
+u8 = User.create(
+  first_name: "James",
+  last_name: "Bennet",
+  profile_name: "BigJBennet",
+  email:"james@email.com",
+  password: "password",
+  password_confirmation: "password",
+  level: "5",
+  matches_played: 300,
+  wins: 62,
+  losses: 39,
+  tagline: "My warm up is your work out.",
+  )
+u8.save
+
+ch1 = Challenge.create(player1_id:1, centre_id:1,court_id:1, status: 'pending')    
+ch2 = Challenge.create(player1_id:1, centre_id:1,court_id:2, status: 'pending')    
+ch3 = Challenge.create(player1_id:2, centre_id:2,court_id:22, status: 'pending')    
+ch4 = Challenge.create(player1_id:2, centre_id:3,court_id:31, status: 'pending')    
+ch5 = Challenge.create(player1_id:3, centre_id:3,court_id:32, status: 'pending')    
+ch6 = Challenge.create(player1_id:3, centre_id:3,court_id:33, status: 'pending') 
+ch7 = Challenge.create(player1_id:4, centre_id:3,court_id:34, status: 'pending')    
+ch8 = Challenge.create(player1_id:4, centre_id:2,court_id:19, status: 'pending')    
+ch9 = Challenge.create(player1_id:5, centre_id:2,court_id:20, status: 'pending')    
+ch10 = Challenge.create(player1_id:5, centre_id:1,court_id:3, status: 'pending')    
+ch11 = Challenge.create(player1_id:6, centre_id:1,court_id:4, status: 'pending') 
+ch12 = Challenge.create(player1_id:6, centre_id:1,court_id:5, status: 'pending')    
+ch13 = Challenge.create(player1_id:7, centre_id:1,court_id:6, status: 'pending')    
+ch14 = Challenge.create(player1_id:7, centre_id:1,court_id:7, status: 'pending')    
+ch15 = Challenge.create(player1_id:8, centre_id:1,court_id:8, status: 'pending')    
+ch16 = Challenge.create(player1_id:8, centre_id:1,court_id:9, status: 'pending') 
 
 
+ 
+# ch17 = Challenge.create(player1_id:8, centre_id:1,court_id:10, status: 'pending')    
+# ch18 = Challenge.create(player1_id:6, centre_id:1,court_id:11, status: 'pending')    
+# ch19 = Challenge.create(player1_id:5, centre_id:1,court_id:12, status: 'pending')    
+# ch20 = Challenge.create(player1_id:4, centre_id:1,court_id:13, status: 'pending') 
 
 
 
