@@ -1,5 +1,3 @@
-== README
-
 
 Project Squash-Tinder
 =============    
