@@ -8,4 +8,7 @@ app.controller('UserProfileController', ['$scope', '$http', '$routeParams', 'Pro
   console.log($scope.userInfo)
  })
 
+
+ 
+
 }])

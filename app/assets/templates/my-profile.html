@@ -1,4 +1,4 @@
-<h2><a href="/test/home">Home</a></h2>
+<!-- <h2><a href="/test/home">Home</a></h2> -->
 <div class="profile">
 
   <img class="user-image" ng-src="{{ user.user_image.url }}"/>
@@ -11,20 +11,22 @@
 
 </div>  
 
+<h4><a href="/users/edit">Edit</a></h4>
+<h4><a href="/users/sign_out" data-method="delete">Sign Out</a></h4>
 
 <div class="my-profile-info">
 
     <div class="bookings">
       <h2>My Bookings</h2>
-      <ul ng-repeat="court in myCourts | limitTo:2">
-        <li class="opponent_list">{{ court.start_time | customtime }} | {{ court.centre.name }} <button type="button" class="btn btn-info btn-xs">Find Opponent</button> <button type="button" class="btn btn-warning btn-xs">Cancel Booking</button> </li>
+      <ul ng-repeat="court in myCourts | limitTo:5">
+        <li class="booked-courts-list">{{ court.start_time | customtime }} | {{ court.centre.name }} <button type="button" class="btn btn-info btn-sm">Find Opponent</button> <button type="button" class="btn btn-warning btn-sm">Cancel Booking</button> </li>
       </ul>
      
     </div>
 
     <div class="challenges">
       <h2>My Matches</h2>
-      <ul ng-repeat="challenge in myChallenges | limitTo:2">
+      <ul ng-repeat="challenge in myChallenges | limitTo:5">
         <li class="opponent_list"> {{ challenge.court.start_time | customtime }} | {{ challenge.centre.name }}  </li>
         <!-- this needs to send a request to the challenge controller  -->
         <li class="opponent_list"><strong>Opponent:</strong> {{ challenge.player1.first_name }} {{ challenge.player1.last_name }} | level: {{ challenge.player1.level}} 

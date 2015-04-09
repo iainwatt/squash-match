@@ -100,9 +100,9 @@
 }
 
 .my-profile-info {
-  margin-left: auto;
+  margin-left: 3em;
   margin-right: auto;
-
+  
 }
 .nav > li > a {
   padding: 0;
@@ -170,15 +170,25 @@ text-align: center;
   border-radius: 50%;
 }
 .bookedCourt {
-  border: 2px black solid;
+  border: .2em black solid;
+  width: 800px;
   padding: 10px;
   margin: 10px;
+  margin-right: 0;
+  margin-left: 2.5em;
+  font-size: 2em;
+
 }
 
 .challenge_list {
   text-decoration: none;
   list-style-type: none;
-  padding: 3px;
+  padding: .5em;
+  font-size: 2em;
+}
+.challenge_list opponent {
+  margin-right: 1em;
+  padding-right: 2em;
 }
 
 .opponent_list {
@@ -190,6 +200,8 @@ text-align: center;
   text-decoration: none;
   list-style-type: none;
   padding: 3px;
+  margin-top: 1em;
+  font-size: 2em;
 }
 
 .animate-show {
@@ -279,33 +291,110 @@ text-align: center;
 .map {
   display: block;
    height: 300px; 
-   width: 500px;
+   width: 800px;
+   margin-left: auto;
+  margin-right: auto;
    margin-bottom: 2em;
+   padding-left: 0;
+   padding-right: 1em;
 }
 
 .main-wrapper {
-  width: 90%;
+  width: 940px;
   margin-left: auto;
-  margin-right: auto:
+  margin-right: auto;
+  /*border: 1em solid black;*/
 }
 
 .main-buttons {
-  display: inline-block;
+
+  margin-left: auto;
+  margin-right: auto;
 }
 .court-info {
   text-align: center;
   font-size: 1em;
   text-decoration: none;
-  float: left
+
 }
 .challenge-info {
   text-align: center;
   font-size: 1em;
   text-decoration: none;
-  float: right;
+
+}
+.top-wrapper {
+  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1em solid black;
+  border-radius: .5em;
+}
+
+.bookings  {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.court-button {
+  width: 20em;
+  font-size: 2.8em;
+}
+.opponent-button {
+  width: 20em;
+  font-size: 2.8em;
+  margin-bottom: 1em;
+}
+.booked-courts-list {
+  font-size: 2.5em;
+  text-decoration: none;
+  list-style-type: none;
+
+}
+
+.shot .title {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 
+.stats {
+  background: #CCC;
+  opacity: 0.5;
+  text-align: center;
+  padding: 4px 0;
+}
+
+.stats .stat {
+  padding: 5px;
+}
+
+.shot_image {
+  width: 100%;
+}
+
+
+.shot_header {
+  margin-bottom: 20px;
+}
+
+.shot_header h1 {
+  font-size: 24px;
+  line-height: 1;
+  margin-top: 5px;
+}
+
+.shot_header img {
+  height: 60px;
+}
+
+
+.comment img {
+  height: 60px;
+  width: 60px;
+}
 
 
 

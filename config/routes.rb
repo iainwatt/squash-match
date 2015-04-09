@@ -9,19 +9,23 @@ Rails.application.routes.draw do
   resources :courts
   resources :challenges
 
+  get '/test/landing' => 'static#index', as: 'landing'
+
+  # get '/test/home' => 'static#index', as: 'home'
+
   get 'users/get_all_users' => 'users#get_all_users'
 
   put 'courts/book_a_court/:id' => 'courts#book_a_court'
 
   get 'users/current_user_profile' => 'users#current_user_profile'
   
-  get '/test/home' => 'static#index', as: 'home'
-
   put 'challenges/accept_challenge/:id' => 'challenges#accept_challenge' 
 
   get 'users/user_profile/:id' => 'users#user_profile'
 
   get 'users/phone_profile' => 'users#phone_profile'
+
+  get 'users/all_users' => 'users#all_users'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

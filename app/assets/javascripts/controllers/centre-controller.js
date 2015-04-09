@@ -16,9 +16,30 @@ $http.get('/users/current_user_profile')
   }
   updateTime();
 
+  CentreService.getCentres()
+  .then(function(response) {
+    $scope.centres = response.data;
+    // console.log($scope.centre);
+  });
+
 
 
 }]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

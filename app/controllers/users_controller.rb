@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
   def get_all_users
     users = User.all.to_json(include: [{ courts: {include: :centre }}, { challenges: {include: [:player2, :player1, :centre, :court]}}])
-    render json: users
+      render json: users
   end
 
   def current_user_profile
@@ -21,6 +21,12 @@ class UsersController < ApplicationController
   def phone_profile
 
   end
+
+  def all_users
+    all_app_users = User.all.to_json
+    render json: all_app_users
+  end
+
 
   
 

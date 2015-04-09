@@ -21,29 +21,31 @@
 
 
 
-
+<div class="top-wrapper">
     <div class="navbar my-nav">
      <div class="navbar-inner">
       <a href="/test/home"><i class="fa fa-home fa-5x"></i></a>
-      <a class="my-logo">SSSquash</a>
+      <a class="my-logo">Tdr-Squash</a>
      
       
      
      
       <ul class='nav pull-right'>
+      <a href="users/all_users"><i class="fa fa-circle fa-2x"></i></a>
+      <a href="phone"><i class="fa fa-mobile fa-2x"></i></a>
       <a href="profile"><i class="fa fa-user fa-5x"></i></a>
-<!--       
+
         <% if user_signed_in? %>
           <li>
             <% if current_user.email? %>
               <%= current_user.email %>
-            <% end %>
+            <% end %> 
           </li>
           <li>
-            <%= link_to "Edit", edit_user_registration_path, target: "_self"%>
+          <!--   <%= link_to "Edit", edit_user_registration_path, target: "_self"%> -->
           </li>
           <li>
-            <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+            <%= link_to "Logout", destroy_user_session_path, method: :delete %> 
           </li>
         <% else %>
           <li>
@@ -53,9 +55,9 @@
           <%= link_to "Sign Up", new_user_registration_path, target: "_self"%>
           </li>
         <% end %>
-        </ul> -->
+        </ul>
         </div>
-      </div>
+      </div> 
 
    
     <% if !user_signed_in? %>
@@ -72,6 +74,7 @@
     <ng-view></ng-view>
 
    <% end %>
+   </div>
 
 </body>
 </html>

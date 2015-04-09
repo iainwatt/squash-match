@@ -12,10 +12,14 @@ app.value( 'gps', {
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   $routeProvider
-  .when('/home', {
-    controller: 'CentreController',
-    templateUrl: "<%= asset_path('index.html') %>"
+  .when('/landing', {
+    controller: 'LandingPageController',
+    templateUrl: "<%= asset_path('landing-page.html') %>"
   })
+  // // .when('/home', {
+  // //   controller: 'CentreController',
+  // //   templateUrl: "<%= asset_path('index.html') %>"
+  // })
   .when('/profile', {
     controller: 'ProfileController',
     templateUrl: "<%= asset_path('my-profile.html') %>"   
@@ -28,8 +32,12 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     controller: 'PhoneController',
     templateUrl: "<%= asset_path('phone.html') %>"
   })
+  .when('/users/all_users', {
+    controller: 'AllUsersController',
+    templateUrl: "<%= asset_path('all-users.html') %>"
+  })
   .otherwise({
-    redirectTo: '/home'
+    redirectTo: '/landing'
   });
 
   $locationProvider.html5Mode(true);
