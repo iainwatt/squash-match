@@ -6,6 +6,9 @@
  <!--  <p>{{ user.last_name}}</p> -->
   <p> aka '{{ user.profile_name}}'</p>
   <p>level: {{ user.level }}</p>
+  <p>W: {{ user.wins}}</p>
+  <p>L: {{ user.losses }}</p>
+  <p>%: {{ (user.losses/user.wins) * 100 | number:0 }}%</p>
   </div>  
 
 
@@ -34,7 +37,10 @@
         ng-click="getUserProfile(challenge.player1_id)"
         >
         <a href="profile/{{ challenge.player1_id }}">View Profile</a></button> 
-        <button type="button" class="btn btn-danger btn-xs">Cancel Match</button> </li>
+        <button type="button" class="btn btn-danger btn-xs">Cancel Match</button> 
+        <button type="button" class="btn btn-success btn-xs" ng-click="logWin(challenge)">Log Win</button>
+        <button type="button" class="btn btn-warning btn-xs">Log Loss</button>
+        </li>
       </ul>
      </div>
 

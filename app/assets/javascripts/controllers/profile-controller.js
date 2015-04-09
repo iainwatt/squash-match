@@ -33,6 +33,20 @@ app.controller('ProfileController', ['$scope', '$http', '$routeParams', 'Profile
 // ## -- getting the courts booked by current_user and the challenges -- ## \\
 
 
+$scope.logWin = function(challenge) {
+ $scope.opponent_id = challenge.player1.id 
+ $scope.opponentLosses = (challenge.player1.losses + 1) 
+ $scope.winner = gon.current_user.id
+ $scope.youWin = (gon.current_user.wins + 1)
+ console.log($scope.opponent_id)
+ console.log($scope.opponentLosses)
+ console.log($scope.winner)
+ console.log($scope.youWin)
+
+};
+
+
+
 
   
 }]);

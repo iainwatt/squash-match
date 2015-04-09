@@ -16,10 +16,10 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     controller: 'LandingPageController',
     templateUrl: "<%= asset_path('landing-page.html') %>"
   })
-  // // .when('/home', {
-  // //   controller: 'CentreController',
-  // //   templateUrl: "<%= asset_path('index.html') %>"
-  // })
+  .when('/home', {
+    controller: 'CentreController',
+    templateUrl: "<%= asset_path('index.html') %>"
+  })
   .when('/profile', {
     controller: 'ProfileController',
     templateUrl: "<%= asset_path('my-profile.html') %>"   
