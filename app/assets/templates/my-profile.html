@@ -1,14 +1,15 @@
 <!-- <h2><a href="/test/home">Home</a></h2> -->
 <div class="profile">
 
-  <img class="user-image" ng-src="{{ user.user_image.url }}"/>
-  <p>{{ user.first_name }} {{ user.last_name}}</p>
- <!--  <p>{{ user.last_name}}</p> -->
-  <p> aka '{{ user.profile_name}}'</p>
-  <p>level: {{ user.level }}</p>
-  <p>W: {{ user.wins}}</p>
-  <p>L: {{ user.losses }}</p>
-  <p>%: {{ (user.losses/user.wins) * 100 | number:0 }}%</p>
+    <img class="user-image" ng-src="{{ user.user_image.url }}"/>
+    <p>{{ user.first_name }} {{ user.last_name}}</p>
+    <p> aka '{{ user.profile_name}}'</p>
+    <p>level: {{ user.level }}</p>
+    <div id="win-loss-bar">
+      <p class="win-loss-info">W: {{ user.wins}}</p>
+      <p class="win-loss-info">L: {{ user.losses }}</p>
+      <p class="win-loss-info">Win %: {{ (user.losses/user.wins) * 100 | number:0 }}%</p>
+    </div>
   </div>  
 
 
@@ -22,24 +23,64 @@
     <div class="bookings">
       <h2>My Bookings</h2>
       <ul ng-repeat="court in myCourts | limitTo:5">
-        <li class="booked-courts-list">{{ court.start_time | customtime }} | {{ court.centre.name }} <button type="button" class="btn btn-info btn-sm">Find Opponent</button> <button type="button" class="btn btn-warning btn-sm">Cancel Booking</button> </li>
-      </ul>
-     
+        <li class="booked-courts-list">
+          {{ court.start_time | customtime }} | {{ court.centre.name }} 
+
+          <button 
+            type="button" 
+            class="btn btn-info btn-sm">
+            Find Opponent
+          </button> 
+
+          <button 
+            type="button" 
+            class="btn btn-warning btn-sm">
+            Cancel Booking
+          </button> 
+
+        </li>
+      </ul>     
     </div>
 
     <div class="challenges">
       <h2>My Matches</h2>
       <ul ng-repeat="challenge in myChallenges | limitTo:5">
-        <li class="opponent_list"> {{ challenge.court.start_time | customtime }} | {{ challenge.centre.name }}  </li>
-        <!-- this needs to send a request to the challenge controller  -->
-        <li class="opponent_list"><strong>Opponent:</strong> {{ challenge.player1.first_name }} {{ challenge.player1.last_name }} | level: {{ challenge.player1.level}} 
-        <button type="button" class="btn btn-info btn-xs" 
-        ng-click="getUserProfile(challenge.player1_id)"
-        >
-        <a href="profile/{{ challenge.player1_id }}">View Profile</a></button> 
-        <button type="button" class="btn btn-danger btn-xs">Cancel Match</button> 
-        <button type="button" class="btn btn-success btn-xs" ng-click="logWin(challenge)">Log Win</button>
-        <button type="button" class="btn btn-warning btn-xs">Log Loss</button>
+
+        <li class="opponent_list"> 
+          {{ challenge.court.start_time | customtime }} | {{ challenge.centre.name }}  
+        </li>
+       
+        <li class="opponent_list">
+          <strong>Opponent:</strong> 
+          {{ challenge.player1.first_name }} {{ challenge.player1.last_name }} | level: {{ challenge.player1.level}} 
+
+          <button 
+            type="button" 
+            class="btn btn-info btn-xs" 
+            ng-click="getUserProfile(challenge.player1_id)">
+            <a href="profile/{{ challenge.player1_id }}">View Profile</a>
+          </button> 
+
+          <button 
+            type="button" 
+            class="btn btn-danger btn-xs"
+            ng-click="destroyChallenge(challenge)">
+            Cancel Match
+          </button> 
+
+          <button 
+            type="button" 
+            class="btn btn-success btn-xs" 
+            ng-click="logWin(challenge)">
+            Log Win 
+          </button>
+          
+          <button 
+            type="button" 
+            class="btn btn-warning btn-xs"
+            ng-click="logLoss(challenge)">
+            Log Loss
+          </button>
         </li>
       </ul>
      </div>

@@ -27,6 +27,12 @@ Rails.application.routes.draw do
 
   get 'users/all_users' => 'users#all_users'
 
+  put 'users/log_win/:id' => 'users#log_win'
+
+  put 'users/log_loss/:id' => 'users#log_loss'
+
+  delete 'challenges/end_challenge/:id' => 'challenges#end_challenge'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

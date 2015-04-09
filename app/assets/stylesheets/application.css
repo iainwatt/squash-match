@@ -100,8 +100,10 @@
 }
 
 .my-profile-info {
-  margin-left: 3em;
+  margin-left: auto;
   margin-right: auto;
+  width: 80%;
+  font-size: .6em;
   
 }
 .nav > li > a {
@@ -161,7 +163,26 @@ text-align: center;
 .profile {
   text-align: center;
   font-size: 3em;
+  background: #54ACEE;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: .2em;
+  
 }
+.profile img {
+  margin-top: .3em;
+}
+.profile .win-loss-info {
+  display: inline-block;
+  
+}
+.profile #win-loss-bar {
+  background: #ADD8FA;
+  border-radius: .2em;
+  font-size: .7em;
+}
+
 
 .user-image {
   width: 200px;

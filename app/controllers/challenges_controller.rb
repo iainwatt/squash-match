@@ -9,7 +9,6 @@ class ChallengesController < ApplicationController
 
 # should be called challenge_opponenet 
  def accept_challenge
-
     accept_challenge = Challenge.find(params[:id]) 
     accept_challenge.status = "Game on!"
     accept_challenge.player2_id = params[:challenge][:player2_id]
@@ -23,6 +22,12 @@ class ChallengesController < ApplicationController
   challenge = Challenge.create(params.require(:challenges).permit(:player1_id, :court_id, :centre_id))
   challenge.status = "pending"
   challenge.save
+  render json: challenge
+ end
+
+ def end_challenge
+  challenge = Challenge.find(params[:id])
+  challenge.destroy
   render json: challenge
  end
 

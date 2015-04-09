@@ -1,3 +1,25 @@
 users/edit
 /test/profile -  http://localhost:3000/#/profile
 /test/home
+
+
+
+// $scope.logWin = function(challenge) {
+//  $scope.opponent_id = challenge.player1.id 
+//  $scope.opponentLosses = (challenge.player1.losses + 1) 
+//  $scope.winner = gon.current_user.id
+//  $scope.youWin = (gon.current_user.wins + 1)
+//  // console.log($scope.opponent_id)
+//  // console.log($scope.opponentLosses)
+//  // console.log($scope.winner)
+//  // console.log($scope.youWin)
+//  UserService.putUser($scope.winner, $scope.youWin)
+//     .then(function(response){
+//      $scope.updatedResults = response.data
+//     });
+// };
+
+
+
+ putUsers: function() {
+      return $http.put('/users/log_win/'+user')
