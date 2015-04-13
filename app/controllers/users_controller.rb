@@ -37,6 +37,36 @@ class UsersController < ApplicationController
   end
 
 
+  def log_opponent_loss
+    log_opponent_loss = User.find(params[:id])
+    log_opponent_loss.losses = params[:challenge][:losses]
+    log_opponent_loss.save
+    render json: log_opponent_loss
+  end
+
+  def log_opponent_win
+    log_opponent_win = User.find(params[:id])
+    log_opponent_win.wins = params[:challenge][:wins]
+    log_opponent_win.save
+    render json: log_opponent_win
+  end
+
+  def new_user_elo
+    new_user_elo = User.find(params[:id])
+    new_user_elo.elo = params[:challenge][:elo]
+    new_user_elo.save
+    render json: new_user_elo
+  end
+
+  def new_opponent_elo
+    new_opponent_elo = User.find(params[:id])
+    new_opponent_elo.elo = params[:challenge][:elo]
+    new_opponent_elo.save
+    render json: new_opponent_elo
+  end
+
+  
+
 
 
   def all_users

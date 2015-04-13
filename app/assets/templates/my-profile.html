@@ -4,11 +4,12 @@
     <img class="user-image" ng-src="{{ user.user_image.url }}"/>
     <p>{{ user.first_name }} {{ user.last_name}}</p>
     <p> aka '{{ user.profile_name}}'</p>
-    <p>level: {{ user.level }}</p>
+    <p>ELO: {{ user.elo }}</p>
     <div id="win-loss-bar">
       <p class="win-loss-info">W: {{ user.wins}}</p>
       <p class="win-loss-info">L: {{ user.losses }}</p>
-      <p class="win-loss-info">Win %: {{ (user.losses/user.wins) * 100 | number:0 }}%</p>
+      <p class="win-loss-info">Win %: {{ (user.wins/(user.losses + user.wins)) * 100 | number:0 }}%</p>
+      <!-- <p class="win-loss-info">ELO: {{ user.elo }}</p> -->
     </div>
   </div>  
 
@@ -81,6 +82,7 @@
             ng-click="logLoss(challenge)">
             Log Loss
           </button>
+
         </li>
       </ul>
      </div>

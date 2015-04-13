@@ -31,6 +31,14 @@ Rails.application.routes.draw do
 
   put 'users/log_loss/:id' => 'users#log_loss'
 
+  put 'users/log_opponent_loss/:id' => 'users#log_opponent_loss'
+
+  put 'users/log_opponent_win/:id' => 'users#log_opponent_win'
+
+  put 'users/new_user_elo/:id' => 'users#new_user_elo'
+
+  put 'users/new_opponent_elo/:id' => 'users#new_opponent_elo'
+
   delete 'challenges/end_challenge/:id' => 'challenges#end_challenge'
 
 

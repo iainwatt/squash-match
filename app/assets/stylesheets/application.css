@@ -1,5 +1,6 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * This is a manifest file that'll be compiled into application.css, which will include 
+  the files
  * listed below.
  *
  * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
@@ -123,17 +124,22 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   overflow: visible;
-  background-color: #F9F9F9;
+  background-color: #2E2E2E;
 }
 
 .my-logo {
+/*  font-size: 90px;*/
+  font-family: 'Open Sans',sans-serif;
+  color: #44A2C0;
+  text-shadow: 0 8px 0 rgba(0,0,0,.15);
+  margin: 0;
+  padding: 30px 0;
   font-size: 3em;
   padding-left: 4.5em;
+  
 }
-
-
 
 
 
@@ -180,7 +186,7 @@ text-align: center;
 .profile #win-loss-bar {
   background: #ADD8FA;
   border-radius: .2em;
-  font-size: .7em;
+  font-size: .6em;
 }
 
 
@@ -314,7 +320,8 @@ text-align: center;
    height: 300px; 
    width: 800px;
    margin-left: auto;
-  margin-right: auto;
+   margin-right: auto;
+   margin-top: 1em;
    margin-bottom: 2em;
    padding-left: 0;
    padding-right: 1em;
@@ -417,8 +424,50 @@ text-align: center;
   width: 60px;
 }
 
+.all-users-page {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.all-users-page img {
+  padding-top: 1em;
+  width: 8em;
+  height: 8em;
+}
+.all-users-page #elo {
+  text-align: right;
+}
 
 
+.nvgt{
+    position:absolute;
+    top: 120px;
+    height: 50px;
+    width: 30px;
+    opacity: 0.6;
+}
+.nvgt:hover{
+    opacity: 0.9;
+}
+#prev{
+    background: #000 url('./image/prev.png') no-repeat center;
+    left: 0px;
+}
+#next{
+    background: #000 url('./image/next.png') no-repeat center;
+    right: 0px;
+}
 
+.find-court-button {
+  background-color: #AF4FDD;
+}
+
+.find-opponent-button {
+  width: 20em;
+  font-size: 2.8em;
+  margin-bottom: 1em;
+  background-color: #E449A1;
+}
 
 

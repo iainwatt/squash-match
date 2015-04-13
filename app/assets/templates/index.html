@@ -30,9 +30,22 @@
 
 <!-- ######## this shows what courts are available  - ng-show / not working ##### -->
 <div class="court-info" ng-controller="CourtController">
- <div class="bookedCourt" ng-show="bookedCourt"> Court Successfully Booked! </br> {{ bookedCourt.centre_id }} | {{ bookedCourt.time }} | court_no: {{ bookedCourt.court_no}} </br>  <button type="button" class="btn btn-primary btn-sm active" ng-click="issueChallengewithCourt(bookedCourt)">Find Opponent</button> 
+ <div class="bookedCourt" ng-show="bookedCourt"> Court Successfully Booked! </br> {{ bookedCourt.centre_id }} | {{ bookedCourt.time }} | court_no: {{ bookedCourt.court_no}} </br>  
+
+  <button type="button" 
+      class="btn btn-primary btn-sm active" 
+      ng-click="issueChallengewithCourt(bookedCourt)">
+      Find Opponent
+  </button> 
+
   </div>
- <button type="button" class="btn btn-primary btn-lg court-button" ng-click="findCourts()">Find a Court</button>
+
+  <button type="button" 
+    class="btn btn-default btn-lg court-button find-court-button" 
+    ng-click="findCourts()">
+    Find a Court 
+  </button>
+
     <ul ng-hide="bookedCourt">
      <!--  <h2>Available courts to book</h2> -->
       <li class="all_courts" ng-repeat="court in courtsAndDistances | orderBy:['dist','start_time'] | filter:'!booked' " >{{ court.centre.name }} | {{ court.start_time | customtime }} | Distance: {{ court.dist | number:1 }}km's <button type="button" class="btn btn-success btn-sm active" ng-click="bookCourt(court)">Book Now</button>
@@ -51,7 +64,13 @@
 
 <!-- ######### this shows all the pending challenges ########### -->
   <div class="challenge-info" ng-controller="ChallengeController">
-   <button type="button" class="btn btn-default btn-lg opponent-button" ng-click="findOpponent()">Find an Opponent</button>
+
+   <button type="button" 
+      class="btn btn-default btn-lg find-opponent-button" 
+      ng-click="findOpponent()">
+      Find an Opponent
+   </button>
+
    <!--  <h2 ng-hide="challengeOffered">Pending Challenges</h2> -->
        <ul ng-hide="challengeOffered" ng-repeat="challenge in challengesAndDistances | orderBy:'dist' | limitTo:10">
          <li class="challenge_list"><strong>location: </strong> {{ challenge.court.start_time | customtime }} | {{ challenge.centre.name }} | {{ challenge.dist | number:1}}km's </li>
