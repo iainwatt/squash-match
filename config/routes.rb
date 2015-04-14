@@ -19,7 +19,9 @@ Rails.application.routes.draw do
 
   get 'users/current_user_profile' => 'users#current_user_profile'
   
-  put 'challenges/accept_challenge/:id' => 'challenges#accept_challenge' 
+  put 'challenges/challenge_opponent/:id' => 'challenges#challenge_opponent' 
+
+  put 'challenges/challenge_accepted/:id' => 'challenges#challenge_accepted'
 
   get 'users/user_profile/:id' => 'users#user_profile'
 

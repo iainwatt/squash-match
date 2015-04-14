@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
 
    before_create :set_default_elo
    before_create :set_default_tagline
+   before_create :set_ninja_rank
    # before_save :set_default_tagline
   #  if self.user_image.url = nil 
   #   self.user_image.url = 'blanca/jpg'
@@ -40,13 +41,13 @@ class User < ActiveRecord::Base
   end  
 
   def set_ninja_rank 
-    if elo = 2800 
+    if elo == 2800 
       self.rank = "Kage"
-    elsif elo = (2400..2799)
+    elsif elo == (2400..2799)
       self.rank = "Jonin"
-    elsif elo = (2100..2399)
+    elsif elo == (2100..2399)
       self.rank = "Chūnin"
-    elsif elo = (1700..2099)
+    elsif elo == (1700..2099)
       self.rank = "Genin"
     else 
       self.rank = "Young grasshopper"

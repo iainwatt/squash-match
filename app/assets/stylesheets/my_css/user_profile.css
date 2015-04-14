@@ -1,0 +1,81 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway|Varela+Round|Coda);
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+.title-pen {
+  color: #333;
+  font-family: "Coda", sans-serif;
+  text-align: center;
+}
+.title-pen span {
+  color: #55acee;
+}
+
+.user-profile {
+  margin: auto;
+  width: 25em; 
+  border-radius: .3em;
+  border: .3em solid #507BD5;
+}
+.user-profile .user-username {
+  background-color: #3E5A74;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.user-profile  .username {
+  margin: auto;
+  color: #FD8586;
+  font-size: 1.8em;
+  font-family: "Coda", sans-serif;
+  font-weight: bold;
+}
+
+.user-profile  .bio {
+  margin: auto;
+  color: #FD8586; 
+  font-size: .87em;
+  font-family: "varela round", sans-serif;
+}
+.user-profile  .user-elo {
+  color: #FD8586; 
+}
+
+.user-profile > img.avatar {
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  margin-bottom: .5em;
+}
+.user-profile ul.data {
+  margin-bottom: 0;
+  margin-top: 0;
+  height: 3.70em;
+  background: #456481;
+  text-align: center;
+
+
+}
+.user-profile li {
+  margin: 0 auto;
+  padding: 1.30em; 
+  width: 33.33334%;
+  display: table-cell;
+  text-align: center;
+}
+
+.user-profile span {
+  font-family: "varela round", sans-serif;
+  color: #e3eeee;
+  white-space: nowrap;
+  font-size: 1.27em;
+  font-weight: bold;
+}
+.user-profile span:hover {
+  color: #daebea;
+}

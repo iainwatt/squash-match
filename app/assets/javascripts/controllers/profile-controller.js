@@ -5,6 +5,7 @@ app.controller('ProfileController', ['$scope', '$http', '$routeParams', 'Profile
   $http.get('/users/current_user_profile')
  .success(function(data){
   $scope.user = data
+  console.log($scope.user)
   })
 
  $scope.getUserProfile = function(user) {
@@ -22,18 +23,31 @@ app.controller('ProfileController', ['$scope', '$http', '$routeParams', 'Profile
   UserService.getUsers()
   .then(function(response) {
     console.log(response.data);
-
     mybookings = response.data
     for (i = 0; i < mybookings.length; i++ ) {
-      // console.log(mybookings[i].courts)
-      // console.log(mybookings[i].challenges)
-      // console.log(gon.current_user.id)
-
       $scope.myCourts = mybookings[i].courts
       $scope.myChallenges = mybookings[i].challenges
     }
   })
 
+// ########## -- Accept a challenge 
+$scope.acceptChallenge = function(challenge) {
+  console.log(challenge)
+  $scope.challenge = challenge.id
+
+  ChallengeService.acceptChallenge($scope.challenge)
+  .then(function(response){
+      console.log("Challenge Accepted");
+      console.log(response);
+    })
+
+
+  // alertService.add("warning", "This is a warning.");
+
+
+
+
+} 
 
 // ########## -- Logging win information for current user, loss info for opponenet and destroying the challenge.
   $scope.logWin = function(challenge) {
@@ -116,6 +130,23 @@ app.controller('ProfileController', ['$scope', '$http', '$routeParams', 'Profile
     })
   }; 
 
+
+// function AlertsCtrl($scope, alertsManager) {
+//     $scope.alerts = alertsManager.alerts;
+//     console.log($scope.alerts)
+// }
+
+// function FooCtrl($scope, alertsManager) {
+//     $scope.doGood = function() {
+//         alertsManager.addAlert('Yay!', 'alert-success');
+//     };
+//     $scope.doEvil = function() {
+//         alertsManager.addAlert('Noooo!', 'alert-error');
+//     };
+//     $scope.reset = function() {
+//         alertsManager.clearAlerts();
+//     };
+// }
 
 
 

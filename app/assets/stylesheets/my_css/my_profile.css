@@ -1,0 +1,175 @@
+
+
+#test-wrap {
+  text-align: center;
+  margin: 0px auto;
+  width: 100%;
+}
+
+#test-div-1, #test-div-2 {
+  display: inline-block;
+  margin-top: 10px;
+  width: 45%;
+  min-height: 200px;
+  border: 2px solid black;
+  background: #fafaff;
+  border-radius: 5px;
+}
+
+#test-div-1 {
+  margin: 50px auto;
+  background: #fafaff;
+  border-radius: 4px;
+  text-align: center;
+  border-bottom: 4px solid $gray;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#test-div-1 .profile-header {
+  padding: 30px 0 30px;
+  color: #3F6371;
+}
+#test-div-1 h1 {
+  font-size: 19px;
+  line-height: 1.5;
+  margin: 0;
+}
+#test-div-1 h2 {
+  font-size: 15px;
+  font-weight: normal;
+  margin: 0 0 1.4em;
+}
+#test-div-1 .profile-image {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  margin: 0 auto;
+  border: 1px solid #6B1229;
+  border-radius: 50%;
+}
+#test-div-1 .profile-image img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+#test-div-1 .profile-social-links {
+  border-top: 1px solid #E1E1E5;
+  border-bottom: 1px solid #E1E1E5;
+  padding: 12px 0;
+}
+#test-div-1 .info-circle  {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid black;
+  border-radius: 100%;
+  margin: 0 9px;
+}
+#test-div-1 .profile-footer {
+  padding: 30px 0;
+}
+#test-div-1 .profile-btn {
+  display: inline-block;
+  min-width: 120px;
+  min-height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #064D54;
+  color: #EFFB4F;
+  font-size: 14px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all ease 0.3s;
+}
+
+#test-div-2 {}
+
+#test-div-2 .profile-info-header {
+  text-align: center;
+  width: 100%;
+
+}
+
+#test-div-2 .profile-info-header .booking-info, .challenge-info {
+  margin:0;
+  padding:0;
+  border:0;
+  display: inline-block;
+  width: 49%;
+  height: 50px;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 5px;
+}
+#test-div-2 .profile-info-header .booking-info {
+  background-color: #456481;
+  color: #FD8586;
+}
+#test-div-2 .profile-info-header .challenge-info {
+  background-color: #3E5871;
+  color:#FD8586;
+}
+#test-div-2 h2 {
+  padding:0;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+#profile-wrapper {
+  text-align: center;
+}
+/*#profile-center {
+  text-align: center;
+}*/
+.profile, .my-profile-info {
+  display: inline-block;
+}
+
+.profile {
+/*  text-align: center;*/
+  font-size: 3em;
+  background: #54ACEE;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: .2em;
+  
+}
+.profile p {
+  font-size: 1em;
+  float: none;
+}
+.profile img {
+  margin-top: .3em;
+}
+.my-profile-info {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  font-size: 1em; 
+}
+
+.profile .win-loss-info {
+  display: inline-block;
+  
+}
+.profile #win-loss-bar {
+  background: #ADD8FA;
+  height: 1.5em;
+  border-radius: .2em;
+  font-size: .6em;
+}
+.user-image {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #6B1229;
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg%20version%3D%271.1%27%20id%3D%27Layer_1%27%20xml…3.535L0%2C3.535V0z%20M8.465%2C12L12%2C8.465V12H8.465z%27/%3E%0A%3C/svg%3E");
+}

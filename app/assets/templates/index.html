@@ -1,18 +1,9 @@
 
 
 
-<!-- <div class="navbar my-nav phone">
-<div id="left"><a href="/test/home"><i class="fa fa-home fa-5x"></i></a></div>
-<div id="middle"><a class="brand my-logo" href="/test/home">SSSquash</a></div>
-<div id="right"><a href="profile"><i class="fa fa-user fa-5x"></i></a></div>
-</div> -->
 
 <div class="main-wrapper">
 
-<!-- <p>{{ displayTime }}</p> -->
-
-<!-- <a href="phone"><i class="fa fa-mobile fa-2x"></i></a> -->
- 
 
 <div ng-controller="MapController"></div>
 
@@ -73,10 +64,27 @@
 
    <!--  <h2 ng-hide="challengeOffered">Pending Challenges</h2> -->
        <ul ng-hide="challengeOffered" ng-repeat="challenge in challengesAndDistances | orderBy:'dist' | limitTo:10">
-         <li class="challenge_list"><strong>location: </strong> {{ challenge.court.start_time | customtime }} | {{ challenge.centre.name }} | {{ challenge.dist | number:1}}km's </li>
-         <li class="challenge_list opponent"><strong>Opponent: </strong>{{ challenge.player1.profile_name }} | level: {{ challenge.player1.level }} <button type="button" class="btn btn-info ">View Profile</button> <button type="button" class="btn btn-info active" ng-click="challengePlayer1(challenge)">Play</button></li>
+
+         <li class="challenge_list">
+            <strong>location: </strong> 
+              {{ challenge.court.start_time | customtime }} | {{ challenge.centre.name }} | {{ challenge.dist | number:1}}km's 
+          </li>
+
+         <li class="challenge_list opponent">
+            <strong>Opponent: </strong>
+              {{ challenge.player1.profile_name }} | level: {{ challenge.player1.level }} 
+              <button type="button" 
+                class="btn btn-info ">
+                View Profile
+              </button> 
+              <button type="button" 
+                class="btn btn-info active" 
+                ng-click="challengePlayer1(challenge)">
+                Play
+              </button>
+          </li>
        </ul>
-     <div ng-show="challengeOffered">Game On Baby! Dont be late for your match! <button type="button" class="btn btn-info btn-xs active">
+     <div ng-show="challengeOffered">Challenge Pending..good luck {{ current_user.rank }} <button type="button" class="btn btn-info btn-xs active">
      <a href=""></a>View Details</button></div>
   </div>
 <!-- ######### this shows all the pending challenges ########### -->

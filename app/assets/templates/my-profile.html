@@ -1,27 +1,70 @@
 <!-- <h2><a href="/test/home">Home</a></h2> -->
-<div class="profile">
 
-    <img class="user-image" ng-src="{{ user.user_image.url }}"/>
+
+<div id="test-wrap">
+  <div id="test-div-1">
+    <div class="profile-header">
+      <h1>Full Name</h1>
+      <h2>Tagline...</h2>
+      <div class="profile-image">
+        <img ng-src="{{ user.user_image.url }}"/>
+      </div>
+     </div>
+      <div class="profile-social-links">
+        <a class="info-circle"></a>
+        <a class="info-circle"></a>
+        <a class="info-circle"></a>
+        <a class="info-circle"></a>
+      </div>
+      <div class="profile-footer">
+        <a class="profile-btn" href="#">Follow</a>
+      </div>
+  </div>
+
+  <div id="test-div-2">
+    <div class="profile-info-header">
+      <div class="booking-info">
+        <h2>BOOKINGS</h2>
+      </div>
+      <div class="challenge-info">
+        <h2>CHALLENGES</h2>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+<!-- <div id="profile-wrapper">
+<div id="profile-center">
+
+  <div class="profile">
+    <img class="user-image pb-pattern o-lines-light" 
+      ng-src="{{ user.user_image.url }}"/>
     <p>{{ user.first_name }} {{ user.last_name}}</p>
-    <p> aka '{{ user.profile_name}}'</p>
-    <p>ELO: {{ user.elo }}</p>
+    <! <p> aka '{{ user.profile_name}}'</p> -->
+    <!-- <p>ELO: {{ user.elo }}</p>
     <div id="win-loss-bar">
       <p class="win-loss-info">W: {{ user.wins}}</p>
       <p class="win-loss-info">L: {{ user.losses }}</p>
       <p class="win-loss-info">Win %: {{ (user.wins/(user.losses + user.wins)) * 100 | number:0 }}%</p>
-      <!-- <p class="win-loss-info">ELO: {{ user.elo }}</p> -->
-    </div>
-  </div>  
+      <! <p class="win-loss-info">ELO: {{ user.elo }}</p> -->
+   <!--  </div>
+  </div> -->   
 
 
-</div>  
 
-<h4><a href="/users/edit">Edit</a></h4>
-<h4><a href="/users/sign_out" data-method="delete">Sign Out</a></h4>
 
-<div class="my-profile-info">
 
-    <div class="bookings">
+
+
+
+
+<!--   <div class="my-profile-info"> -->
+
+<!--     <div class="bookings">
       <h2>My Bookings</h2>
       <ul ng-repeat="court in myCourts | limitTo:5">
         <li class="booked-courts-list">
@@ -41,13 +84,14 @@
 
         </li>
       </ul>     
-    </div>
+    </div> -->
 
-    <div class="challenges">
+   <!--  <div class="challenges">
       <h2>My Matches</h2>
-      <ul ng-repeat="challenge in myChallenges | limitTo:5">
+      <ul ng-repeat="challenge in myChallenges | limitTo:2">
 
         <li class="opponent_list"> 
+          <strong>Booking:</strong> 
           {{ challenge.court.start_time | customtime }} | {{ challenge.centre.name }}  
         </li>
        
@@ -62,7 +106,21 @@
             <a href="profile/{{ challenge.player1_id }}">View Profile</a>
           </button> 
 
-          <button 
+         <button 
+            type="button" 
+            class="btn btn-success btn-xs"
+            ng-click="acceptChallenge(challenge)">
+             Accept
+          </button> 
+
+           <button 
+            type="button" 
+            class="btn btn-warning btn-xs"
+            ng-click="declineChallenge(challenge)"> 
+             Decline
+          </button>           
+ -->
+          <!-- <button 
             type="button" 
             class="btn btn-danger btn-xs"
             ng-click="destroyChallenge(challenge)">
@@ -81,13 +139,28 @@
             class="btn btn-warning btn-xs"
             ng-click="logLoss(challenge)">
             Log Loss
-          </button>
+          </button> -->
 
-        </li>
+<!--         </li>
       </ul>
      </div>
 
+  </div>
 </div>
+</div> -->
+
+<!-- <div ng-controller="FooCtrl"> -->
+<!-- 
+    <a class="btn btn-success" ng-click="doGood()">Do Good</a>
+    <a class="btn btn-danger" ng-click="doEvil()">Do Evil</a>
+    <a class="btn pull-right" ng-click="reset()">Reset</a> -->
+<!-- </div> -->
+<!-- <hr> -->
+<!-- <div ng-controller="AlertsCtrl"> -->
+    <!-- div ng-repeat="(key,val) in alerts" class="alert {{key}}">
+        <div ng-repeat="msg in val">{{msg}}</div> -->
+<!--     </div> -->
+<!-- </div> -->
 
 
   

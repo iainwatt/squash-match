@@ -28,7 +28,7 @@ ChallengeService.getChallenges()
     }
     return dataArray
   }).then(function(){  
-    $scope.challengesAndDistances = fuckHelpMe(x_allChallenges, dataArray);
+    $scope.challengesAndDistances = distanceHelper(x_allChallenges, dataArray);
     console.log($scope.challengesAndDistances)
   });
 }

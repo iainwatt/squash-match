@@ -22,6 +22,7 @@ $http.get('/users/current_user_profile')
     // console.log($scope.centre);
   });
 
+$scope.current_user = gon.current_user
 
 
 }]);

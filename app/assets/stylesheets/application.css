@@ -14,104 +14,11 @@
  *= require_tree .
  *= require_self
  */
-@import url(http://fonts.googleapis.com/css?family=Raleway|Varela+Round|Coda);
-@import url(http://weloveiconfonts.com/api/?family=entypo);
 
-[class*="entypo-"]:before {
-  font-family: 'entypo', sans-serif;
-}
 
-.title-pen {
-  color: #333;
-  font-family: "Coda", sans-serif;
-  text-align: center;
-}
-.title-pen span {
-  color: #55acee;
-}
-
-.user-profile {
-  margin: auto;
-  width: 25em; 
-  height: 15em;
-  background: #fff;
-  border-radius: .3em;
-  border: .3em solid #daebea;
-}
-
-.user-profile  .username {
-  margin: auto;
-  margin-top: -4.40em;
-  margin-left: 5.80em;
-  color: #658585;
-  font-size: 1.53em;
-  font-family: "Coda", sans-serif;
-  font-weight: bold;
-}
-.user-profile  .bio {
-  margin: auto;
-  display: inline-block;
-  margin-left: 10.43em;
-  color: #e76043; 
-  font-size: .87em;
-  font-family: "varela round", sans-serif;
-}
-.user-profile > .description {
-  margin: auto;
-  margin-top: 1.35em;
-  margin-right: 4.43em;
-  width: 14em;
-  color: #c0c5c5; 
-  font-size: .87em;
-  font-family: "varela round", sans-serif;
-}
-.user-profile > img.avatar {
-  padding: .7em;
-  margin-left: .3em;
-  margin-top: .3em;
-  height: 6.23em;
-  width: 6.23em;
-  border-radius: 18em;
-}
-.user-profile ul.data {
-  margin: 2em auto;
-  height: 3.70em;
-  background: #4eb6b6;
-  text-align: center;
-  border-radius: 0 0 .3em .3em;
-
-}
-.user-profile li {
-  margin: 0 auto;
-  padding: 1.30em; 
-  width: 33.33334%;
-  display: table-cell;
-  text-align: center;
-}
-
-.user-profile span {
-  font-family: "varela round", sans-serif;
-  color: #e3eeee;
-  white-space: nowrap;
-  font-size: 1.27em;
-  font-weight: bold;
-}
-.user-profile span:hover {
-  color: #daebea;
-}
-
-.my-profile-info {
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-  font-size: .6em;
-  
-}
 .nav > li > a {
   padding: 0;
 }
-
-
 
 .nav_container {
   width: 90%;
@@ -166,36 +73,6 @@ text-align: center;
 }
 
 
-.profile {
-  text-align: center;
-  font-size: 3em;
-  background: #54ACEE;
-  width: 80%;
-  margin-right: auto;
-  margin-left: auto;
-  border-radius: .2em;
-  
-}
-.profile img {
-  margin-top: .3em;
-}
-.profile .win-loss-info {
-  display: inline-block;
-  
-}
-.profile #win-loss-bar {
-  background: #ADD8FA;
-  border-radius: .2em;
-  font-size: .6em;
-}
-
-
-.user-image {
-  width: 200px;
-  height: 200px;
-  border: 1px solid #6B1229;
-  border-radius: 50%;
-}
 .bookedCourt {
   border: .2em black solid;
   width: 800px;
@@ -258,62 +135,7 @@ text-align: center;
 }
 
 
-.wrapper {
-  max-width: 800px;
-  margin: 0 auto;
-}
-.iphone {
-  position: relative;
-  background: linear-gradient(135deg, rgba(76,76,76,1) 0%, rgba(77,77,77,1) 10%, rgba(44,44,44,1) 32%, rgba(0,0,0,1) 44%, rgba(17,17,17,1) 60%, rgba(43,43,43,1) 80%, rgba(19,19,19,1) 100%);
-  width: 45%;
-  height: 0;
-  padding-top: 95%;
-  margin: 0 auto;
-  border: 5px solid #43b3ed;
-  border-radius: 3rem;
-  box-shadow: 12px 15px 25px 5px rgba(0,0,0,0.45);
-}
 
-.camera {
-  position: absolute;
-  top: 4%;
-  left: 48.5%;
-  background: #202020;
-  width: 3%;
-  height: 0;
-  padding-top: 3%;
-  border-radius: 50%;
-}
-.speaker {
-  position: absolute;
-  top: 7%;
-  left: 42.5%;
-  background: linear-gradient(178deg, rgba(32,32,32,1) 0%, rgba(32,32,32,1) 56%, rgba(102,102,102,1) 100%);
-  width: 15%;
-  height: 0;
-  padding-top: 3%;
-  border-radius: 1em;
-}
-.inside {
-  position: absolute;
-  top: 25%;
-  left: 7%;
-  background: #202020;
-  width: 85%;
-  height: 60%;
-  border-radius: 1em;
-}
-
-.screen {
-  background-color: #f5f5f5;
-  width: 90%;
-  height: 75%;
-  position: absolute;
-  top: 12.5%;
-  left: 5%;
-  box-shadow: inset 1px 2px 8px 0px rgba(0,0,0,0.3);
-  overflow: hidden;
-}
 
 .map {
   display: block;
@@ -329,6 +151,7 @@ text-align: center;
 
 .main-wrapper {
   width: 940px;
+  height: 2000px;
   margin-left: auto;
   margin-right: auto;
   /*border: 1em solid black;*/
@@ -353,6 +176,7 @@ text-align: center;
 }
 .top-wrapper {
   width: 940px;
+  height: 1000px;
   margin-left: auto;
   margin-right: auto;
   border: 1em solid black;
@@ -469,5 +293,151 @@ text-align: center;
   margin-bottom: 1em;
   background-color: #E449A1;
 }
+
+
+
+
+/*Login Page*/
+#login-page {
+  width:400px;
+  margin:0 auto;
+  margin-top:8px;
+  margin-bottom:2%;
+  transition:opacity 1s;
+  -webkit-transition:opacity 1s;
+}
+#login-page form {
+  background:#f0f0f0;
+  padding:6% 4%;
+}
+
+#login-page h1 {
+  background:#3399cc;
+  padding:20px 0;
+  font-size:140%;
+  font-weight:300;
+  text-align:center;
+  color:#fff;
+  margin-bottom: 0;
+}
+
+#login-page #user_password, #user_email {
+  width:100%;
+  background:#fff;
+  margin-bottom:4%;
+  border:1px solid #ccc;
+  padding:4%;
+  font-family:'Open Sans',sans-serif;
+  font-size:95%;
+  color:#555;
+}
+
+#login-page input[type="submit"] {
+  width:100%;
+  background:#3399cc;
+  border:0;
+  padding:4%;
+  font-family:'Open Sans',sans-serif;
+  font-size:100%;
+  color:#fff;
+  cursor:pointer;
+  transition:background .3s;
+  -webkit-transition:background .3s;
+}
+
+#login-page input[type="submit"]:hover {
+  background:#2288bb;
+}
+
+/* Sign up Page*/
+#sign-up-page {
+  width:400px;
+  margin:0 auto;
+  margin-top:8px;
+  margin-bottom:2%;
+  transition:opacity 1s;
+  -webkit-transition:opacity 1s;
+}
+
+#sign-up-page form {
+  background:#f0f0f0;
+  padding:6% 4%;
+}
+#sign-up-page h1 {
+  background:#3399cc;
+  padding:20px 0;
+  font-size:140%;
+  font-weight:300;
+  text-align:center;
+  color:#fff;
+  margin-bottom: 0;
+}
+
+#sign-up-page #user_first_name, #user_last_name, #user_profile_name {
+  width:100%;
+  background:#fff;
+  margin-bottom:4%;
+  border:1px solid #ccc;
+  padding:4%;
+  font-family:'Open Sans',sans-serif;
+  font-size:95%;
+  color:#555;
+}
+
+#sign-up-page input[type="file"] {
+  width:100%;
+  height:40px;
+  background:#fff;
+  margin-bottom:4%;
+  padding:4%;
+  font-family:'Open Sans',sans-serif;
+  font-size:95%;
+  color:#555;
+}
+#sign-up-page input[type="file"] button {
+  height: 40px;
+}
+
+#sign-up-page input[type="password"], #user_password_confirmation {
+  width:100%;
+  background:#fff;
+  margin-bottom:4%;
+  border:1px solid #ccc;
+  padding:4%;
+  font-family:'Open Sans',sans-serif;
+  font-size:95%;
+  color:#555;
+  margin-top: 0;
+} 
+
+#sign-up-page input[type="submit"] {
+  width:100%;
+  background:#3399cc;
+  border:0;
+  padding:4%;
+  font-family:'Open Sans',sans-serif;
+  font-size:100%;
+  color:#fff;
+  cursor:pointer;
+  transition:background .3s;
+  -webkit-transition:background .3s;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
