@@ -98,12 +98,11 @@
   text-decoration: none;
   transition: all ease 0.3s;
 }
-
+/* this is for the 2 toggle buttons at the top for challenge / bookings */
 #test-div-2 .profile-info-header {
   text-align: center;
   width: 100%;
 }
-
 #test-div-2 .profile-info-header .booking-info, .challenge-info {
   margin:0;
   padding:0;
@@ -126,8 +125,9 @@
   padding:0;
   font-size: 14px;
   font-weight:300;
-  
 }
+
+/*this is for the booked court stub*/
 #test-div-2 .booking-card-wrap {
   background-color: #EBEBEB;
   margin-top: 10px;
@@ -150,10 +150,14 @@
 #test-div-2 .booking-card .booking-details {
   background:#4da6cf;
   width:94%;
-  padding:50px 0 0 0;
-  min-height:140px;
+  padding:25px 0 25px 0;
+/*  min-height:140px;*/
   margin:0 auto;
   border-radius: 5px;
+}
+#test-div-2 .booking-card .booking-details .clearfix {
+  overflow: auto;
+  zoom: 1;
 }
 #test-div-2 .booking-card .booking-details .item {
   float:left;
@@ -217,6 +221,164 @@ a .info-circle .map {
 .booking-card .btn-continue {
   background:#4da6cf;
 }
+
+#test-div-2 .challenge-card {
+  background-color: #FFF;
+  margin: 5px auto 5px auto;
+  border: 1px solid #456481;
+  width: 95%;
+  border-radius: 5px;
+}
+#test-div-2 .challenge-title {
+
+}
+#test-div-2 .challenge-booking-details {
+  background:#11A8AB;
+  width:94%;
+  margin:0 auto;
+  border-radius: 5px;
+}
+#test-div-2 .challenge-booking-details .clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+#test-div-2 .challenge-booking-details .item {
+  float:left;
+  width:25%;
+  text-align:center;
+}
+#test-div-2 .challenge-info-button {
+  word-wrap: normal;
+  border-left: 2px solid #3F729B;
+}
+#test-div-2 .challenge-info-button:hover {
+  background-color: #EA4C89;
+  border-radius: 5px;
+}
+
+
+.challenge-booking-details .item .title {
+  color:#fff;
+  font-size:10px;
+  font-weight:300;
+  padding:5px 0 5px 0;
+}
+.challenge-booking-details .item .value {
+  color:#fff;
+  font-size:12px;
+  margin:4px 0 0 0;
+  font-weight:100;
+}
+
+#test-div-2 .challenge-card .challenger-details {
+  background:#FFCD00;
+  width:94%;
+/*  padding: 5px 0 5px 0;*/
+  margin: 5px auto 5px auto;
+  border-radius: 5px;
+}
+#test-div-2 .challenge-card .challenger-details .clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+#test-div-2 .challenge-card .challenger-details .challenger-item {
+  float:left;
+  width: 25%;
+
+}
+#test-div-2 .ch-image {
+  padding-top: 2px;
+}
+#test-div-2 .challenge-circle {
+  margin: 0 auto 0 auto;
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  border:1px solid #3F729B;
+}
+#test-div-2 .ch-info .title  {
+  font-size: 10px;
+  font-weight: 300;
+  padding: 5px 0 5px 0;
+}
+#test-div-2 .ch-info .value {
+  font-size: 10px;
+  font-weight: 300;
+  padding: 5px 0 5px 0;
+}
+#test-div-2 .ch-profile:hover {
+  border-radius: 5px;
+  background-color:#3468AF;
+}
+
+#test-div-2 .accept:hover {
+  border-radius: 5px;
+  background-color:#30BD8A;
+}
+#test-div-2 .decline:hover {
+  border-radius: 5px;
+  background-color: #E64C65;
+}
+
+/*#test-div-2 .challenger-links {
+  width: 94%;
+  padding: 5px 0 5px 0;
+  margin: 5px auto 5px auto;
+  background: #4da6cf;
+  border-radius: 5px;
+}
+
+#test-div-2 .challenger-links .info-circle {
+  background-color: #fff;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid black;
+  border-radius: 100%;
+   padding: 0 15px; 
+  margin: 5px 20px;
+}
+
+
+
+/*#test-div-2 .challenger-details .challenger-img {
+  width: 20%;
+  float: left;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+#test-div-2 .challenger-details .challenger-img i {
+  margin: 0 auto 0 auto;
+  vertical-align: center;
+}
+#test-div-2 .challenger-details .challenger-name {
+  width: 20%;
+  float: left;
+}
+#test-div-2 .challenger-details .challenger-info {
+  width: 20%;
+  float: left;
+  margin: 0 auto 0 auto;
+}
+*/
+/*#test-div-2 .challenger-details .challenger-img img {
+  border-radius: 50%;
+  border: 1px solid black;
+}*/
+
+
+
+
+
+
+
+
+
 
 
 
