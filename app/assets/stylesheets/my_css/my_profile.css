@@ -62,10 +62,25 @@
   width: 36px;
   height: 36px;
   line-height: 36px;
-  border: 1px solid black;
+  border: 1px solid;
   border-radius: 100%;
   margin: 0 9px;
 }
+.blu {
+  border-color: #3b5998;
+  background-color: #3b5998;
+}
+.dblu  {
+  background-color: #3f729b;
+  border-color: #3b5998;
+}
+.lblu {
+  background-color: #55acee;
+}
+.red:hover {
+  background-color: #ea4c89;
+}
+
 #test-div-1 .profile-footer {
   padding: 30px 0;
 }
@@ -84,12 +99,9 @@
   transition: all ease 0.3s;
 }
 
-#test-div-2 {}
-
 #test-div-2 .profile-info-header {
   text-align: center;
   width: 100%;
-
 }
 
 #test-div-2 .profile-info-header .booking-info, .challenge-info {
@@ -113,11 +125,98 @@
 #test-div-2 h2 {
   padding:0;
   font-size: 14px;
+  font-weight:300;
+  
+}
+#test-div-2 .booking-card-wrap {
+  background-color: #EBEBEB;
+  margin-top: 10px;
+  padding: 5px;
+}
+#test-div-2 .booking-card {
+  background-color: #FFF;
+  margin: 5px auto 5px auto;
+/*  border: 1px solid #456481;*/
+  width: 95%;
+  border-radius: 5px;
+}
+#test-div-2 .booking-title {
+
+}
+#test-div-2 .booking-title h2 {
+  color:#3a4142;
+
+}
+#test-div-2 .booking-card .booking-details {
+  background:#4da6cf;
+  width:94%;
+  padding:50px 0 0 0;
+  min-height:140px;
+  margin:0 auto;
+  border-radius: 5px;
+}
+#test-div-2 .booking-card .booking-details .item {
+  float:left;
+  width:33%;
+  text-align:center;
+}
+.item .title {
+  color:#fff;
+  font-size:10px;
+  font-weight:300;
+  padding-bottom: 20px
+}
+.item .value {
+  color:#fff;
+  font-size:18px;
+  margin:4px 0 0 0;
+  font-weight:100;
+}
+.booking-card .booking-links {
+  min-height:60px;
+  width:94%;
+  padding: 5px 0 5px 0;
+  margin: 5px auto 5px auto;
+  background:#4da6cf;
+  border-radius: 5px
+}
+#test-div-2 .booking-card .booking-links .info-circle {
+  background-color:#fff;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid black;
+  border-radius: 100%;
+  /*padding: 0 15px;*/
+  margin: 5px 20px; 
+}
+.booking-card .booking-links a i {
+  margin: 0 auto 0 auto;
+}
+a .info-circle .map {
+  padding: 0;
+}
+.booking-card .booking-links a i fa-map-marker {
+  margin-left: 2px;
 }
 
 
 
-
+.booking-card .btn {
+  width:94%;
+  font-weight:200;
+  margin:0 auto 8px auto;
+  color:#fff;
+  text-align:center;
+  min-height:50px;
+  padding:15px 0 0 0;
+  font-size:12px;
+  cursor:pointer;
+}
+.booking-card .btn-continue {
+  background:#4da6cf;
+}
 
 
 
