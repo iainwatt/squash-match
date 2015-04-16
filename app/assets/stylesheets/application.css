@@ -16,9 +16,68 @@
  */
 
 
-.nav > li > a {
+.main-nav-wrapper {
+  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  height: 100px;
+  width: 100%;
+  float: left;
+  margin: 0 0 1em 0;
   padding: 0;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ccc;  
 }
+.logo-left {
+  width:50%;
+  background-color: #FE9F01;
+  height: 100px;
+}
+#squash-logo {
+ /* position:absolute;
+  top:50%;
+  left:50%;*/
+  transform:translateX(-50%) translateY(-50%);
+  border-radius:50%;
+  width:10px;
+  height:10px;
+  padding:5px;
+  border:2px solid #efefef;
+  background:#064D54;
+}
+.logo-left h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: light;
+  letter-spacing: 5px;
+}
+
+.nav-right {
+  width: 50%
+}
+
+
+.main-nav ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+}
+.main-nav li {
+  font: bold 12px/18px sans-serif;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 20px;
+  background: #2C3E50;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  color: #fff;
+}
+
 
 .nav_container {
   width: 90%;

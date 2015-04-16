@@ -25,6 +25,7 @@ gem 'fog'
 gem 'rails_12factor'
 gem 'gon'
 gem 'elo'
+gem 'normalize-rails'
 
 # gem 'ngannotate-rails'
 
