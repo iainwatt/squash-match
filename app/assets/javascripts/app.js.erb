@@ -36,6 +36,10 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     controller: 'AllUsersController',
     templateUrl: "<%= asset_path('all-users.html') %>"
   })
+  .when('/match', {
+    controller: 'MatchController',
+    templateUrl: "<%= asset_path('match.html') %>"
+  })
   .otherwise({
     redirectTo: '/landing'
   });

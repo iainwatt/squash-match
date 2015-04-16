@@ -108,11 +108,11 @@ span.meta span {
   background-repeat: no-repeat;
 }
 
-p {
+/*p {
   padding:0;
   margin:0;
   float: left;
-}
+}*/
 
 .tinder-container {
   width: 90%;

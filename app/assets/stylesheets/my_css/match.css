@@ -1,0 +1,100 @@
+@import url(http://fonts.googleapis.com/css?family=Gudea:400,700);
+@import url(http://fonts.googleapis.com/css?family=Satisfy);
+
+.match-wrapper {
+  margin: 20px auto 0 auto;
+  width: 90%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.match-background {
+  position: relative;
+  height: 687.273px;
+  border: 1px solid black;
+/*  background-color:rgba(255,0,0,0.5);*/
+  background-color:rgba(0, 0, 0, 0.7);
+  /*background-image: url(https://s3-eu-west-1.amazonaws.com/squash-bucket/uploads/user/user_image/squash-player.png)*/
+}
+
+.darker {
+  position: absolute;
+  left: 245px;
+  top:156px;
+  width: 818.82px;
+  height: 687.273px;
+  z-index: 1000;
+  background-color: #000000;
+  opacity: 0.6;
+}
+.inner-wrapper {
+  padding-top: 100px;
+
+}
+.inner-wrapper h1 {
+  font-family: 'Satisfy', sans-serif;
+  position: relative;
+  color:#F9F9F9; 
+  z-index: 2000; 
+  font-size: 80px;
+  font-weight:300;
+}
+
+.match-player-images {
+  /*margin: 0 auto 0 auto;*/
+  text-align: center;
+  margin: 0 20px 0 20px;
+}
+.player-circle {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border: 2px solid white;
+  margin: 0 60px 0 60px;
+}
+.match-player-images .versus {
+  display: inline-block;
+}
+.match-player-images h1 {
+
+  font-size: 80px;
+  font-weight:300;
+}
+.match-buttons {
+  margin: 0 auto 0 auto;
+  width: 40%;
+  border-radius: 5px;
+}
+.match-buttons h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: 100;
+  font-size: 30px;
+  padding:10px;
+  margin: auto 0 auto 0;
+}
+.mc-message {
+  border: 1px solid white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.mc-continue {
+  border: 1px solid white;
+  border-radius: 50px;
+}
+.mc-message:hover {
+  background-color:#EF6958
+}
+.mc-continue:hover {
+  background-color:#B566B3; 
+}
+
+
+
+
+
+
+
+
+
+

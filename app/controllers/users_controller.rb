@@ -65,7 +65,9 @@ class UsersController < ApplicationController
     render json: new_opponent_elo
   end
 
-  
+  def match
+
+  end
 
 
 

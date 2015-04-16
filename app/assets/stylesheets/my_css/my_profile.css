@@ -8,7 +8,7 @@
 
 #test-div-1, #test-div-2 {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 30px;
   width: 45%;
   min-height: 200px;
   border: 2px solid black;
@@ -17,7 +17,7 @@
 }
 
 #test-div-1 {
-  margin: 50px auto;
+/*  margin: 10px auto;*/
   background: #fafaff;
   border-radius: 4px;
   text-align: center;
@@ -135,13 +135,16 @@
 }
 #test-div-2 .booking-card {
   background-color: #FFF;
-  margin: 5px auto 5px auto;
+  margin: 0 auto 5px auto;
 /*  border: 1px solid #456481;*/
   width: 95%;
   border-radius: 5px;
 }
 #test-div-2 .booking-title {
-
+  background-color: #C6D6E3;
+  width: 94%;
+  border-radius: 5px;
+  margin: 5px auto 5px auto;
 }
 #test-div-2 .booking-title h2 {
   color:#3a4142;
@@ -193,7 +196,7 @@
   border: 1px solid black;
   border-radius: 100%;
   /*padding: 0 15px;*/
-  margin: 5px 20px; 
+  margin: 10px 20px; 
 }
 .booking-card .booking-links a i {
   margin: 0 auto 0 auto;
@@ -282,19 +285,60 @@ a .info-circle .map {
   zoom: 1;
 }
 
+
 #test-div-2 .challenge-card .challenger-details .challenger-item {
   float:left;
-  width: 25%;
+/*  width: 25%;*/
 
 }
 #test-div-2 .ch-image {
-  padding-top: 2px;
+  padding-top: 3px;
+  width: 12% !important;
 }
+#test-div-2 .ch-name {
+  width: 28%;
+}
+#test-div-2 .ch-info {
+  width:15%;
+
+}
+#test-div-2 .ch-rank {
+  width:15%;
+}
+
+#test-div-2 .ch-form {
+  width:15%; 
+}
+#test-div-2 .ch-profile {
+  width: 15%;
+}
+#test-div-2 .ch-rank .title {
+  font-size: 10px;
+  font-weight: 300;
+  padding: 5px 0 5px 0;
+}
+#test-div-2 .ch-rank .value{
+  font-size: 10px;
+  font-weight: 300;
+  padding: 5px 0 5px 0;
+}
+#test-div-2 .ch-form .title {
+  font-size: 10px;
+  font-weight: 300;
+  padding: 5px 0 5px 0;
+}
+#test-div-2 .ch-form .value{
+  font-size: 10px;
+  font-weight: 300;
+  padding: 5px 0 5px 0;
+}
+
 #test-div-2 .challenge-circle {
-  margin: 0 auto 0 auto;
+  margin: 0 0 0 5px;
   height: 36px;
   width: 36px;
   border-radius: 50%;
+  background-color: #F16964;
   border:1px solid #3F729B;
 }
 #test-div-2 .ch-info .title  {
@@ -434,3 +478,38 @@ a .info-circle .map {
   border-radius: 50%;
   background-image: url("data:image/svg+xml,%3Csvg%20version%3D%271.1%27%20id%3D%27Layer_1%27%20xml…3.535L0%2C3.535V0z%20M8.465%2C12L12%2C8.465V12H8.465z%27/%3E%0A%3C/svg%3E");
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

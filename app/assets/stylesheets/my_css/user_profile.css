@@ -1,4 +1,206 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway|Varela+Round|Coda);
+
+
+.up-wrapper {
+  margin: 0 auto 0 auto;
+  background-color: #E4E4E4;
+  width: 90%;
+  min-height: 720px;
+}
+.up-card {
+  margin: 20px auto 0 auto;
+  width:90%;
+  background-color:#394264;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 700px;
+  border-radius: 5px;
+
+}
+.up-picture {
+  margin:20px auto 0 auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.up-user-name {
+
+}
+.up-user-name h1 {
+  padding-top: 20px;
+  font-size: 70px;
+  font-weight: 200;
+  color:#FFFFFF;
+}
+.up-user-description {
+  margin: 0 auto 0 auto;
+  text-align: center;
+  width:90%;
+  min-height: 20px;
+}
+.up-user-description p {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 200;
+  color:#9099B7;
+}
+.up-details {
+  width:94%;
+  padding:25px 0 25px 0;
+/*  min-height:140px;*/
+  margin:0 auto;
+  border-radius: 5px;
+}
+.up-details .clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+.up-details .up-item {
+  float:left;
+  width:25%;
+  text-align:center;
+  padding-top: 10px;
+  /*border-radius: 10px;*/
+}
+.up-item .title {
+  color:#07090A;
+  font-size:20px;
+  font-weight:300;
+  padding-bottom: 20px;
+}
+
+.up-item .value {
+  color:#07090A;
+  font-size:18px;
+  margin:4px 0 0 0;
+  font-weight:100;
+  padding-bottom: 10px;
+}
+.up-details .elo {
+  background-color:#F7EA48; 
+}
+.up-details .rank {
+   background-color:#FEDB00;
+}
+.up-details .form {
+   background-color:#FFB81C;
+}
+.up-details .message {
+   background-color:#F6BE00;
+}
+.up-links {
+  width:94%;
+  padding:0 0 25px 0;
+/*  min-height:200px;*/
+  margin:0 auto;
+  border-radius: 5px;
+}
+.up-links .clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+.up-links .up-item {
+  float:left;
+  width:25%;
+  text-align:center;
+  padding-top: 10px;
+  min-height:80px; 
+}
+.up-links .calendar {
+  background-color: #E4706C;
+}
+.up-links .pay {
+  background-color: #695D8B;
+}
+.up-links .message {
+  background-color: #8A6079;
+}
+.up-links .map-icon {
+  background-color: #5A9AA9;
+}
+.up-links .teams {
+  background-color: #867AD3;
+}
+.up-links .history {
+  background-color: #A9E236;
+}
+.up-links .trophy {
+  background-color: #FAC20D;
+}
+.up-links .up-phone {
+  background-color: #E12558;
+}
+.up-item .info-circle {
+  background-color:#fff;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  line-height: 36px;
+  border: 1px solid black;
+  border-radius: 100%;
+  padding-top: 5px;
+}
+
+/*.up-links {
+  min-height:80px;
+  width:94%;
+  padding: 5px 0 5px 0;
+  margin: 5px auto 5px auto;
+  background:#4da6cf;
+  border-radius: 5px
+}
+.up-links .info-circle {
+  background-color:#fff;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 36px;
+  border: 1px solid black;
+  border-radius: 100%;
+  /*padding: 0 15px;*/
+  /*margin: 20px 50px; */
+  /*margin: 20px 40px 20px 40px;
+
+}
+.up-links a i {
+  margin: 0 auto 0 auto;
+}*/
+
+
+/*up-info .comments .view .likes*/*/
+
+
+/*.profile-options {
+padding-top: 23px;
+}
+.profile-options li {
+  border-left: 1px solid #1f253d;
+}
+  .profile-options p {
+    margin: 0;
+  }
+  .profile-options a {
+    display: block;         
+    width: 99px;
+    line-height: 60px;
+    text-align: center;
+    -webkit-transition: background .3s;
+    transition: background .3s;    
+
+.horizontal-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+  .horizontal-list li {
+    float: left;
+  }*/
+
+
+
+
+
+
+/*@import url(http://fonts.googleapis.com/css?family=Raleway|Varela+Round|Coda);
 @import url(http://weloveiconfonts.com/api/?family=entypo);
 
 [class*="entypo-"]:before {
@@ -79,3 +281,4 @@
 .user-profile span:hover {
   color: #daebea;
 }
+*/
