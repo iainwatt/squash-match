@@ -22,6 +22,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.15.0/utils/Draggable.min.js"></script>
 
 
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.3.12/css/ngDialog-theme-default.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
   <script src="<%= asset_path('ng-map.min.js') %>"></script>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
@@ -30,89 +33,77 @@
 
 
 
-<div class="main-nav-wrapper">
-  <div class="logo-left">
+<div class="main-nav-wrapper clearfix">
+  <div id="logo-left">
     <div id="squash-logo">
       <div id="dot"></div>
     </div>
-    <h2>SQUASH MATCH</h2>
+    <a href="home"><h2>SQUASH MATCH</h2></a>
   </div>
-  <div class="nav-rigth">
-    
+  <div id="nav-right">
+    <ul>
+      <li><a href="#">LOGIN</a></li>
+      <li><a href="phone">I-PHONE</a></li>  
+      <li><a href="profile">PROFILE</a></li>
+      <li><a href="users/all_users">All USERS</a></li>
+      <li><a href="search">SEARCH</a></li>
+    </ul>  
   </div>
-  <!-- <ul class="main-nav"><li class='home'>Home</li>
-    <li>About</li>
-    <li>
-      Phone Design
-      <ul>
-        <li>Web Design</li>
-        <li>Web Development</li>
-        <li class='ill'>Illustrations</li>
-      </ul>
-    </li>
-    <li>Find players</li>
-    <li class='contact'>Profile</li>
-  </ul> -->
-</div>
+  </div>
+  
 
-<!-- 
-<div class="top-wrapper">
-    <div class="navbar my-nav">
-     <div class="navbar-inner">
-      <a href="/test/home"><i class="fa fa-home fa-4x"></i></a>
-      <a class="my-logo">SQUASH MATCH</a>
      
       
      
      
-      <ul class='nav pull-right'>
+    <!--   <ul class='nav pull-right'>
       <a href="users/all_users"><i class="fa fa-user-plus fa-2x"></i></a>
       <a href="phone"><i class="fa fa-mobile fa-2x"></i></a>
-      <a href="profile"><i class="fa fa-user fa-4x"></i></a> -->
+      <a href="profile"><i class="fa fa-user fa-4x"></i></a> --> 
 
 <!--       <h4><a href="/users/edit">Edit</a></h4>
       <h4><a href="/users/sign_out" data-method="delete">Sign Out</a></h4> -->
-
-        <% if user_signed_in? %>
+<!-- 
+        <#% if user_signed_in? %>
           <li>
-            <% if current_user.email? %>
-              <%= current_user.email %>
-            <% end %> 
+            <%#if current_user.email? %>
+              <%#= current_user.email %>
+            <%# end %> 
           </li>
           <li>
-          <!--   <%= link_to "Edit", edit_user_registration_path, target: "_self"%> -->
-          </li>
-          <li>
-            <%= link_to "Logout", destroy_user_session_path, method: :delete %> 
-          </li>
-        <% else %>
-          <li>
-          <%= link_to "Login", new_user_session_path, target: "_self"%>    
-          </li>
-          <li>
-          <%= link_to "Sign Up", new_user_registration_path, target: "_self"%>
-          </li>
-        <% end %>
-        </ul>
+          <! <%#= link_to "Edit", edit_user_registration_path, target: "_self"%> -->
+          <!-- </li>
+          <li> -->
+            <%#= link_to "Logout", destroy_user_session_path, method: :delete %> 
+         <!--  </li> -->
+        <%# else %>
+         <!--  <li> -->
+          <%#= link_to "Login", new_user_session_path, target: "_self"%>    
+<!--           </li> -->
+<!--           <li> -->
+          <%#= link_to "Sign Up", new_user_registration_path, target: "_self"%>
+<!--           </li> -->
+        <%# end %>
+       <!--  </ul>
         </div>
       </div> 
-
+ -->
    
-    <% if !user_signed_in? %>
-    <%= link_to "Login", new_user_session_path %>
-    <%= link_to "Sign Up", new_user_registration_path%>
-    <%= yield %>
-    <% end %>
+    <%# if !user_signed_in? %>
+    <%#= link_to "Login", new_user_session_path %>
+    <%#= link_to "Sign Up", new_user_registration_path%>
+    <%#= yield %>
+    <%# end %>
    
-   <% if user_signed_in? %>
+   <%# if user_signed_in? %>
 
 
 
     <%= yield %>
     <ng-view></ng-view>
 
-   <% end %>
-   </div>
+   <%# end %>
+<!--    </div>  -->
 
 </body>
 </html>

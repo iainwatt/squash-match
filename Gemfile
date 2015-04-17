@@ -26,6 +26,9 @@ gem 'rails_12factor'
 gem 'gon'
 gem 'elo'
 gem 'normalize-rails'
+gem "rails-assets-ngDialog"
+
+source "https://rails-assets.org"
 
 # gem 'ngannotate-rails'
 

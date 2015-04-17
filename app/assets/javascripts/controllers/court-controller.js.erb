@@ -1,5 +1,5 @@
 
-app.controller('CourtController', ['$scope', '$http', 'CourtService', 'ChallengeService', 'gps', function($scope, $http, CourtService, ChallengeService, gps){
+app.controller('CourtController', ['$scope', '$http', 'CourtService', 'ChallengeService', 'gps', 'ngDialog', function($scope, $http, CourtService, ChallengeService, gps, ngDialog){
 
 
 
@@ -8,6 +8,7 @@ var x = []
 var y = []
 CourtService.getCourts()
   .then(function(response){ 
+    console.log(response);
   x = response.data
   return x
   }).then(function(x){
@@ -18,7 +19,7 @@ CourtService.getCourts()
     }
     return dataArray
   }).then(function(){
-    $scope.courtsAndDistances = fuckHelpMe(x, dataArray);
+    $scope.courtsAndDistances = distanceHelper(x, dataArray);
   });
 }
 
@@ -47,6 +48,17 @@ CourtService.getCourts()
     });
   };
 // ###### function that books a court ###### //
+
+
+$scope.clickToOpenMatch = function () {
+  // $scope.modalArtist = artist;
+  ngDialog.open({ 
+    templateUrl: "<%= asset_path('booking-confirmation.html') %>",
+    scope: $scope,
+    appendTo: "body"
+  });
+ }
+
 
 
 }]);

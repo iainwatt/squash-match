@@ -23,3 +23,75 @@ users/edit
 
  putUsers: function() {
       return $http.put('/users/log_win/'+user')
+
+
+########## MAP ##########
+<map class="map" lazy-load
+      zoom="12"
+      center="Old Street, London, United Kingdom">
+           <marker position="{{ me }}" 
+           title="My Current Location"
+           animation="Animation.BOUNCE"
+           ></marker>
+       <marker ng-repeat="centre in centres" position="{{ centre.latitude }},{{ centre.longitude}}"></marker>
+</map>  -->
+
+
+########## CODE TO RETRUN INFO ON BOOKED COURT ##########
+<div class="bookedCourt" ng-show="bookedCourt"> Court Successfully Booked! </br> {{ bookedCourt.centre_id }} | {{ bookedCourt.time }} | court_no: {{ bookedCourt.court_no}} </br>  
+          </div>
+
+
+
+################ ALL THE CODE FOR BOOKING COURTS THEN CHALLENGE ###############
+ <!--  <div ng-controller="CourtController"> -->
+
+        <!-- <button
+          ng-click="issueChallengewithCourt(bookedCourt)"
+          >Find Court
+        </button>
+
+        <button
+          ng-click="findCourts()">
+          Find a Court 
+        </button> -->
+
+<!--       </div> -->
+     <!--  ######## this shows what courts are available  - ng-show / not working ##### -->
+    <!--   <div class="court-info" ng-controller="CourtController">
+
+        <div class="bookedCourt" ng-show="bookedCourt"> Court Successfully Booked! </br> {{ bookedCourt.centre_id }} | {{ bookedCourt.time }} | court_no: {{ bookedCourt.court_no}} </br>  
+
+          <button type="button" 
+            class="btn btn-primary btn-sm active" 
+            ng-click="issueChallengewithCourt(bookedCourt)">
+            Find Opponent
+          </button> 
+        </div>
+
+        <button type="button" 
+          class="btn btn-default btn-lg court-button find-court-button" 
+          ng-click="findCourts()">
+          Find a Court 
+        </button>
+
+        <ul ng-hide="bookedCourt">
+
+          <li class="all_courts" ng-repeat="court in courtsAndDistances | orderBy:['dist','start_time'] | filter:'!booked' " >{{ court.centre.name }} | {{ court.start_time | customtime }} | Distance: {{ court.dist | number:1 }}km's <button type="button" class="btn btn-success btn-sm active" ng-click="bookCourt(court)">Book Now</button>
+          </li>
+        </ul> -->
+    <!-- **** This is the message and info that is shown once you have booked a court  **** --> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

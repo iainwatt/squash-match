@@ -1,6 +1,6 @@
 
 
-app.controller('ChallengeController', ['$route', '$scope', '$http', 'ChallengeService', 'UserService', 'GeolocationService', 'gps', function($route, $scope, $http, ChallengeService, UserService, geolocation, gps){
+app.controller('ChallengeController', ['$route', '$scope', '$http', 'ChallengeService', 'UserService', 'GeolocationService', 'gps', 'ngDialog', function($route, $scope, $http, ChallengeService, UserService, geolocation, gps, ngDialog){
 
 // ### the app.value in app.js works! ### \\\\
 console.log(gps.userLat);
@@ -42,9 +42,18 @@ ChallengeService.getChallenges()
     .then(function(response){
      $scope.challengeOffered = response.data
      console.log($scope.challengeOffered);
+     clickToOpenMatchConf();
     });
     // $route.reload();
   };
+
+function clickToOpenMatchConf() {
+  ngDialog.open({ 
+    templateUrl: "<%= asset_path('match-confirmation.html') %>",
+    scope: $scope,
+    appendTo: "body"
+  });
+ }
 
 
 

@@ -1,6 +1,7 @@
 // #= depend_on_asset "index.html"
+//= require "ngDialog"
 
-var app = angular.module('SquinderApp', ['ngRoute', 'ngAnimate', 'ngMap']);
+var app = angular.module('SquinderApp', ['ngRoute', 'ngAnimate', 'ngMap', 'ngDialog']);
 
 app.value( 'gps', { 
   userLat: '51.520151399999996',
@@ -17,8 +18,11 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     templateUrl: "<%= asset_path('landing-page.html') %>"
   })
   .when('/home', {
-    controller: 'CentreController',
     templateUrl: "<%= asset_path('index.html') %>"
+  })
+  .when('/search', {
+    controller: 'CentreController',
+    templateUrl: "<%= asset_path('main-function-page.html') %>"
   })
   .when('/profile', {
     controller: 'ProfileController',

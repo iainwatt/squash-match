@@ -11,72 +11,110 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require normalize
  *= require_tree .
  *= require_self
+ 
+
  */
 
 
+
+
 .main-nav-wrapper {
-  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  height: 100px;
   width: 100%;
-  float: left;
-  margin: 0 0 1em 0;
-  padding: 0;
   background-color: #f2f2f2;
   border-bottom: 1px solid #ccc;  
+  text-align: center;
 }
-.logo-left {
-  width:50%;
+.main-nav-wrapper #logo-left, #nav-right {
+  display: inline-block;
+  border: 1px solid black;
+  width: 49%
+}
+
+#logo-left {
+  display: inline-block;
+  text-align: left;
   background-color: #FE9F01;
-  height: 100px;
 }
+
 #squash-logo {
- /* position:absolute;
-  top:50%;
-  left:50%;*/
-  transform:translateX(-50%) translateY(-50%);
+  display: inline-block;
   border-radius:50%;
-  width:10px;
-  height:10px;
-  padding:5px;
+  width:15px;
+  height:15px;
   border:2px solid #efefef;
   background:#064D54;
+  margin-left: 20px;
 }
-.logo-left h2 {
+
+#dot {
+  position:absolute;
+  top:2.5%;
+  left:12.5%;
+  border-radius:1000px;
+  width:5px;
+  height:5px;
+  background:#EFFB4F;
+}
+
+#logo-left h2 {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 100;
+  letter-spacing: 5px;
+  padding-left: 5px;
+}
+
+#nav-right {
+  background-color:#1EA076;
+}
+#nav-right ul {
+  list-style: none;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0; 
+}
+#nav-right li {
+  float: right; 
+}
+#nav-right li a {
+  display: block;
+  padding: 8px 15px;
+  text-decoration: none;
+  color: #0060B6;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
-  font-weight: light;
-  letter-spacing: 5px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  padding-left: 5px;
+  /*padding-top: 20px;*/
+  margin-top: 10px;
 }
 
-.nav-right {
-  width: 50%
-}
 
 
-.main-nav ul {
-  text-align: left;
-  display: inline;
-  margin: 0;
-  padding: 15px 4px 17px 0;
-  list-style: none;
-}
-.main-nav li {
-  font: bold 12px/18px sans-serif;
-  display: inline-block;
-  margin-right: -4px;
-  position: relative;
-  padding: 15px 20px;
-  background: #2C3E50;
-  cursor: pointer;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -ms-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
-  color: #fff;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .nav_container {
@@ -132,16 +170,8 @@ text-align: center;
 }
 
 
-.bookedCourt {
-  border: .2em black solid;
-  width: 800px;
-  padding: 10px;
-  margin: 10px;
-  margin-right: 0;
-  margin-left: 2.5em;
-  font-size: 2em;
 
-}
+
 
 .challenge_list {
   text-decoration: none;
@@ -159,13 +189,7 @@ text-align: center;
   list-style-type: none;
   padding: 3px;
 }
-.all_courts {
-  text-decoration: none;
-  list-style-type: none;
-  padding: 3px;
-  margin-top: 1em;
-  font-size: 2em;
-}
+
 
 .animate-show {
   line-height: 20px;
@@ -196,37 +220,13 @@ text-align: center;
 
 
 
-.map {
-  display: block;
-   height: 300px; 
-   width: 800px;
-   margin-left: auto;
-   margin-right: auto;
-   margin-top: 1em;
-   margin-bottom: 2em;
-   padding-left: 0;
-   padding-right: 1em;
-}
-
-.main-wrapper {
-  width: 940px;
-  height: 2000px;
-  margin-left: auto;
-  margin-right: auto;
-  /*border: 1em solid black;*/
-}
 
 .main-buttons {
 
   margin-left: auto;
   margin-right: auto;
 }
-.court-info {
-  text-align: center;
-  font-size: 1em;
-  text-decoration: none;
 
-}
 .challenge-info {
   text-align: center;
   font-size: 1em;
@@ -247,10 +247,6 @@ text-align: center;
   margin-right: auto;
 }
 
-.court-button {
-  width: 20em;
-  font-size: 2.8em;
-}
 .opponent-button {
   width: 20em;
   font-size: 2.8em;
@@ -342,9 +338,6 @@ text-align: center;
     right: 0px;
 }
 
-.find-court-button {
-  background-color: #AF4FDD;
-}
 
 .find-opponent-button {
   width: 20em;
@@ -356,7 +349,7 @@ text-align: center;
 
 
 
-/*Login Page*/
+/*Login Page
 #login-page {
   width:400px;
   margin:0 auto;

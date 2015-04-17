@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get '/test/landing' => 'static#index', as: 'landing'
 
+  get '/test/search' => 'static#search'
+
   get '/test/home' => 'static#index', as: 'home'
 
   get 'users/get_all_users' => 'users#get_all_users'
