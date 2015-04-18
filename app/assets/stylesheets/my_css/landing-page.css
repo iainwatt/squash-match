@@ -183,7 +183,9 @@ section.module.content-2 {
 }
 section.module.content-3 {
   text-align: center;
-  height: 300px;
+  height: 400px;
+  background-color: #ECF3FD
+  padding-bottom:0;
 }
 .content-3 .container-3 p {
   font-family: 'Inconsolata', sans-serif;
@@ -192,9 +194,6 @@ section.module.content-3 {
   font-size: 25px;
   line-height: 200%;
 }
-.footer .my-footer {
-  height: 155px;
-  background-color: black;
-}
+
 
 

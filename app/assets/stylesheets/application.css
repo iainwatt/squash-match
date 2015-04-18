@@ -18,8 +18,33 @@
 
  */
 
-
-
+/** {
+  margin:0;
+}*/
+html, body {
+  height: 100%;
+}
+#all-project-wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -10em;
+}
+.main-footer, .push {
+  height: 10em;
+}
+.main-footer {
+  margin-top:0;
+  text-align: center;
+  background-color: #090E14;
+}
+.main-footer h4 {
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 3px; 
+  font-family: 'Inconsolata', sans-serif;
+  color: #2776ED;
+}
 
 .main-nav-wrapper {
   width: 100%;

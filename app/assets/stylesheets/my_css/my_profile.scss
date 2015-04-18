@@ -7,23 +7,336 @@
 }
 
 #test-div-1, #test-div-2 {
-  display: inline-block;
-  margin-top: 30px;
-  width: 45%;
-  min-height: 200px;
-  border: 2px solid black;
+  margin-top: 3em;
+  width: 49%;
+  min-height: 60em;
+  border: 1px solid black;
   background: #fafaff;
-  border-radius: 5px;
+  border-radius: .5em;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #test-div-1 {
-/*  margin: 10px auto;*/
-  background: #fafaff;
-  border-radius: 4px;
-  text-align: center;
-  border-bottom: 4px solid $gray;
-  font-family: 'Montserrat', sans-serif;
+  float:left;
 }
+#test-div-2 {
+  float:right;
+}
+#test-wrap .clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+#test-div-1 #my-profile-card {
+  width:90%;
+  height:50em;
+  margin: 5% auto 5% auto;
+  border-radius: 1em;
+  background-color:#394264;
+  opacity:.95;
+  padding-bottom: 5em;
+
+    .bumper {
+      height:4em;
+    }
+    .edit-link {
+      border-bottom-right-radius: .1em;
+      background-color:#090E14;
+      color:#25CF87;
+      width: 2.5em;
+      font-family: 'Inconsolata', sans-serif;
+      font-size: 3em;
+      cursor:pointer;       
+    }
+    .edit-link:hover {
+      background-color:#0ED085;
+      color:#090E14;
+    }
+    
+
+    .my-profile-picture {
+    margin: 5% auto 5% auto;
+    height:15em;
+    width:15em;
+    border-radius: 50%;
+    background-color: #39D68E;
+    position: relative
+    }
+    .my-profile-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 5.5em;
+      color:white;
+      width:100%;
+      text-align:center;
+      opacity:.9;
+      letter-spacing:.1em;
+    } 
+    .my-stats {
+      height: 7em;
+      width:100%;
+      background-color:#FFDD3A; 
+        .item {
+          padding-top: 1em; 
+          width:20%;
+          float:left;
+          font-family: 'Inconsolata', sans-serif;
+          text-align: center;
+          font-size: 1.5em;
+            .title {
+              padding-bottom:1em; 
+            }
+        }
+    }   
+    .clearfix {
+      overflow: auto; 
+      zoom: 1;}  
+    .my-profile-links {
+      height: 8em;
+      width:100%;
+      background-color:#2474F1; 
+      opacity:.9;
+        .item {
+          padding-top:.5em; 
+          width:20%;
+          float:left;
+          font-family: 'Inconsolata', sans-serif;
+          text-align: center;
+          font-size: 1.5em;
+            .info-circle {
+              height:3em;
+              width:3em;
+              margin-bottom:.5em;
+                .i {
+                  padding-top:.4em; 
+                }
+            }
+        }
+    }  
+}
+
+#test-div-2 {
+ .my-profile-nav-bar {
+    width:100%;
+    border-bottom:.1em solid #2B303B;
+      .profile-nav-bookings, .profile-nav-challenges  {
+        width:50%; 
+        float:left;
+        text-align: center;
+        font-family: 'Inconsolata', sans-serif;
+        font-size:2em;
+        background-color:#456481; 
+          h2 {
+            color:#FF8484; 
+          }    
+      }  
+  }
+  .clearfix {
+    overflow: auto; 
+    zoom: 1;
+  }
+  .hack-div-34 {
+    height:.1em; 
+  }
+  #my-booked-courts-wrap {
+    width:90%;
+    height:20em;
+    margin: 5% auto 5% auto;
+    border-radius: 1em;
+    background-color:white;
+    font-family: 'Montserrat', sans-serif;
+    text-align:center; 
+      h2 {
+        font-size:3em; 
+      }
+    .booking-details {
+      width:94%;
+      margin: .1em auto .1em auto;
+      border-radius: .2em;
+      font-size:2em;
+      background-color:#0594F2;
+      font-family: 'Inconsolata', sans-serif;
+      color:black;  
+        .bd-item {
+          width:33%;
+          float:left;
+          height:4em;
+            .title {
+              padding-top:.5em;
+              padding-bottom:.5em; 
+            }
+            .value {
+              padding-top:.5em; 
+            }
+            .bd-hr {
+              margin:0;
+              height:.01em;
+              background-color: rgba(255,255,255,1);         
+            }
+        }
+    .clearfix {
+      overflow: auto; 
+      zoom: 1;
+    }    
+    }
+    .my-social-links {
+      width:94%;
+      margin: .2em auto 0 auto;
+      border-radius: .2em;
+      font-size:2em;
+      background-color:#0474D3;
+      font-family: 'Inconsolata', sans-serif;
+      color:black; 
+        .my-sc-item {
+          height:4em;
+          width:25%;
+          float:left;
+            a {
+              padding-top:.8em;
+              padding-bottom:.5em; 
+            }
+            }
+            .title {
+              padding-top:.5em;
+            }
+        }
+    .clearfix {
+      overflow: auto; 
+      zoom: 1;
+    }    
+    }
+  #my-challengers-list {
+    width:90%;
+    height:21em;
+    margin: 5% auto 5% auto;
+    border-radius: 1em;
+    background-color:white;
+    border: .2em solid #434B6A;
+    font-family: 'Montserrat', sans-serif;
+    text-align:center; 
+      .challenge-booking-deets {
+        width:94%;  
+        margin: 5% auto 1% auto;  
+        background-color:#43D893;    
+        border-radius: 1em;
+
+        font-family: 'Inconsolata', sans-serif;
+        font-size:1.5em; 
+          .cbd-item {
+            height:4em;
+            width:25%;
+            float:left;
+              .cbd-info-button {
+                padding-top:1em;
+                margin:0;
+                word-wrap:normal;                
+                  h2 {
+                    margin:0; 
+                  }
+              }
+           } 
+           .cbd-item.last:hover {
+             background-color:#E84F89;
+           }      
+        
+          .title {
+            padding-top:.5em;
+            padding-bottom: .5em; 
+          }
+          .value {
+            padding-top:.5em;        
+          }
+      .clearfix {
+        overflow: auto; 
+        zoom: 1; 
+      } 
+      }
+      .challenger-personal-info {
+        width:94%;  
+        height:4em;
+        margin: 1% auto 1% auto;  
+        background-color:#FEDD53;    
+        border-radius: 1em;
+        font-family: 'Inconsolata', sans-serif;
+          .chp-item {
+            float:left;
+
+          }
+          .chp-item.item-1 {
+            width: 15%;
+            margin:0;
+          }
+          .chp-item.item-2 {
+            width:25%; 
+          }
+          .chp-item.item-3 {
+            width:15%;
+          }
+          .chp-item.item-4{
+            width:15%;
+          }
+          .chp-item.item-5{
+            width:15%;
+          }
+          .chp-item.item-6{
+            width:15%; 
+              .cbd-info-button {
+                padding-top:1em;
+                margin:0;
+                
+                  h2 {
+                    margin:0; 
+                  }
+              }
+          }
+          .title {
+            padding-top:.5em;
+            padding-bottom: .5em; 
+          }
+          .value {
+            padding-top:.5em;        
+          }
+      .clearfix {
+        overflow: auto; 
+        zoom: 1; 
+      }    
+      }
+      .chp-action-buttons {
+        width:94%;  
+        height:4em;
+        margin: 1% auto 5% auto;  
+        background-color:#3175E3;
+        font-family: 'Inconsolata', sans-serif;
+        border-radius: 1em;
+          .item-chp-action {
+            height:4em;
+            padding-top:1em;
+            width:20%;
+            float:left;
+              .info-circle {
+                padding-top:.5em; 
+                height:2em;
+                width:2em;
+                margin-bottom:.5em;
+                  .i {
+                    padding-top:.4em; 
+                  }
+              }
+          } 
+      }      
+      .clearfix {
+        overflow: auto; 
+        zoom: 1; 
+      }
+  }   
+}
+
+
+/*#my-profile-card .my-profile-picture {
+  margin: 5% auto 5% auto;
+  height:10em;
+  width:10em;
+  background-color: #39D68E;
+}*/
 
 #test-div-1 .profile-header {
   padding: 30px 0 30px;
@@ -121,11 +434,11 @@
   background-color: #3E5871;
   color:#FD8586;
 }
-#test-div-2 h2 {
+/*#test-div-2 h2 {
   padding:0;
   font-size: 14px;
   font-weight:300;
-}
+}*/
 
 /*this is for the booked court stub*/
 #test-div-2 .booking-card-wrap {
