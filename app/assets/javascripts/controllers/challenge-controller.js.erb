@@ -10,6 +10,7 @@ console.log(gps.userLon);
   $http.get('/users/current_user_profile')
  .success(function(data){
   $scope.user = data
+  console.log($scope.user)
  })
 
  

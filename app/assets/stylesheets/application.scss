@@ -21,6 +21,7 @@
 /** {
   margin:0;
 }*/
+
 html, body {
   height: 100%;
 }
@@ -44,57 +45,64 @@ html, body {
   letter-spacing: 3px; 
   font-family: 'Inconsolata', sans-serif;
   color: #2776ED;
+  margin: 0;
+  padding-top: 1em;
 }
 
 .main-nav-wrapper {
   width: 100%;
-  background-color: #f2f2f2;
+  background-color:white;
   border-bottom: 1px solid #ccc;  
   text-align: center;
 }
 .main-nav-wrapper #logo-left, #nav-right {
   display: inline-block;
-  border: 1px solid black;
   width: 49%
 }
 
-#logo-left {
-  display: inline-block;
+
+
+
+
+
+
+#logo-left  { 
   text-align: left;
-  background-color: #FE9F01;
+    #squash-logo {
+      display: inline-block;
+      border-radius:50%;
+      width:1.8em;
+      height:1.8em;
+      border:2px solid #efefef;
+      background:#064D54;
+      margin-left: 4em;
+        #dot {
+          position:absolute;
+          top:2.7%;
+          left:4.6%;
+          border-radius:50%;
+          width:.2em;
+          height:.2em;
+          background:#EFFB4F;
+        }
+    }
+    a {
+      display: inline-block;
+      color: black;
+      text-decoration: none;
+        h2.main-name {      
+          font-family: 'Montserrat', sans-serif;
+          font-size: 30px;
+          font-weight: 100;
+          letter-spacing: .6em;
+          padding-left: 5px;        
+        }
+    }    
 }
 
-#squash-logo {
-  display: inline-block;
-  border-radius:50%;
-  width:15px;
-  height:15px;
-  border:2px solid #efefef;
-  background:#064D54;
-  margin-left: 20px;
-}
-
-#dot {
-  position:absolute;
-  top:2.5%;
-  left:12.5%;
-  border-radius:1000px;
-  width:5px;
-  height:5px;
-  background:#EFFB4F;
-}
-
-#logo-left h2 {
-  display: inline-block;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 30px;
-  font-weight: 100;
-  letter-spacing: 5px;
-  padding-left: 5px;
-}
 
 #nav-right {
-  background-color:#1EA076;
+/*  background-color:#1EA076;*/
 }
 #nav-right ul {
   list-style: none;
@@ -109,7 +117,7 @@ html, body {
   display: block;
   padding: 8px 15px;
   text-decoration: none;
-  color: #0060B6;
+  color:#9B9B9B;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-weight: 100;
@@ -364,67 +372,16 @@ text-align: center;
 }
 
 
-.find-opponent-button {
+/*.find-opponent-button {
   width: 20em;
   font-size: 2.8em;
   margin-bottom: 1em;
   background-color: #E449A1;
 }
+*/
 
 
 
-
-/*Login Page
-#login-page {
-  width:400px;
-  margin:0 auto;
-  margin-top:8px;
-  margin-bottom:2%;
-  transition:opacity 1s;
-  -webkit-transition:opacity 1s;
-}
-#login-page form {
-  background:#f0f0f0;
-  padding:6% 4%;
-}
-
-#login-page h1 {
-  background:#3399cc;
-  padding:20px 0;
-  font-size:140%;
-  font-weight:300;
-  text-align:center;
-  color:#fff;
-  margin-bottom: 0;
-}
-
-#login-page #user_password, #user_email {
-  width:100%;
-  background:#fff;
-  margin-bottom:4%;
-  border:1px solid #ccc;
-  padding:4%;
-  font-family:'Open Sans',sans-serif;
-  font-size:95%;
-  color:#555;
-}
-
-#login-page input[type="submit"] {
-  width:100%;
-  background:#3399cc;
-  border:0;
-  padding:4%;
-  font-family:'Open Sans',sans-serif;
-  font-size:100%;
-  color:#fff;
-  cursor:pointer;
-  transition:background .3s;
-  -webkit-transition:background .3s;
-}
-
-#login-page input[type="submit"]:hover {
-  background:#2288bb;
-}
 
 /* Sign up Page*/
 #sign-up-page {

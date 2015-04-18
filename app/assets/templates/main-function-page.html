@@ -13,28 +13,65 @@
 </section>
 
 <div id="search-results">
-  <div class="container-4">
-    <div class="main-page-courts">
-      <h4>FREE COURTS</h4>
-<!-- 
-       <div ng-controller="CourtController">
+  <div class="toggle-buttons">
+    <button class="find-court-button" ng-hide="main-page-courts">Find a Court</button>
+    <button class="find-opponent-button" ng-click="findOpponent()">Find an Opponent</button>
+  </div> 
+  
 
-          <button
-            ng-click="findCourts()">
-            Find a Court 
+  <div class="main-page-courts">
+    <div ng-controller="CourtController" class="court-cont">
+      <button class="find-court-button"
+        ng-click="findCourts()">
+        Find a Court 
+      </button>
+      <ul class="av-courts" ng-hide="bookedCourt">
+        <li ng-repeat="court in courtsAndDistances | orderBy:['dist','start_time'] | filter:'!booked' | limitTo:10 " >{{ court.centre.name }} | {{ court.start_time | customtime }} | Distance: {{ court.dist | number:1 }}km's 
+        <button ng-click="bookCourt(court); clickToOpenMatch()">Book Now</button>
+        <button ng-click="clickToOpenMatch()">Show Modal</button>
+         <div class="bookedCourt" ng-show="bookedCourt"> Court Successfully Booked! </br> {{ bookedCourt.centre_id }} | {{ bookedCourt.time }} | court_no: {{ bookedCourt.court_no}} </br></div> 
+        </li>
+      </ul>        
+    </div>
+
+   <div class="challenge-info" ng-controller="ChallengeController">
+   <button class="find-opponent-button" 
+      ng-click="findOpponent()">
+      Find an Opponent
+   </button>
+      <ul ng-hide="challengeOffered" ng-repeat="challenge in challengesAndDistances | orderBy:'dist' | limitTo:6">
+       <li class="challenge_list">
+        <strong>location: </strong> 
+          {{ challenge.court.start_time | customtime }} | {{ challenge.centre.name }} | {{ challenge.dist | number:1}}km's 
+        </li>
+         <li class="challenge_list opponent">
+          <strong>Opponent: </strong>
+            {{ challenge.player1.first_name }} {{ challenge.player1.last_name }} | level: {{ challenge.player1.level }} 
+          <button>
+            <a href="profile/{{ challenge.player1_id }}">View Profile</a>
+          </button> 
+          <button type="button" 
+            class="btn btn-info active" 
+            ng-click="challengePlayer1(challenge)">
+            Play
           </button>
+          </li>
+       </ul>
+     <div ng-show="challengeOffered">Challenge Pending..good luck <br>
+     {{ current_user.first_name }}  <button>
+     <a href=""></a>View Details</button></div>
+  </div> 
 
-          <ul class="av-courts" ng-hide="bookedCourt">
-            <li ng-repeat="court in courtsAndDistances | orderBy:['dist','start_time'] | filter:'!booked' " >{{ court.centre.name }} | {{ court.start_time | customtime }} | Distance: {{ court.dist | number:1 }}km's 
 
-            <button ng-click="bookCourt(court)">Book Now</button>
-            <button ng-click="clickToOpenMatch()">Show Modal</button>
-            </li>
-          </ul>  -->
-      </div>
+</div> 
 
-    <div class="main-page-challenges">
-     <h4>FREE CHALLENGES</h4>
+
+
+  </div>
+</div>
+
+   <!--  <div class="main-page-challenges">
+     <h4>FIND MATCHES</h4>
      <div ng-controller="ChallengeController">
 
       <button
@@ -63,13 +100,22 @@
 
   </div>
 </div>
-
+ -->
 
 <!-- 
-<div class="main-wrapper">
 
+<!
+          <ul class="av-courts" ng-hide="bookedCourt">
+            <li ng-repeat="court in courtsAndDistances | orderBy:['dist','start_time'] | filter:'!booked' " >{{ court.centre.name }} | {{ court.start_time | customtime }} | Distance: {{ court.dist | number:1 }}km's 
 
-<div class="main-buttons"> -->
+            <button ng-click="bookCourt(court)">Book Now</button>
+            <button ng-click="clickToOpenMatch()">Show Modal</button>
+            </li>
+          </ul>  -->
+<!-- <div class="main-wrapper">
+
+ -->
+<!-- <div class="main-buttons">  -->
 
 <!-- ######## this shows what courts are available  - ng-show / not working ##### -->
 <!-- <div class="court-info" ng-controller="CourtController">

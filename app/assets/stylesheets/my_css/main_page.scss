@@ -1,0 +1,206 @@
+
+section.module.parallax-4 {
+  background-image: url("https://s3-eu-west-1.amazonaws.com/squash-bucket/uploads/user/user_image/london-map.jpg");
+  height: 800px;
+  margin-top:0;
+  z-index: -2;
+}
+.animation-photo{
+  position:absolute;
+  top:40%;
+  left:50%;
+  transform:translateX(-50%) translateY(-50%);
+  border-radius:1000px;
+  width:280px;
+  height:280px;
+  padding:5px;
+  /*border:2px solid #efefef;*/
+  background:#064D54;
+  opacity: 0.9;
+}
+
+#animation-dot {
+  position:absolute;
+  top:25%;
+  left:63%;
+  border-radius:1000px;
+  width:8px;
+  height:8px;
+  background:#EFFB4F;
+  opacity: 0.8;
+}
+
+#loading {
+  position:absolute;
+  top:44%;
+  left:14%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  line-height: 30px;
+  color:#F0E797;
+  letter-spacing: 7px;
+  opacity: 0.9;
+}
+
+.pulse{
+  position:absolute;
+  left:50%;
+  top:40%;
+  width:800px;
+  height:500px;
+  background:radial-gradient(white 40%, orange);
+  z-index:2;
+  transform:translateY(-50%) translateX(-50%);
+  border-radius:1000px;
+  opacity:0.9;
+  border:2px solid red;
+}
+
+#search-results {
+  padding:0;
+  text-align: center;
+  width:100%;
+  height: 800px;
+    .toggle-buttons {
+      margin-top: 1em;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3em;
+      word-spacing:.2em;
+      color:#1777E2;
+      border-radius:.5em;
+      border:0;     
+        .find-court-button {
+          display: inline-block;
+          background-color:#404B57;
+          border-radius:.2em;     
+        }
+       .find-opponent-button {
+          display: inline-block;
+          background-color:#404B57;
+          border-radius:.2em;     
+      }
+    }
+    .main-page-courts {
+      .court-cont {
+          button.find-court-button {
+            margin: 1em 20em 1em 0 ;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3em;
+            word-spacing:.2em;
+            color:#1777E2;
+            opacity:.9;
+            background-color:#2B3745;
+            border-radius:.2em;     
+          }
+          .av-courts {
+            font-family: 'Inconsolata', sans-serif;
+            font-size:1.8em;
+            list-style-type: none;
+            margin: .1em 0 .1em 0;
+          
+              ul { 
+                } li {
+                    width:80%;
+                    padding-top:1em;
+                    margin: 2% 0 2% 0;
+                    height:2em;
+                    margin:0;
+                    border-bottom: .1em dashed #434B6B;
+                    border-radius: .5em;
+                    background-color:#EAF8EA;
+
+                  }
+                  .booked-court {
+                    font-family: 'Inconsolata', sans-serif;
+                    font-size:1.5em;
+                  }
+          }
+      }
+    }
+    .challenge-info {
+      .find-opponent-button {
+        margin-top: 1em;
+        margin:0;
+        width:70%;
+        /*margin-left: 10em;*/
+        font-family: 'Montserrat', sans-serif;
+        font-size: 3em;
+        word-spacing:.2em;
+        color:#1777E2;
+        opacity:.9;
+        background-color:#2B3745;
+        border-radius:.2em;     
+      }
+      .challenge_list {
+        font-family: 'Inconsolata', sans-serif;
+        font-size:1.5em;
+        list-style-type: none;
+        margin: .1em 0 .1em 0;
+      }
+    }
+}
+
+
+
+/*.bookedCourt {
+  border: .2em black solid;
+  width: 800px;
+  padding: 10px;
+  margin: 10px;
+  margin-right: 0;
+  margin-left: 2.5em;
+  font-size: 2em;
+}
+
+.court-info {
+  text-align: center;
+  font-size: 1em;
+  text-decoration: none;
+}
+.court-button {
+  width: 20em;
+  font-size: 2.8em;
+}
+.find-court-button {
+  background-color: #AF4FDD;
+}
+.all_courts {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 3px;
+  margin-top: 1em;
+  font-size: 2em;
+}*/
+
+/*.container-4.main-page-courts, .main-page-challenges {
+  width:20%;
+  display: inline-block !important;
+}
+*/
+/*.main-wrapper {
+  width: 100%;
+  height: 2000px;
+  margin: 10px auto 0 auto;
+}
+.fixed-map {
+
+  height:600px;
+}
+.fixed-map img {
+  width:100%;
+/*  height:600px;*/
+
+
+/*.map {
+  display: block;
+   height: 300px; 
+   width: 800px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 1em;
+   margin-bottom: 2em;
+   padding-left: 0;
+   padding-right: 1em;
+}*/
+

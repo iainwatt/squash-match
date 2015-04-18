@@ -1,0 +1,100 @@
+
+
+.up-wrapper {
+  margin: 0 auto 0 auto;
+  background-color: #E4E4E4;
+  width:55%;
+  min-height:62em;
+    .up-card {
+      margin: 5% auto 0 auto;
+      width:50%;
+      background-color:#394264;
+      font-family: 'Montserrat', sans-serif;
+      min-height: 60px;
+      border-radius: 1em;
+      }
+      .bumper {
+        height:4em;
+      }
+      .up-picture {
+        margin: 5% auto 5% auto;
+        height:15em;
+        width:15em;
+        border-radius: 50%;
+        background-color: #39D68E;
+        position: relative
+      }
+      .up-user-name { 
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2em;
+        color:white;
+        width:100%;
+        text-align:center;
+        opacity:.9;
+        letter-spacing:.1em;
+      }
+      .up-user-description {
+        margin: 0 auto 0 auto;
+        text-align: center;
+        width:90%;
+        min-height: 20px;
+          .up-user-description p {
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: 200;
+            color:#9099B7;
+          }          
+      }
+      .up-details {
+        width:100%;
+        background-color:#FFDD3A; 
+          .up-item {
+            padding-top: 1em; 
+            width:25%;
+            float:left;
+            font-family: 'Inconsolata', sans-serif;
+            text-align: center;
+            font-size: 1.5em;
+              .title {
+                padding-bottom:1em; 
+              }
+          }
+      }
+      .clearfix {
+        overflow: auto; 
+        zoom: 1;
+      }
+      .up-links {
+        height: 8em;
+        width:100%;
+        background-color:#2474F1; 
+        opacity:.9;
+        border-bottom:.1em solid #394263; 
+          .up-item {
+            padding-top:1.5em; 
+            width:25%;
+            float:left;
+            font-family: 'Inconsolata', sans-serif;
+            text-align: center;
+            font-size: 1.5em;
+              .info-circle {
+                height:3em;
+                width:3em;
+                margin-bottom:.5em;
+                  .i {
+                    padding-top:.4em; 
+                  }
+              }
+          }
+      .clearfix {
+        overflow: auto; 
+        zoom: 1;
+      } 
+      .up-links.link-2 {
+        background-color:#2F93E1; 
+      }     
+      }
+      
+}
+
+

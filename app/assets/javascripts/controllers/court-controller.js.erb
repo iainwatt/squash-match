@@ -36,20 +36,34 @@ CourtService.getCourts()
   };
 
 
+
+
+
 // ###### function that books a court ###### //
   $scope.bookCourt = function(court) {
+    console.log(court)
     $scope.court_id = court.id
     $scope.user_id = gon.current_user.id
+
     // console.log($scope.selectedCourt)
     CourtService.putCourts($scope.court_id, $scope.user_id)
     .then(function(response){
       console.log(response)
       $scope.bookedCourt = response.data
+      console.log("this is the booked court message")
     });
   };
 // ###### function that books a court ###### //
 
 
+// function clickToOpenMatch() {
+//   ngDialog.open({ 
+//     templateUrl: "<%= asset_path('booking-confirmation.html') %>",
+//     scope: $scope,
+//     // appendTo: "document.body"
+//   });
+//  }
+// }
 $scope.clickToOpenMatch = function () {
   // $scope.modalArtist = artist;
   ngDialog.open({ 

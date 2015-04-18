@@ -28,7 +28,7 @@
 }
 
 #test-div-1 #my-profile-card {
-  width:90%;
+  width:60%;
   height:50em;
   margin: 5% auto 5% auto;
   border-radius: 1em;
@@ -64,7 +64,7 @@
     }
     .my-profile-name {
       font-family: 'Montserrat', sans-serif;
-      font-size: 5.5em;
+      font-size: 4em;
       color:white;
       width:100%;
       text-align:center;
@@ -180,7 +180,7 @@
     }
     .my-social-links {
       width:94%;
-      margin: .2em auto 0 auto;
+      margin: .2em auto 1em auto;
       border-radius: .2em;
       font-size:2em;
       background-color:#0474D3;
@@ -206,7 +206,7 @@
     }
   #my-challengers-list {
     width:90%;
-    height:21em;
+    height:22em;
     margin: 5% auto 5% auto;
     border-radius: 1em;
     background-color:white;
