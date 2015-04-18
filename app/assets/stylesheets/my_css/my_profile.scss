@@ -125,6 +125,7 @@
         font-family: 'Inconsolata', sans-serif;
         font-size:2em;
         background-color:#456481; 
+        cursor: pointer;
           h2 {
             color:#FF8484; 
           }    
@@ -138,6 +139,7 @@
     height:.1em; 
   }
   #my-booked-courts-wrap {
+    display: none;
     width:90%;
     height:20em;
     margin: 5% auto 5% auto;
@@ -205,6 +207,7 @@
     }    
     }
   #my-challengers-list {
+    display: none;
     width:90%;
     height:22em;
     margin: 5% auto 5% auto;

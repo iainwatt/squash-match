@@ -130,24 +130,15 @@ $scope.acceptChallenge = function(challenge) {
     })
   }; 
 
+$('#toggle-bookings').click(function(){
+         $('#my-booked-courts-wrap').show(200);
+     $('#my-challengers-list').hide(600);
+});
 
-// function AlertsCtrl($scope, alertsManager) {
-//     $scope.alerts = alertsManager.alerts;
-//     console.log($scope.alerts)
-// }
-
-// function FooCtrl($scope, alertsManager) {
-//     $scope.doGood = function() {
-//         alertsManager.addAlert('Yay!', 'alert-success');
-//     };
-//     $scope.doEvil = function() {
-//         alertsManager.addAlert('Noooo!', 'alert-error');
-//     };
-//     $scope.reset = function() {
-//         alertsManager.clearAlerts();
-//     };
-// }
-
+$('#toggle-challenges').click(function(){
+         $('#my-challengers-list').show(200);
+     $('#my-booked-courts-wrap').hide(700);
+});
 
 
 

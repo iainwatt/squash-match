@@ -82,6 +82,7 @@ section.module.parallax-4 {
       }
     }
     .main-page-courts {
+      display: none;
       .court-cont {
           button.find-court-button {
             margin: 1em 20em 1em 0 ;
@@ -119,6 +120,7 @@ section.module.parallax-4 {
       }
     }
     .challenge-info {
+      display: none;
       .find-opponent-button {
         margin-top: 1em;
         margin:0;

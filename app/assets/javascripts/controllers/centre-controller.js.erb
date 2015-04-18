@@ -43,6 +43,15 @@ $('.photo').click(function(){
   $( ".pulse" ).clone().appendTo( "body" );
 })
 
+$('.find-court-button').click(function() {
+  $('.main-page-courts').show(200);
+  $('.challenge-info').hide(600);
+});
+
+$('.find-opponent-button').click(function() {
+  $('.challenge-info').show(200);
+  $('.main-page-courts').hide(700);
+});
 
 }]);
 

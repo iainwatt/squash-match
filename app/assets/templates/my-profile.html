@@ -55,23 +55,25 @@
       </div>
     </div>
 
-    <div id="test-div-2">
+  <div id="test-div-2">
       <div class="my-info-card"></div>
       <div class="my-profile-nav-bar clearfix">
         <div class="profile-nav-bookings">
-          <h2>BOOKINGS</h2>
+          <h2><button id="toggle-bookings">BOOKINGS</button></h2>
         </div>
         <div class="profile-nav-challenges">
-          <h2>CHALLENGES</h2>
+          <h2><button id="toggle-challenges">CHALLENGES</button></h2>
         </div>
       </div>
-
       <div id="my-booked-courts-wrap">
         <div class="hack-div-34"></div>
         <div class="booking-title">
-          <h2>COURT BOOKED <span class="fa fa-ticket" style="font-style: italic"></span></h2>
+          <h2>
+            COURT BOOKED <span class="fa fa-ticket" style=
+            "font-style: italic"></span>
+          </h2>
         </div>
-        <div class="booking-details clearfix" ng-repeat="court in myCourts | limitTo:2">
+        <div class="booking-details clearfix">
           <div class="bd-item">
             <div class="title">
               DATE
@@ -103,102 +105,161 @@
         <div class="my-social-links clearfix">
           <div class="my-sc-item">
             <a class="info-circle calendar fa fa-calendar"></a>
-            <div class="Title">ADD</div>
+            <div class="Title">
+              ADD
+            </div>
           </div>
           <div class="my-sc-item">
-            <a class="info-circle pay fa fa-credit-card"></a> 
-            <div class="Title">PAY</div>
+            <a class="info-circle pay fa fa-credit-card"></a>
+            <div class="Title">
+              PAY
+            </div>
           </div>
           <div class="my-sc-item">
-            <a class="info-circle message fa fa-envelope-o"></a> 
-            <div class="Title">SHARE</div>
+            <a class="info-circle message fa fa-envelope-o"></a>
+            <div class="Title">
+              SHARE
+            </div>
           </div>
           <div class="my-sc-item">
             <a class="info-circle map-icon fa fa-map-marker"></a>
-            <div class="Title">MAP</div>
+            <div class="Title">
+              MAP
+            </div>
           </div>
         </div>
       </div>
       <div id="my-challengers-list">
         <div class="my-ch-title">
-         <div class="challenge-title">
-            <h2>CHALLENGES <span class="fa fa-user-plus"></span></h2>
+          <div class="challenge-title">
+            <h2>
+              CHALLENGES <span class="fa fa-user-plus"></span>
+            </h2>
           </div>
-
-         <div class="challenge-booking-deets clearfix">
+          <div class="challenge-booking-deets clearfix">
             <div class="cbd-item">
-              <div class="title">DATE</div>
-              <div class="value">16/04</div>
+              <div class="title">
+                DATE
+              </div>
+              <div class="value">
+                16/04
+              </div>
             </div>
             <div class="cbd-item">
-              <div class="title">TIME</div>
-              <div class="value">18.45</div>
+              <div class="title">
+                TIME
+              </div>
+              <div class="value">
+                18.45
+              </div>
             </div>
             <div class="cbd-item">
-              <div class="title">LOCATION</div>
-              <div class="value">Clissold</div>
+              <div class="title">
+                LOCATION
+              </div>
+              <div class="value">
+                Clissold
+              </div>
             </div>
             <div class="cbd-item last">
               <div class="cbd-info-button">
-                <h2>More Info</h2>
+                <h2>
+                  More Info
+                </h2>
               </div>
             </div>
-          </div> 
-          <div class="challenger-personal-info clearfix" ng-repeat="challenge in myChallenges | limitTo:1">
+          </div>
+          <div class="challenger-personal-info clearfix">
             <div class="chp-item item-1">
-              <div class="title">IMAGE</div>
+              <div class="title">
+                IMAGE
+              </div>
             </div>
             <div class="chp-item item-2">
-              <h4>{{ challenge.player1.first_name }} {{ challenge.player1.last_name }}</h4>
+              <h4>
+                {{ challenge.player1.first_name }} {{
+                challenge.player1.last_name }}
+              </h4>
             </div>
             <div class="chp-item item-3">
-              <div class="title"> ELO</div>
-              <div class="value">1045</div>
-             <!--  <div class="chp-value">{{ challenge.player1.elo}}</h4> -->
+              <div class="title">
+                ELO
+              </div>
+              <div class="value">
+                1045
+              </div>
+              <div class="chp-value">
+                {{ challenge.player1.elo}}
+              </div>
+              <div class="chp-item item-4">
+                <div class="title">
+                  RANK
+                </div>
+                <div class="value">
+                  123rd
+                </div>
+              </div>
+              <div class="chp-item item-5">
+                <div class="title">
+                  FORM
+                </div>
+                <div class="value">
+                  WLW
+                </div>
+              </div>
+              <div class="chp-item item-6">
+                <div class="cbd-info-button">
+                  <h2>
+                    More Info
+                  </h2>
+                </div>
+              </div>
             </div>
-            <div class="chp-item item-4">
-              <div class="title">RANK</div>
-              <div class="value">123rd</div>
-            </div>
-            <div class="chp-item item-5">
-              <div class="title">FORM</div>
-              <div class="value">WLW</div>
-            </div>
-            <div class="chp-item item-6">
-              <div class="cbd-info-button">
-                <h2>More Info</h2>
+            <div class="chp-action-buttons clearfix">
+              <div class="item-chp-action">
+                <a class="info-circle fa fa-calendar" style=
+                "font-style: italic"></a>
+                <div class="Title">
+                  ACCEPT
+                </div>
+              </div>
+              <div class="item-chp-action">
+                <a class="info-circle fa fa-calendar" style=
+                "font-style: italic"></a>
+                <div class="Title">
+                  DECLINE
+                </div>
+              </div>
+              <div class="item-chp-action">
+                <a class="info-circle fa fa-calendar" style=
+                "font-style: italic"></a>
+                <div class="Title">
+                  CANCEL
+                </div>
+              </div>
+              <div class="item-chp-action">
+                <a class="info-circle fa fa-calendar" style=
+                "font-style: italic"></a>
+                <div class="Title">
+                  LOG WIN
+                </div>
+              </div>
+              <div class="item-chp-action">
+                <a class="info-circle fa fa-calendar" style=
+                "font-style: italic"></a>
+                <div class="Title">
+                  LOG LOSS
+                </div>
               </div>
             </div>
           </div>
-          <div class="chp-action-buttons clearfix">
-            <div class="item-chp-action ">
-              <a class="info-circle"><i class="fa fa-calendar"></i></a>
-            <div class="Title">ACCEPT</div>
-          </div>
-          <div class="item-chp-action ">
-             <a class="info-circle"><i class="fa fa-calendar"></i></a>
-            <div class="Title">DECLINE</div>
-          </div>
-          <div class="item-chp-action ">
-             <a class="info-circle"><i class="fa fa-calendar"></i></a>
-            <div class="Title">CANCEL</div>
-          </div>
-          <div class="item-chp-action ">
-             <a class="info-circle"><i class="fa fa-calendar"></i></a>
-            <div class="Title">LOG WIN</div>
-          </div>
-          <div class="item-chp-action ">
-              <a class="info-circle"><i class="fa fa-calendar"></i></a>
-            <div class="Title">LOG LOSS</div>
-          </div>
         </div>
-        
       </div>
-
     </div>
-</div>
+           
 
 
+   
 <!-- <div class="bookings">
   <h2>My Bookings</h2>
   <ul ng-repeat="court in myCourts | limitTo:2">
