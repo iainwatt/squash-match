@@ -4,10 +4,28 @@ app.controller('AllUsersController', ['$scope', '$http', '$routeParams', functio
 
 
   $http.get('/users/all_users')
+    .success(function(response){  
+    $scope.top_users = response 
+    console.log($scope.top_users);
+    for (i=1; i < $scope.top_users.length;i++) {
+      console.log(i);
+    }
+    $scope.count = response.count
+    
+  });
+    // $scope.count = $scope.top_users.count
+    // console.log($scope.count);
+    // for (i=1; $scope.top_users.length;i++) {
+    //   console.log(i);
+    // }
+ // console.log(data.index);
+//  $scope.range = function(n) {
+//   return new Array(n);
+// };
+
+  $http.get('/users/all_users')
  .success(function(response){  
   $scope.all_users = response
-  console.log($scope.all_users)
-
 // Setting up the 2 button press event functions, then calling add new profile function
   $(document).ready(function(event) {  
     $("div#swipe_like").on( "click", function() {
@@ -102,4 +120,4 @@ app.controller('AllUsersController', ['$scope', '$http', '$routeParams', functio
 
  
 
-}])
+}]);

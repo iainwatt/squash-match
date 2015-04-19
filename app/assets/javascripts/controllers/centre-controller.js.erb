@@ -4,8 +4,10 @@ app.controller('CentreController', ['$scope', '$http', '$timeout', '$location', 
 
 $http.get('/users/current_user_profile')
  .success(function(data){
+ 
   $scope.user = data
  })
+
 
  // passing the displayTime() function from moment.js file so we can display a clock, and including the $timeout Angular service
   var updateTime = function() {
@@ -16,11 +18,37 @@ $http.get('/users/current_user_profile')
   }
   updateTime();
 
+NavigatorGeolocation.getCurrentPosition()
+   .then(function(position) {
+    $scope.meLat = position.coords.latitude; 
+    $scope.meLong = position.coords.longitude;
+    $scope.me = position.coords.latitude, position.coords.longitude;
+     // console.log($scope.meLat);
+     // console.log($scope.meLong);
+
+  });
+
   CentreService.getCentres()
   .then(function(response) {
     $scope.centres = response.data;
-    // console.log($scope.centre);
-  });
+    });
+
+  //   $scope.showInfoWindow = function (event, p) {
+
+  //     var infowindow = new google.maps.InfoWindow();
+  //     var center = new google.maps.LatLng(centre.latitude,centre.longitude);
+
+  //     infowindow.setContent(
+  //         '<h3>' + p + '</h3>');
+
+  //     infowindow.setPosition(center);
+  //     infowindow.open($scope.objMapa);
+  //   };
+
+
+// setTimeout(function(){
+//   console.log($scope.centre);
+// },2000);
 
 $scope.current_user = gon.current_user
 
@@ -46,6 +74,7 @@ $('.photo').click(function(){
 $('.find-court-button').click(function() {
   $('.main-page-courts').show(200);
   $('.main-challenge-info').hide(600);
+  $('.map-hide').show(200);
 });
 
 $('.find-opponent-button').click(function() {

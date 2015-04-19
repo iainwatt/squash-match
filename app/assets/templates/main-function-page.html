@@ -13,189 +13,82 @@
   </div>
 </section>
 
+
+
 <div id="search-results">
   <div class="toggle-buttons">
     <button class="find-court-button">Find a Court</button>
     <button class="find-opponent-button">Find an Opponent</button>
   </div> 
-  
 
-  <div class="main-page-courts">
-    <div ng-controller="CourtController" class="court-cont">
-      <button class="find-court-button"
-        ng-click="findCourts()">
-        SEARCH COURTS
-      </button>
-      <ul class="av-courts" ng-hide="bookedCourt">
-        <li ng-repeat="court in courtsAndDistances | orderBy:['dist','start_time'] | filter:'!booked' | limitTo:10 " >{{ court.centre.name }} | {{ court.start_time | customtime }} | Distance: {{ court.dist | number:1 }}km's 
-        <button class"launchConfirm" ng-click="bookCourt(court)">Book Now</button>
-       
+  <div class"map-and-challenge-wrapper clearfix">
 
-         
-        </li>
-      </ul>  
-      <div class="bookedCourt" ng-show="bookedCourt"> Court Successfully Booked! </br> {{ bookedCourt.centre_id }} | {{ bookedCourt.time }} | court_no: {{ bookedCourt.court_no}} </br></div>       
+    <div class="map-hide">
+    <map class="map" lazy-load
+          zoom="12"
+          center="[{{meLat}},{{meLong}}]">    
+           <marker position="[{{meLat}},{{meLong}}]" 
+           title="My Current Location"
+           animation="Animation.BOUNCE"
+           icon: "/small-icon.png"
+           ></marker>
+           <marker ng-repeat="centre in centres" position="{{ centre.latitude }},{{ centre.longitude}}"
+           title="{{centre.name}}" on-click="showInfoWindow(event, 'marker-info')"></marker>
+           <info-window id="marker-info">
+              <h4></h4>
+            </info-window>
+      </map>  
     </div>
-  </div> 
-   <div class="main-challenge-info" ng-controller="ChallengeController">
-   <button class="find-opponent-button" 
-      ng-click="findOpponent()">
-      SEARCH OPPONENTS
-   </button>
-      <ul ng-hide="challengeOffered" ng-repeat="challenge in challengesAndDistances | orderBy:'dist' | limitTo:6">
-       <li class="challenge_list">
-        <strong>location: </strong> 
-          {{ challenge.court.start_time | customtime }} | {{ challenge.centre.name }} | {{ challenge.dist | number:1}}km's 
-        </li>
-         <li class="challenge_list opponent">
-          <strong>Opponent: </strong>
-            {{ challenge.player1.first_name }} {{ challenge.player1.last_name }} | ELO {{ challenge.player1.elo }} level: {{ challenge.player1.level }} 
-          <button>
-            <a href="profile/{{ challenge.player1_id }}">View Profile</a>
-          </button> 
-          <button type="button" 
-            class="btn btn-info active" 
-            ng-click="challengePlayer1(challenge)">
-            Play
-          </button>
+    
+    <div class="main-page-courts">
+      <div ng-controller="CourtController" class="court-cont">
+        <button class="find-court-button"
+          ng-click="findCourts()">
+          SEARCH COURTS
+        </button>
+        <ul class="av-courts" ng-hide="bookedCourt">
+
+          <li ng-repeat="court in courtsAndDistances | orderBy:['dist','start_time'] | filter:'!booked' | limitTo:10 " >{{ court.centre.name }} | {{ court.start_time | customtime }} | Distance: {{ court.dist | number:1 }}km's 
+          <button class"btn" ng-click="bookCourt(court)">Book Now</button>
+               
           </li>
-       </ul>
-     <div ng-show="challengeOffered">Challenge Pending..good luck <br>
-     {{ current_user.first_name }}  <button>
-     <a href="profile/{{ challenge.player1_id }}">View Details</a></button></div>
-  </div> 
-
-
-
-
-
-
-  </div>
-
-</div>
-
-   <!--  <div class="main-page-challenges">
-     <h4>FIND MATCHES</h4>
-     <div ng-controller="ChallengeController">
-
-      <button
-        ng-click="findOpponent()">
-        Find an Opponent
-      </button>
-
-      <ul ng-hide="challengeOffered" ng-repeat="challenge in challengesAndDistances | orderBy:'dist' | limitTo:10">
-
-       <li class="challenge_list">
-          <strong>location: </strong> 
-            {{ challenge.court.start_time | customtime }} | {{ challenge.centre.name }} | {{ challenge.dist | number:1}}km's 
-       </li>
-       <li class="challenge_list opponent">
-          <strong>Opponent: </strong>
-          {{ challenge.player1.profile_name }} | level: {{ challenge.player1.level }} 
-
-          <button>View Profile</button> 
-          <button ng-click="challengePlayer1(challenge)">Play </button>
-        </li>
-       </ul>     
-
-     </div>
-    </div>
-
-
-  </div>
-</div>
- -->
-
-<!-- 
-
-<!
-          <ul class="av-courts" ng-hide="bookedCourt">
-            <li ng-repeat="court in courtsAndDistances | orderBy:['dist','start_time'] | filter:'!booked' " >{{ court.centre.name }} | {{ court.start_time | customtime }} | Distance: {{ court.dist | number:1 }}km's 
-
-            <button ng-click="bookCourt(court)">Book Now</button>
-            <button ng-click="clickToOpenMatch()">Show Modal</button>
-            </li>
-          </ul>  -->
-<!-- <div class="main-wrapper">
-
- -->
-<!-- <div class="main-buttons">  -->
-
-<!-- ######## this shows what courts are available  - ng-show / not working ##### -->
-<!-- <div class="court-info" ng-controller="CourtController">
- <div class="bookedCourt" ng-show="bookedCourt"> Court Successfully Booked! </br> {{ bookedCourt.centre_id }} | {{ bookedCourt.time }} | court_no: {{ bookedCourt.court_no}} </br>  
-
-  <button type="button" 
-      class="btn btn-primary btn-sm active" 
-      ng-click="issueChallengewithCourt(bookedCourt)">
-      Find Opponent
-  </button> 
-
-  </div>
-
-  <button type="button" 
-    class="btn btn-default btn-lg court-button find-court-button" 
-    ng-click="findCourts()">
-    Find a Court 
-  </button>
-
-    <ul ng-hide="bookedCourt">
-     <!  <h2>Available courts to book</h2> -->
-     <!--  <li class="all_courts" ng-repeat="court in courtsAndDistances | orderBy:['dist','start_time'] | filter:'!booked' " >{{ court.centre.name }} | {{ court.start_time | customtime }} | Distance: {{ court.dist | number:1 }}km's <button type="button" class="btn btn-success btn-sm active" ng-click="bookCourt(court)">Book Now</button>
-      </li>
-    </ul> -->
-    <!-- **** This is the message and info that is shown once you have booked a court  **** --> 
-   
-  <!-- ######## this shows what courts are available  - ng-show / not working ##### -->
-
-
-
-
-
-
-
-
-<!-- ######### this shows all the pending challenges ########### -->
-  <!-- <div class="challenge-info" ng-controller="ChallengeController">
-
-   <button type="button" 
-      class="btn btn-default btn-lg find-opponent-button" 
-      ng-click="findOpponent()">
-      Find an Opponent
-   </button>
- -->
-   <!--<!  <h2 ng-hide="challengeOffered">Pending Challenges</h2> -->
-   <!--     <ul ng-hide="challengeOffered" ng-repeat="challenge in challengesAndDistances | orderBy:'dist' | limitTo:10">
-
-         <li class="challenge_list">
+        </ul>  
+        <div class="bookedCourt" ng-show="bookedCourt"> Court Successfully Booked! </br> {{ court.centre.name }} | {{ bookedCourt.time }} | court_no: {{ bookedCourt.court_no}} </br></div>       
+      </div>
+    </div> 
+    <div class="main-challenge-info" ng-controller="ChallengeController">
+       <button class="find-opponent-button" 
+          ng-click="findOpponent()">
+          SEARCH OPPONENTS
+       </button>
+          <ul ng-hide="challengeOffered" ng-repeat="challenge in challengesAndDistances | orderBy:'dist' | limitTo:6">
+            <li class="challenge_list">
             <strong>location: </strong> 
               {{ challenge.court.start_time | customtime }} | {{ challenge.centre.name }} | {{ challenge.dist | number:1}}km's 
-          </li>
-
-         <li class="challenge_list opponent">
-            <strong>Opponent: </strong>
-              {{ challenge.player1.profile_name }} | level: {{ challenge.player1.level }} 
-              <button type="button" 
-                class="btn btn-info ">
-                View Profile
+            </li>
+             <li class="challenge_list opponent">
+              <strong>Opponent: </strong>
+                {{ challenge.player1.first_name }} {{ challenge.player1.last_name }} | ELO {{ challenge.player1.elo }} level: {{ challenge.player1.level }} 
+              <button>
+                <a href="profile/{{ challenge.player1_id }}">View Profile</a>
               </button> 
               <button type="button" 
                 class="btn btn-info active" 
                 ng-click="challengePlayer1(challenge)">
                 Play
               </button>
-          </li>
-       </ul>
-     <div ng-show="challengeOffered">Challenge Pending..good luck {{ current_user.rank }} <button type="button" class="btn btn-info btn-xs active">
-     <a href=""></a>View Details</button></div>
-  </div>  -->
-<!-- ######### this shows all the pending challenges ########### -->
+              </li>
+           </ul>
+         <div ng-show="challengeOffered">Challenge Pending..good luck <br>
+         {{ current_user.first_name }}  <button>
+         <a href="profile/{{ challenge.player1_id }}">View Details</a></button></div>
+    </div> 
+  </div>
+</div>
 
-<!-- </div>
 
-</div> -->
 
-<!-- <div ng-controller="MapController"></div>
+
 
 
 

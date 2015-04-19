@@ -24,7 +24,7 @@ app.controller('MapController', ['$scope', '$http', '$timeout', '$location',  'N
 
    // Checking that we can reverse geocode and address \\ 
   GeoCoder.geocode({address: 'the cn tower'}).then(function(result) {
-
+    console.log(result);
   });
 
 
