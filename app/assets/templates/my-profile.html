@@ -5,7 +5,7 @@
         <div class="edit-link">EDIT<a href="/users/edit"></a></div> <!-- <i class="fa fa-cog fa-5x"></i> -->
         <div class="bumper"></div>
         <div class="my-profile-picture">
-         <img ng-src="{{user.user_image.url}}">
+         <img class="pro-image" ng-src="{{user.user_image.url}}">
         </div>
         <div class="my-profile-name">{{ user.first_name }} {{ user.last_name}}</div>
         <div class="my-stats clearfix">
@@ -172,7 +172,8 @@
           <div class="challenger-personal-info clearfix">
             <div class="chp-item item-1">
               <div class="title">
-                IMAGE
+              <img ng-src="{{ challenge.player1.user_image.url}}">
+
               </div>
             </div>
             <div class="chp-item item-2">
@@ -233,14 +234,14 @@
                 Decline
                 </button>           
               </div>
-              <div class="item-chp-action">
-              <button 
+              <div class="item-chp-action lg-win">
+              <button class="log-win" 
                 ng-click="logWin(challenge)">
                 Log Win 
               </button> 
               </div>
-              <div class="item-chp-action">
-                <button 
+              <div class="item-chp-action lg-loss">
+                <button class="log-loss"
                 ng-click="logLoss(challenge)">
                 Log Loss
               </button> 

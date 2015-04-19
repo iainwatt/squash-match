@@ -25,10 +25,11 @@
         width:15em;
         border-radius: 50%;
         background-color: #39D68E;
-        position: relative
+        position: relative;
           img {
-            width: 100%;
-            height: auto;
+            width: 15em;
+            height: 15em;
+            border-radius:50%; 
           }
       }
       .up-user-name { 

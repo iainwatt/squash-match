@@ -24,11 +24,16 @@ app.controller('ProfileController', ['$scope', '$http', '$routeParams', 'Profile
   .then(function(response) {
     console.log(response.data);
     mybookings = response.data
+    helperArray = []
     for (i = 0; i < mybookings.length; i++ ) {
-      $scope.myCourts = mybookings[i].courts
-      console.log( $scope.myCourts);
-      $scope.myChallenges = mybookings[i].challenges
+      // console.log(mybookings[i].challenges);
+      if (mybookings[i].id == $scope.user.id) {
+        $scope.myCourts = this.mybookings[i].courts;
+        $scope.myChallenges = this.mybookings[i].challenges;
+      }
     }
+    console.log($scope.myChallenges);
+    console.log($scope.myCourts);
   })
 
 // ########## -- Accept a challenge 
@@ -41,9 +46,6 @@ $scope.acceptChallenge = function(challenge) {
       console.log("Challenge Accepted");
       console.log(response);
     })
-
-
-  // alertService.add("warning", "This is a warning.");
 
 
 

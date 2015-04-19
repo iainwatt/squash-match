@@ -16,12 +16,12 @@ class ChallengesController < ApplicationController
     render json: challenge_opponent 
   end
 
-  # def challenge_accepted
-  #   challenge_accepted = Challenge.find(params[:id]) 
-  #   challenge_accepted.status = "accepted"
-  #   challenge_accepted.save
-  #   render json: challenge_accepted 
-  # end
+  def challenge_accepted
+    challenge_accepted = Challenge.find(params[:id]) 
+    challenge_accepted.status = "accepted"
+    challenge_accepted.save
+    render json: challenge_accepted 
+  end
 
 
  def create

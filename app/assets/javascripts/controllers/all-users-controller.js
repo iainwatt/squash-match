@@ -75,20 +75,22 @@ app.controller('AllUsersController', ['$scope', '$http', '$routeParams', functio
     var matches = matches[random]
 
 
-    $("div.content").prepend('<div class="photo" id="photo" style="background-image:url('+photos+')"></div>');
-    $("div.tinder-info").prepend('<div class="td-info">'
-      + '<h2>' + names + '</h2>'
-      + '<p>ELO: ' +elo+ '</p>'  
+    $("div.content").prepend('<div class="photo" id="photo" style="background-image:url('+photos+')">'
+      + '<span class="meta">' 
+      + '<p>'+names+'</p>' 
+      + '<span class="distance">ELO ' +elo+'</span>'    
+      + '<p>distance:</p>'
       + '<p>matches: '+matches+'</p>'
+      + '</span>' 
       + '</div>');
 
-      // + '<span class="meta">' 
-      // + '<p>'+names+'</p>' 
-      // + '<span class="distance">ELO ' +elo+'</span>'    
-      // + '<p>distance:</p>'
-      // + '<p>matches: '+matches+'</p>'
-      // + '</span>' 
-      // + '</div>');
+
+    // $("div.tinder-info").prepend('<div class="td-info">'
+    //   + '<h2>' + names + '</h2>'
+    //   + '<p>ELO: ' +elo+ '</p>'  
+    //   + '<p>matches: '+matches+'</p>'
+    //   + '</div>');
+
 
       swipe();
   }

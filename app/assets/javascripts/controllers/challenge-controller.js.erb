@@ -1,10 +1,10 @@
 
 
-app.controller('ChallengeController', ['$route', '$scope', '$http', 'ChallengeService', 'UserService', 'GeolocationService', 'gps', 'ngDialog', function($route, $scope, $http, ChallengeService, UserService, geolocation, gps, ngDialog){
+app.controller('ChallengeController', ['$route', '$scope', '$http', 'ChallengeService', 'UserService', 'GeolocationService', 'gps', 'ngDialog', 'NavigatorGeolocation', function($route, $scope, $http, ChallengeService, UserService, geolocation, gps, ngDialog, NavigatorGeolocation){
 
 // ### the app.value in app.js works! ### \\\\
-console.log(gps.userLat);
-console.log(gps.userLon);
+// console.log(gps.userLat);
+// console.log(gps.userLon);
 
 // getting the user data through http request so that i can have access to that id 
   $http.get('/users/current_user_profile')
@@ -12,6 +12,16 @@ console.log(gps.userLon);
   $scope.user = data
   console.log($scope.user)
  })
+
+
+  NavigatorGeolocation.getCurrentPosition()
+   .then(function(position) {
+    $scope.meLat = position.coords.latitude, 
+    $scope.meLong = position.coords.longitude;
+     console.log($scope.meLat);
+     console.log($scope.meLong);
+  });
+
 
  
 $scope.findOpponent = function() {
@@ -24,7 +34,7 @@ ChallengeService.getChallenges()
   }).then(function(x_allChallenges){
     dataArray = [];
     for (var i = 0; i < x_allChallenges.length; i++) {  
-      y_dist = getDistanceFromLatLonInKm(x_allChallenges[i].centre.latitude, x_allChallenges[i].centre.longitude, gps.userLat ,gps.userLon)
+      y_dist = getDistanceFromLatLonInKm(x_allChallenges[i].centre.latitude, x_allChallenges[i].centre.longitude, $scope.meLat, $scope.meLong)
       dataArray.push(y_dist);
     }
     return dataArray
