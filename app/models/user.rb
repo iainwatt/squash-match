@@ -5,8 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
    # before_create :set_default_elo
-   before_create :set_default_tagline
-   before_create :set_ninja_rank
+   # before_create :set_default_tagline
+   # before_create :set_ninja_rank
    # before_save :set_default_tagline
   #  if self.user_image.url = nil 
   #   self.user_image.url = 'blanca/jpg'
