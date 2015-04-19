@@ -26,6 +26,7 @@ app.controller('ProfileController', ['$scope', '$http', '$routeParams', 'Profile
     mybookings = response.data
     for (i = 0; i < mybookings.length; i++ ) {
       $scope.myCourts = mybookings[i].courts
+      console.log( $scope.myCourts);
       $scope.myChallenges = mybookings[i].challenges
     }
   })
@@ -130,16 +131,15 @@ $scope.acceptChallenge = function(challenge) {
     })
   }; 
 
-$('#toggle-bookings').click(function(){
-         $('#my-booked-courts-wrap').show(200);
-     $('#my-challengers-list').hide(600);
+$('#toggle-bookings').click(function() {
+  $('#my-booked-courts-wrap').show(200);
+  $('#my-challengers-list').hide(600);
 });
 
-$('#toggle-challenges').click(function(){
-         $('#my-challengers-list').show(200);
-     $('#my-booked-courts-wrap').hide(700);
+$('#toggle-challenges').click(function() {
+  $('#my-challengers-list').show(200);
+  $('#my-booked-courts-wrap').hide(700);
 });
-
 
 
   

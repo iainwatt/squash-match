@@ -24,21 +24,22 @@
     <div ng-controller="CourtController" class="court-cont">
       <button class="find-court-button"
         ng-click="findCourts()">
-        Find a Court 
+        SEARCH COURTS
       </button>
       <ul class="av-courts" ng-hide="bookedCourt">
         <li ng-repeat="court in courtsAndDistances | orderBy:['dist','start_time'] | filter:'!booked' | limitTo:10 " >{{ court.centre.name }} | {{ court.start_time | customtime }} | Distance: {{ court.dist | number:1 }}km's 
-        <button ng-click="bookCourt(court); clickToOpenMatch()">Book Now</button>
+        <button class"launchConfirm" ng-click="bookCourt(court); clickToOpenMatch()">Book Now</button>
         <button ng-click="clickToOpenMatch()">Show Modal</button>
+
          <div class="bookedCourt" ng-show="bookedCourt"> Court Successfully Booked! </br> {{ bookedCourt.centre_id }} | {{ bookedCourt.time }} | court_no: {{ bookedCourt.court_no}} </br></div> 
         </li>
       </ul>        
     </div>
   </div> 
-   <div class="challenge-info" ng-controller="ChallengeController">
+   <div class="main-challenge-info" ng-controller="ChallengeController">
    <button class="find-opponent-button" 
       ng-click="findOpponent()">
-      Find an Opponent
+      SEARCH OPPONENTS
    </button>
       <ul ng-hide="challengeOffered" ng-repeat="challenge in challengesAndDistances | orderBy:'dist' | limitTo:6">
        <li class="challenge_list">

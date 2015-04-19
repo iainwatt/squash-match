@@ -1,3 +1,16 @@
+body,
+.modal-open .page-container,
+.modal-open .page-container .navbar-fixed-top,
+.modal-open .modal-container {
+  overflow-y: scroll;
+}
+
+@media (max-width: 979px) {
+  .modal-open .page-container .navbar-fixed-top{
+    overflow-y: visible;
+  }
+}
+
 
 section.module.parallax-4 {
   background-image: url("https://s3-eu-west-1.amazonaws.com/squash-bucket/uploads/user/user_image/london-map.jpg");
@@ -119,12 +132,13 @@ section.module.parallax-4 {
           }
       }
     }
-    .challenge-info {
+    .main-challenge-info {
       display: none;
+      margin-top: 2em; 
       .find-opponent-button {
-        margin-top: 1em;
+        margin-top: 2em;
         margin:0;
-        width:70%;
+        width:50%;
         /*margin-left: 10em;*/
         font-family: 'Montserrat', sans-serif;
         font-size: 3em;

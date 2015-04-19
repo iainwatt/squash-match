@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-   before_create :set_default_elo
+   # before_create :set_default_elo
    before_create :set_default_tagline
    before_create :set_ninja_rank
    # before_save :set_default_tagline
@@ -28,9 +28,9 @@ class User < ActiveRecord::Base
   has_many(:reverse_challenges, :class_name => :Challenge, :foreign_key => :player2_id, :dependent => :destroy)
 
 
-  def set_default_elo
-    self.elo = 1000
-  end
+  # def set_default_elo
+  #   self.elo = 1000
+  # end
 
   def set_default_image 
     self.user_image = 'blanca/jpg'

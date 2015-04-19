@@ -42,6 +42,7 @@
   </div>
   <div id="nav-right">
     <ul>
+      <li><a href="/users/sign_out" data-method="delete">LOGOUT</a></li>
       <li><a href="/users/sign_in">LOGIN</a></li>
       <li><a href="phone">I-PHONE</a></li>  
       <li><a href="profile">PROFILE</a></li>
@@ -51,43 +52,17 @@
   </div>
   </div>
   
+        <% if user_signed_in? %>
+          <%if current_user.email? %>
+          <%= current_user.email %>
+          <% end %>       
+         <%= link_to "Edit", edit_user_registration_path, target: "_self"%> 
+          <%= link_to "Logout", destroy_user_session_path, method: :delete %>        
+        <% else %>
+          <%= link_to "Login", new_user_session_path, target: "_self"%>    
+          <%= link_to "Sign Up", new_user_registration_path, target: "_self"%>
+        <% end %>
 
-     
-      
-     
-     
-    <!--   <ul class='nav pull-right'>
-      <a href="users/all_users"><i class="fa fa-user-plus fa-2x"></i></a>
-      <a href="phone"><i class="fa fa-mobile fa-2x"></i></a>
-      <a href="profile"><i class="fa fa-user fa-4x"></i></a> --> 
-
-<!--       <h4><a href="/users/edit">Edit</a></h4>
-      <h4><a href="/users/sign_out" data-method="delete">Sign Out</a></h4> -->
-<!-- 
-        <#% if user_signed_in? %>
-          <li>
-            <%#if current_user.email? %>
-              <%#= current_user.email %>
-            <%# end %> 
-          </li>
-          <li>
-          <! <%#= link_to "Edit", edit_user_registration_path, target: "_self"%> -->
-          <!-- </li>
-          <li> -->
-            <%#= link_to "Logout", destroy_user_session_path, method: :delete %> 
-         <!--  </li> -->
-        <%# else %>
-         <!--  <li> -->
-          <%#= link_to "Login", new_user_session_path, target: "_self"%>    
-<!--           </li> -->
-<!--           <li> -->
-          <%#= link_to "Sign Up", new_user_registration_path, target: "_self"%>
-<!--           </li> -->
-        <%# end %>
-       <!--  </ul>
-        </div>
-      </div> 
- -->
    
     <%# if !user_signed_in? %>
     <%#= link_to "Login", new_user_session_path %>
@@ -114,4 +89,8 @@
 </body>
 </html>
 
-
+   <%# if !user_signed_in? %>
+    <%#= link_to "Login", new_user_session_path %>
+    <%#= link_to "Sign Up", new_user_registration_path%>
+    <%#= yield %>
+    <%# end %>

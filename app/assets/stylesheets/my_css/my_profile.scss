@@ -1,4 +1,6 @@
-
+body {
+  background: #fafaff;
+}
 
 #test-wrap {
   text-align: center;
@@ -7,10 +9,9 @@
 }
 
 #test-div-1, #test-div-2 {
-  margin-top: 3em;
+  margin-top: 1em;
   width: 49%;
-  min-height: 60em;
-  border: 1px solid black;
+  min-height: 50em;
   background: #fafaff;
   border-radius: .5em;
   font-family: 'Montserrat', sans-serif;
@@ -29,7 +30,7 @@
 
 #test-div-1 #my-profile-card {
   width:60%;
-  height:50em;
+  height:45em;
   margin: 5% auto 5% auto;
   border-radius: 1em;
   background-color:#394264;
@@ -154,14 +155,14 @@
       width:94%;
       margin: .1em auto .1em auto;
       border-radius: .2em;
-      font-size:2em;
+      font-size:1.5em;
       background-color:#0594F2;
       font-family: 'Inconsolata', sans-serif;
       color:black;  
         .bd-item {
           width:33%;
           float:left;
-          height:4em;
+          height:5em;
             .title {
               padding-top:.5em;
               padding-bottom:.5em; 
@@ -213,19 +214,23 @@
     margin: 5% auto 5% auto;
     border-radius: 1em;
     background-color:white;
-    border: .2em solid #434B6A;
+    
     font-family: 'Montserrat', sans-serif;
-    text-align:center; 
+    text-align:center;
+      .ang-challenge-wrapper {
+         border: .2em solid #434B6A;
+         border-radius: .5em
+      } 
       .challenge-booking-deets {
         width:94%;  
-        margin: 5% auto 1% auto;  
-        background-color:#43D893;    
+        margin: 2.5% auto 1% auto;  
+        background-color:#434B6B; 
         border-radius: 1em;
-
         font-family: 'Inconsolata', sans-serif;
-        font-size:1.5em; 
+        color:white; 
+        font-size:1em; 
           .cbd-item {
-            height:4em;
+            height:5em;
             width:25%;
             float:left;
               .cbd-info-button {
@@ -255,7 +260,7 @@
       }
       .challenger-personal-info {
         width:94%;  
-        height:4em;
+        height:5em;
         margin: 1% auto 1% auto;  
         background-color:#FEDD53;    
         border-radius: 1em;
@@ -305,8 +310,8 @@
       }
       .chp-action-buttons {
         width:94%;  
-        height:4em;
-        margin: 1% auto 5% auto;  
+        height:5em;
+        margin: 1% auto 2.5% auto;  
         background-color:#3175E3;
         font-family: 'Inconsolata', sans-serif;
         border-radius: 1em;

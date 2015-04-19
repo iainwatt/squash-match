@@ -1,30 +1,31 @@
 
 
 <div class="up-wrapper">
+  <div cladd="hack-dr54"></div>
   <div class="up-card">
     <div class="bumper"></div>
-    <div class="up-picture"><!-- <img src=""> --></div>
-    <div class="up-user-name"><h1>Miko Darcy</h1></div>
+    <div class="up-picture"> <!-- <img ng-src="{{ userInfo.user_image.url }}"/> --> </div>
+    <div class="up-user-name"><h1> {{ userInfo.first_name }} {{ userInfo.last_name}} </h1></div>
     <div class="up-user-description">
-      <p id="up-tagline">I came here to do two things, drink beer and kick ass</p>
+      <p id="up-tagline">{{ userInfo.tagline }}</p>
     </div>
 
     <div class="up-details clearfix">
       <div class="up-item elo">
         <div class="title">ELO</div>
-        <div class="value">1849</div>
+        <div class="value">{{ userInfo.elo}}</div>
       </div>
       <div class="up-item rank">
         <div class="title">Rank</div>
         <div class="value">109th</div>
       </div>
       <div class="up-item form">
-        <div class="title">Form</div>
-        <div class="value">WLW</div>
+        <div class="title">Wins</div>
+        <div class="value">{{ userInfo.wins }} </div>
       </div>
       <div class="up-item message">
-        <div class="title">Form</div>
-        <div class="value">WLW</div>
+        <div class="title">W%</div>
+        <div class="value">{{ (userInfo.wins/(userInfo.wins + userInfo.losses)) * 100 | number:0 }}%</div>
       </div>
     </div>
     

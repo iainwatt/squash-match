@@ -1,27 +1,45 @@
 
 
+
+<!-- <form class="form-signin">
+<%#= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <h2 class="form-signin-heading">Please sign in</h2>
+  <label for="inputEmail" class="sr-only">Email address</label>
+   <%#= f.email_field :email, :placeholder => "Email", autofocus: true, :class => "form-control" %>
+  <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus=""> 
+  <label for="inputPassword" class="sr-only">Password</label>
+  <%#= f.password_field :password, :placeholder => "Password", autocomplete: "off", :class => "form-control" %>
+   <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+  <div class="checkbox">
+  <label>
+  <input type="checkbox" value="remember-me"> Remember me
+  </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <%#= f.submit "Log in", id: "user_login", :class => "btn btn-lg btn-primary btn-block", :type => "submit" %>
+     <%#= f.submit "Log in", id: "user_login" %>
+</form>
+<%# end %> -->
+
+
+<!-- <form class="form-signin"> -->
 <div id="login-page">
-<h1>Log in</h1>
+<h2 class="form-signin-heading">Please sign in</h1>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <label for="inputEmail" class="sr-only">Email address</label>
   <div class="field login-email">
-    <%= f.email_field :email, :placeholder => "Email", autofocus: true %>
+    <%= f.email_field :email, :placeholder => "Email", autofocus: true,:class => "form-control" %>
   </div>
-
   <div class="field login-password">
-    <%= f.password_field :password, :placeholder => "Password", autocomplete: "off" %>
+    <%= f.password_field :password, :placeholder => "Password", autocomplete: "off", :class => "form-control" %>
   </div>
-
-
-
   <div class="actions">
-    <%= f.submit "Log in", id: "user_login" %>
+    <%= f.submit "Log in", id: "user_login", :class =>"log-in-button" %>
   </div>
 <% end %>
-
 <%= render "devise/shared/links" %>
-
 </div>
-
+<!-- </form> -->
 
 
 

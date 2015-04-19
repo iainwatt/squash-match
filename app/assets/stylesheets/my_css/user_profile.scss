@@ -3,11 +3,14 @@
 .up-wrapper {
   margin: 0 auto 0 auto;
   background-color: #E4E4E4;
-  width:55%;
+  width:40%;
   min-height:62em;
+    .hack-dr54 {
+      height: 1em;
+    }
     .up-card {
       margin: 5% auto 0 auto;
-      width:50%;
+      width:80%;
       background-color:#394264;
       font-family: 'Montserrat', sans-serif;
       min-height: 60px;
@@ -23,6 +26,10 @@
         border-radius: 50%;
         background-color: #39D68E;
         position: relative
+          img {
+            width: 100%;
+            height: auto;
+          }
       }
       .up-user-name { 
         font-family: 'Montserrat', sans-serif;

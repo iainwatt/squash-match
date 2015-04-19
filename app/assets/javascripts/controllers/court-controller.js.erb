@@ -73,7 +73,20 @@ $scope.clickToOpenMatch = function () {
   });
  }
 
-
+$('.launchConfirm').on('click', function(e) {
+  $('#confirm')
+    .modal({
+      backdrop: 'static',
+      keyboard: false
+    })
+    .one('click', '[data-value]', function(e) {
+      if ($(this).data('value')) {
+        alert('confirmed');
+      } else {
+        alert('canceled');
+      }
+    });
+});
 
 
 
