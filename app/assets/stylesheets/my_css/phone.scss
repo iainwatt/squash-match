@@ -1,3 +1,21 @@
+
+.big-phone-wrapper {
+  width:100%;
+  text-align: center;
+    .wrapper-1 {
+      width:33%;
+      float:left;
+    }
+    .wrapper-2 {
+      float:left;
+      width:33%;
+    }
+    .wrapper-3 {
+      float:left;
+      width:33%;
+    }
+}
+
 .wrapper {
   max-width: 800px;
   margin: 5em auto;
@@ -119,7 +137,8 @@
                   background-size: cover;
                   background-repeat: no-repeat;                  
                   background-color: #FFFFFF; 
-                  font-size:1.2em;             
+                  font-size:1.2em;    
+                  font-family: 'Inconsolata', sans-serif;         
                     span.meta {
                        .hack538 {
                         height:290px;
@@ -137,7 +156,8 @@
               width:324px;
               text-align: center;
               height:100px;
-              background-color:#434B6B; 
+              background-color:#064D54;
+              opacity:0.9;  
                 .hack-184 {
                   width:4em;
                   float:left;
@@ -189,6 +209,57 @@
           overflow: auto; 
           zoom: 1;
         }
-    }
-    
+    }   
 }
+
+
+
+  .phone-search {
+    background-image: url("https://s3-eu-west-1.amazonaws.com/squash-bucket/uploads/user/user_image/london-map.jpg");
+    width:324px;
+    height:500px;
+    z-index: -2;
+      .squash-ball-phone {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translateX(-50%) translateY(-50%);
+        border-radius:1000px;
+        width:240px;
+        height:240px;
+        padding:5px;
+        /*border:2px solid #efefef;*/
+        background:#064D54;
+        opacity: 0.9;
+          #loading-phone {
+            position:absolute;
+            top:44%;
+            left:14%;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 35px;
+            line-height: 30px;
+            color:#F0E797;
+            letter-spacing: 7px;
+            opacity: 0.9;
+          }
+      }
+      .pulse-phone {
+        position:absolute;
+        left:50%;
+        top:50%;
+        width:800px;
+        height:500px;
+        background:radial-gradient(white 40%, orange);
+        z-index:2;
+        transform:translateY(-50%) translateX(-50%);
+        border-radius:1000px;
+        opacity:0.9;
+        border:2px solid red;
+      }
+  }
+
+
+
+
+
+

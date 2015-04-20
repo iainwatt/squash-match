@@ -2,8 +2,11 @@
 <div id="test-wrap clearfix">
     <div id="test-div-1">
       <div id="my-profile-card">
-        <div class="edit-link">EDIT<a href="/users/edit"></a></div> <!-- <i class="fa fa-cog fa-5x"></i> -->
-        <div class="bumper"></div>
+        <!-- <div class="edit-link">EDIT<a href="/users/edit"></a></div> --> <!-- <i class="fa fa-cog fa-5x"></i> -->
+<!--         <div class="bumper"></div> -->
+        <div class="panel-heading">
+          <h2>My Profile</h2>
+        </div>
         <div class="my-profile-picture">
          <img class="pro-image" ng-src="{{user.user_image.url}}">
         </div>
@@ -26,29 +29,29 @@
             <div class="Value">{{ (user.wins/(user.losses + user.wins)) * 100 | number:0 }}%</div>
           </div>
           <div class="item">
-            <div class="Title">ELO</div>
+            <div class="Title"> <a href="#" data-toggle="body" title="ELO Ratings" data-content="The Elo rating system is a method for calculating the relative skill levels of players in competitor-versus-competitor games. The difference in the ratings between two players serves as a predictor of the outcome of a match. <br /> <br /> A player's Elo rating is represented by a number which increases or decreases based upon the outcome of games between rated players. After every game, the winning player takes points from the losing one. The difference between the ratings of the winner and loser determines the total number of points gained or lost after a game.<br /> <br /> In a series of games between a high-rated player and a low-rated player, the high-rated player is expected to score more wins. If the high-rated player wins, then only a few rating points will be taken from the low-rated player. However, if the lower rated player scores an upset win, many rating points will be transferred.">ELO</a></div>
             <div class="Value">{{ user.elo }}</div>
           </div>          
         </div>
         <div class="my-profile-links clearfix">
           <div class="item calendar">
-            <a class="info-circle"><i class="fa fa-calendar"></i></a>
+            <a class="info-circle"><p></p><i class="fa fa-users fa-2x"></i></a>
             <div class="Title">FRIENDS</div>
           </div>
           <div class="item calendar">
-            <a class="info-circle"><i class="fa fa-calendar"></i></a>
+            <a class="info-circle"><p></p><i class="fa fa-calendar fa-2x"></i></a>
             <div class="Title">EVENTS</div>
           </div>
           <div class="item calendar">
-            <a class="info-circle"><i class="fa fa-calendar"></i></a>
+            <a class="info-circle"><p></p><i class="fa fa-heart fa-2x"></i></a>
             <div class="Title">FAVS</div>
           </div>
           <div class="item calendar">
-            <a class="info-circle"><i class="fa fa-calendar"></i></a>
+            <a class="info-circle" href="/users/edit"><p></p><i class="fa fa-cog fa-2x"></i></a>
             <div class="Title">ACCOUNT</div>
           </div>
           <div class="item calendar">
-            <a class="info-circle"><i class="fa fa-calendar"></i></a>
+            <a class="info-circle"><p></p><i class="fa fa-trophy fa-2x"></i></a>
             <div class="Title">AWARDS</div>
           </div>          
         </div>

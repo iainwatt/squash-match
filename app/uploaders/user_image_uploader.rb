@@ -25,7 +25,7 @@ class UserImageUploader < CarrierWave::Uploader::Base
   # "https://s3-eu-west-1.amazonaws.com/squash-bucket/uploads/user/user_image/squash-512.png"
   # "https://s3-eu-west-1.amazonaws.com/squash-bucket/uploads/user/user_image/tennis_player.png"
   # "https://s3-eu-west-1.amazonaws.com/squash-bucket/uploads/user/user_image/blanca.jpeg"
-  "https://s3-eu-west-1.amazonaws.com/squash-bucket/uploads/user/user_image/Ryu-champ.jpg"
+  "https://s3-eu-west-1.amazonaws.com/squash-bucket/uploads/user/user_image/ramy-profile.jpg"
 
 
     # "/images/fallback/" + [version_name, "blanca.jpeg"].compact.join('_')

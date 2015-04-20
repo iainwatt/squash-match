@@ -1,29 +1,24 @@
 
 
 
-
-  <div class="page-header">
-    <h1>Leaderboard<small> Subtext for header</small></h1>
-  </div>
-
-
-   <div class="squash-leaderboard" data-example-id="table-within-panel">
-    <div class="panel panel-default">
-      <!-- Default panel contents -->
-      <div class="panel-heading">Panel heading</div>
+<div class="leaderboard-wrapper">
+  <div class="squash-leaderboard" data-example-id="table-within-panel">
+    <div class="panel panel-default">  
+      <div class="panel-heading">ALL TIME LEADERBOARD</div>
       <div class="panel-body">
-        <p>The Overall Leaderboard </p>
+        <p>Mixed players, all ages, currently active </p>
       </div>
-
 
       <table class="table">
         <thead>
           <tr>
-            <th>#</th>
+            <th></th>
             <th>First Name</th>
             <th>Last Name</th>
-            <th>ELO</th>
+            <th>Games</th>
+            <th>W%</th>
             <th>Form</th>
+            <th>ELO</th>
           </tr>
         </thead>        
         <tbody>
@@ -31,83 +26,14 @@
             <th scope="row">{{$index+1}}</th>
             <td class="my-tab-data">{{user.first_name}}</td>
             <td>{{user.last_name}}</td>
-            <td>{{user.elo}}</td>
+            <td>{{user.wins + user.losses}}</td>
             <td></td>
+            <td></td>
+            <td>{{user.elo}}</td>
           </tr>
         </tbody>
       </table>   
     </div>
   </div>
-
-
-<!-- <div class="all-users-page">
-  <ul class="thumbnails" >
-      <li class="span3 shot" ng-repeat="user in top_users | orderBy:['-elo', 'first_name'] | limitTo:5 ">
-      <div class="thumbnail">
-        <a href="#">
-          <img ng-src="{{user.user_image.url}}">
-        </a>
-        <strong class="title">{{user.first_name}}</strong>
-        
-        <a class="player" href="#">
-          {{user.profile_name}}  
-        </a>
-        <p>{{ user.tagline}}</p>
-
-        <div id="elo pull-right">
-           <i class="fa fa-bullseye"></i>
-            ELO {{ user.elo }}
-        </div>
-
-        <div class="stats">
-          <span class="stat">
-            <i class="fa fa-user-plus fa-1x"></i>
-           Like
-          </span>
-          <span class="stat">
-            <i class="fa fa-times"></i>
-              Next
-          </span>
-          <span class="stat">
-            <i class="fa fa-comments-o fa-1x"></i>
-            Message
-          </span>
-          <span class="start">
-            <i class="fa fa-bullseye"></i>
-            ELO {{ user.elo }}
-          </span>
-          <span class="stat">
-            <i class="fa fa-sort-asc fa-1x"></i>
-              {{ user.level }}
-          </span>
-        </div>
-
-      </div>
-      </li>
-  </ul>
 </div>
-
- -->
-
-
-
-
-
- <!--          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr> -->
-
-
-
-
-
 

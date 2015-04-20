@@ -84,6 +84,7 @@ $scope.acceptChallenge = function(challenge) {
     .then(function(response){
       console.log("Challenge Destroyed")
     })
+    location.reload(true)
   };
 
 
@@ -120,6 +121,7 @@ $scope.acceptChallenge = function(challenge) {
       .then(function(response){
         console.log("Challenge Destroyed")
       })
+      location.reload(true)
   };
 
 
@@ -143,7 +145,10 @@ $('#toggle-challenges').click(function() {
   $('#my-booked-courts-wrap').hide(700);
 });
 
-
+// $(".Title a").popover({
+//   placement : 'auto'
+// });
+$('.Title a').popover({ container: 'body',html:true } ) 
   
 }]);
 

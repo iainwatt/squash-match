@@ -47,13 +47,17 @@
           SEARCH COURTS
         </button>
         <ul class="av-courts" ng-hide="bookedCourt">
-
           <li ng-repeat="court in courtsAndDistances | orderBy:['dist','start_time'] | filter:'!booked' | limitTo:10 " >{{ court.centre.name }} | {{ court.start_time | customtime }} | Distance: {{ court.dist | number:1 }}km's 
-          <button class"btn" ng-click="bookCourt(court)">Book Now</button>
-               
+          <button class"btn" ng-click="bookCourt(court)">Book Now</button>               
           </li>
         </ul>  
-        <div class="bookedCourt" ng-show="bookedCourt"> Court Successfully Booked! </br> {{ court.centre.name }} | {{ bookedCourt.time }} | court_no: {{ bookedCourt.court_no}} </br></div>       
+        <div class="bookedCourt" ng-show="bookedCourt"> Court Successfully Booked! </br> {{ court.centre.name }} | {{ bookedCourt.time }} | Court#: {{ bookedCourt.court_no}} </br>
+          <button type="button" 
+            class="btn btn-primary btn-sm active" 
+            ng-click="issueChallengewithCourt(bookedCourt)">
+            Find Opponent
+          </button> 
+        </div>       
       </div>
     </div> 
     <div class="main-challenge-info" ng-controller="ChallengeController">
@@ -79,7 +83,7 @@
               </button>
               </li>
            </ul>
-         <div ng-show="challengeOffered">Challenge Pending..good luck <br>
+         <div ng-show="challengeOffered" class="success-challenge-message">Challenge Pending..good luck <br>
          {{ current_user.first_name }}  <button>
          <a href="profile/{{ challenge.player1_id }}">View Details</a></button></div>
     </div> 

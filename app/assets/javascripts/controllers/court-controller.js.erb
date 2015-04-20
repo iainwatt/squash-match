@@ -32,7 +32,8 @@ CourtService.getCourts()
     $scope.court_id = court.id
     $scope.centre_id = court.centre_id
     $scope.user_id = gon.current_user.id
-    ChallengeService.createChallenge($scope.user_id, $scope.court_id, $scope.centre_id)
+    ChallengeService.createChallenge($scope.user_id, $scope.court_id, $scope.centre_id);
+    // clickToOpenMatch();
   };
 
 
@@ -56,12 +57,13 @@ CourtService.getCourts()
 // ###### function that books a court ###### //
 
 
-$scope.clickToOpenMatch = function () {
+// $scope.clickToOpenMatch = function () {
+  function clickToOpenMatch() {
   // $scope.modalArtist = artist;
   ngDialog.open({ 
     templateUrl: "<%= asset_path('booking-confirmation.html') %>",
     scope: $scope,
-    appendTo: "body"
+    appendTo: "(.bookedCourt)"
   });
  }
 

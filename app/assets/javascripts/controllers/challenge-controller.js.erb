@@ -53,18 +53,18 @@ ChallengeService.getChallenges()
     .then(function(response){
      $scope.challengeOffered = response.data
      console.log($scope.challengeOffered);
-     clickToOpenMatchConf();
+
     });
     // $route.reload();
   };
 
-function clickToOpenMatchConf() {
-  ngDialog.open({ 
-    templateUrl: "<%= asset_path('match-confirmation.html') %>",
-    scope: $scope,
-    appendTo: "body"
-  });
- }
+// function clickToOpenMatchConf() {
+//   ngDialog.open({ 
+//     templateUrl: "<%= asset_path('match-confirmation.html') %>",
+//     scope: $scope,
+//     appendTo: "body"
+//   });
+//  }
 
 
 
