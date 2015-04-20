@@ -15,9 +15,8 @@
         <p>The Overall Leaderboard </p>
       </div>
 
-<!--       <div ng-repeat="user in top_users | orderBy:['-elo', 'first_name'] | limitTo:5 "> -->
-      <table class="table">
 
+      <table class="table">
         <thead>
           <tr>
             <th>#</th>
@@ -28,21 +27,20 @@
           </tr>
         </thead>        
         <tbody>
-          <tr ng-repeat="user in top_users | orderBy:'-elo' |emptyToEnd:'elo' | limitTo:5 ">           
-            <th scope="row">{{user.length}}</th>
+          <tr ng-repeat="user in top_users | orderBy:'-elo' |emptyToEnd:'elo' | limitTo:10 " ng-init="serIndex = $index">           
+            <th scope="row">{{$index+1}}</th>
             <td class="my-tab-data">{{user.first_name}}</td>
             <td>{{user.last_name}}</td>
             <td>{{user.elo}}</td>
-            <td>{{user.index}}</td>
+            <td></td>
           </tr>
         </tbody>
       </table>   
-  
     </div>
   </div>
 
 
-<div class="all-users-page">
+<!-- <div class="all-users-page">
   <ul class="thumbnails" >
       <li class="span3 shot" ng-repeat="user in top_users | orderBy:['-elo', 'first_name'] | limitTo:5 ">
       <div class="thumbnail">
@@ -89,43 +87,11 @@
   </ul>
 </div>
 
-<div class="panel panel-default">
-  <!-- Default panel contents -->
-  <div class="panel-heading">Panel heading</div>
-  <div class="panel-body">
-    <p>...</p>
-  </div>
-
-  <!-- Table -->
-  <table class="table">
-    ...
-  </table>
-</div>
+ -->
 
 
 
 
-
-
-
-
-
-<div class="tinder-container">
-  <div class="phone">
-    <div class="app clearfix">
-      <div class="content">
-      </div>  
-      <div class="tinder-info">        
-      </div>
-      <div class="footer clearfix">
-       <!--  <div class="hack-184"></div> -->
-        <div id="swipe_dislike" class="rate"></div>
-        <div class="info"></div>
-        <div id="swipe_like" class="rate"></div>
-      </div>
-    </div>  
-  </div>
-</div>
 
  <!--          <tr>
             <th scope="row">2</th>

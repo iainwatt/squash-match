@@ -99,6 +99,7 @@ c45 = Court.create(centre_id:3, time:"21.00-21.45", start_time:'2015-03-24 21:00
 u1 = User.create(
   first_name: "Jack",
   last_name: "Bush",
+  sex: "male",
   profile_name: "bushyjack",
   email:"jack@email.com",
   password: "password",
@@ -108,6 +109,7 @@ u1 = User.create(
   wins: 32,
   losses: 39,
   elo: 2800,
+  form: "WLWW"
   tagline: "you cant be serious",
   )
 u1.save
@@ -115,6 +117,7 @@ u1.save
 u2 = User.create(
   first_name: "Iain",
   last_name: "Watt",
+  sex: "male",
   profile_name: "iainwatt",
   email:"iain@email.com",
   password: "password",
@@ -124,6 +127,7 @@ u2 = User.create(
   wins: 32,
   losses: 79,
   elo: 2400,
+  form: "LLWW"
   tagline: "I thought it was out....",
   )
 u2.save
@@ -131,6 +135,7 @@ u2.save
 u3 = User.create(
   first_name: "Oli",
   last_name: "Cairns",
+  sex: "male",
   profile_name: "optimusprime",
   email:"oli@email.com",
   password: "password",
@@ -140,6 +145,7 @@ u3 = User.create(
   wins: 132,
   losses: 39,
   elo: 1345,
+  form: "WLWWW"
   tagline: "The most decorated captain in the black berets",
   )
 u3.save
@@ -147,6 +153,7 @@ u3.save
 u4 = User.create(
   first_name: "Alex",
   last_name: "Karim",
+  sex: "male",
   profile_name: "KarimTime",
   email:"alex@email.com",
   password: "password",
@@ -156,6 +163,7 @@ u4 = User.create(
   wins: 302,
   losses: 349,
   elo: 1576,
+  form: "WLWWL"
   tagline: "Run fast or be last",
   )
 u4.save
@@ -163,6 +171,7 @@ u4.save
 u5 = User.create(
   first_name: "Matt",
   last_name: "Hawley",
+  sex: "male",
   profile_name: "MattHawley",
   email:"matt@email.com",
   password: "password",
@@ -172,6 +181,7 @@ u5 = User.create(
   wins: 421,
   losses: 39,
   elo: 1987,
+  form: "WLWLL"
   tagline: "Some call them opponents, I call them victims.",
   )
 u5.save
@@ -179,6 +189,7 @@ u5.save
 u6 = User.create(
   first_name: "Mary",
   last_name: "Weiz",
+  sex: "male",
   profile_name: "WeizMary",
   email:"mary@email.com",
   password: "password",
@@ -188,6 +199,7 @@ u6 = User.create(
   wins: 292,
   losses: 39,
   elo: 1528,
+  form: "WLWWL"
   tagline: "I eat lightning and crap thunder",
   )
 u6.save
@@ -195,6 +207,7 @@ u6.save
 u7 = User.create(
   first_name: "Paul",
   last_name: "Recende",
+  sex: "male",
   profile_name: "Recend_Winner",
   email:"paul@email.com",
   password: "password",
@@ -204,6 +217,7 @@ u7 = User.create(
   wins: 32,
   losses: 99,
   elo: 2238,
+  form: "WLLLWL"
   tagline: "Losers complain…champions train",
   )
 u7.save
@@ -211,6 +225,7 @@ u7.save
 u8 = User.create(
   first_name: "James",
   last_name: "Bennet",
+  sex: "male",
   profile_name: "BigJBennet",
   email:"james@email.com",
   password: "password",
@@ -220,6 +235,7 @@ u8 = User.create(
   wins: 62,
   losses: 39,
   elo: 2222,
+  form: "WLLWL"
   tagline: "My warm up is your work out.",
   )
 u8.save
