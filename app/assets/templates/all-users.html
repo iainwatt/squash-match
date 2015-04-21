@@ -22,13 +22,13 @@
           </tr>
         </thead>        
         <tbody>
-          <tr ng-repeat="user in top_users | orderBy:'-elo' |emptyToEnd:'elo' | limitTo:10 " ng-init="serIndex = $index">           
+          <tr ng-repeat="user in top_users | orderBy:'-elo' |emptyToEnd:'elo' | limitTo:20 " ng-init="serIndex = $index"> 
             <th scope="row">{{$index+1}}</th>
             <td class="my-tab-data">{{user.first_name}}</td>
             <td>{{user.last_name}}</td>
             <td>{{user.wins + user.losses}}</td>
-            <td></td>
-            <td></td>
+            <td>{{ (user.wins/(user.losses + user.wins)) * 100 | number:0 }}%</td>
+            <td>{{user.form}}</td>
             <td>{{user.elo}}</td>
           </tr>
         </tbody>

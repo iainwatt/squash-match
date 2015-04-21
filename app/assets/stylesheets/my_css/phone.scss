@@ -3,17 +3,17 @@
   width:100%;
   text-align: center;
     .wrapper-1 {
-      width:33%;
+      width:50%;
       float:left;
     }
     .wrapper-2 {
+      float:right;
+      width:50%;
+    }
+    /*.wrapper-3 {
       float:left;
       width:33%;
-    }
-    .wrapper-3 {
-      float:left;
-      width:33%;
-    }
+    }*/
 }
 
 .wrapper {

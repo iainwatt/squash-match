@@ -25,12 +25,11 @@
 
     <div class="map-hide">
     <map class="map" lazy-load
-          zoom="12"
-          center="[{{meLat}},{{meLong}}]">    
+          zoom="13"
+          center="68 Hanbury Street, London">    
            <marker position="[{{meLat}},{{meLong}}]" 
            title="My Current Location"
            animation="Animation.BOUNCE"
-           icon: "/small-icon.png"
            ></marker>
            <marker ng-repeat="centre in centres" position="{{ centre.latitude }},{{ centre.longitude}}"
            title="{{centre.name}}" on-click="showInfoWindow(event, 'marker-info')"></marker>

@@ -379,13 +379,7 @@ text-align: center;
 }
 
 
-/*.find-opponent-button {
-  width: 20em;
-  font-size: 2.8em;
-  margin-bottom: 1em;
-  background-color: #E449A1;
-}
-*/
+
 
 
 
@@ -398,6 +392,7 @@ text-align: center;
   margin-bottom:2%;
   transition:opacity 1s;
   -webkit-transition:opacity 1s;
+  font-style: 1em;
 }
 
 #sign-up-page form {
@@ -432,7 +427,7 @@ text-align: center;
   margin-bottom:4%;
   padding:4%;
   font-family:'Open Sans',sans-serif;
-  font-size:95%;
+
   color:#555;
 }
 #sign-up-page input[type="file"] button {

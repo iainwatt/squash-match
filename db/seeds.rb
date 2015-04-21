@@ -110,10 +110,10 @@ u1 = User.create(
   wins: 32,
   losses: 39,
   elo: 2800,
-  form: "WLWW"
+  form: "WLWW",
   tagline: "you cant be serious",
   )
-u1.save
+
 
 u2 = User.create(
   first_name: "Iain",
@@ -128,11 +128,11 @@ u2 = User.create(
   matches_played: 100,
   wins: 32,
   losses: 79,
-  elo: 2400,
-  form: "LLWW"
+  elo: 1700,
+  form: "LLWW",
   tagline: "I thought it was out....",
   )
-u2.save
+
 
 u3 = User.create(
   first_name: "Oli",
@@ -148,10 +148,10 @@ u3 = User.create(
   wins: 132,
   losses: 39,
   elo: 1345,
-  form: "WLWWW"
+  form: "WLWWW",
   tagline: "The most decorated captain in the black berets",
   )
-u3.save
+
 
 u4 = User.create(
   first_name: "Alex",
@@ -167,10 +167,10 @@ u4 = User.create(
   wins: 302,
   losses: 349,
   elo: 1576,
-  form: "WLWWL"
+  form: "WLWWL",
   tagline: "Run fast or be last",
   )
-u4.save
+
 
 u5 = User.create(
   first_name: "Matt",
@@ -185,11 +185,11 @@ u5 = User.create(
   matches_played: 600,
   wins: 421,
   losses: 39,
-  elo: 1987,
-  form: "WLWLL"
+  elo: 1587,
+  form: "WLWLL",
   tagline: "Some call them opponents, I call them victims.",
   )
-u5.save
+
 
 u6 = User.create(
   first_name: "Mary",
@@ -205,10 +205,10 @@ u6 = User.create(
   wins: 292,
   losses: 39,
   elo: 1528,
-  form: "WLWWL"
+  form: "WLWWL",
   tagline: "I eat lightning and crap thunder",
   )
-u6.save
+
 
 u7 = User.create(
   first_name: "Paul",
@@ -223,11 +223,11 @@ u7 = User.create(
   matches_played: 300,
   wins: 32,
   losses: 99,
-  elo: 2238,
-  form: "WLLLWL"
+  elo: 1438,
+  form: "WLLLWL",
   tagline: "Losers complain…champions train",
   )
-u7.save
+
 
 u8 = User.create(
   first_name: "James",
@@ -242,11 +242,11 @@ u8 = User.create(
   matches_played: 300,
   wins: 62,
   losses: 39,
-  elo: 2222,
-  form: "WLLWL"
+  elo: 1822,
+  form: "WLLWL",
   tagline: "My warm up is your work out.",
   )
-u8.save
+
 
 u9 = User.create(
   first_name: "Jono",
@@ -262,7 +262,7 @@ u9 = User.create(
   wins: 19,
   losses: 12,
   elo: 1345,
-  form: "WLLWw",
+  form: "WLLWW",
   )
 
 u10 = User.create(
@@ -279,7 +279,7 @@ u10 = User.create(
   wins: 20,
   losses: 21,
   elo: 1345,
-  form: "WLLWw",
+  form: "WLLWW",
   )
 
 u11 = User.create(
@@ -296,7 +296,7 @@ u11 = User.create(
   wins: 70,
   losses: 30,
   elo: 2459,
-  form: "WLLWw",
+  form: "WLLWW",
   )
 
 u12 = User.create(
@@ -313,7 +313,7 @@ u12 = User.create(
   wins: 400,
   losses: 20,
   elo: 2799,
-  form: "WWWWw",
+  form: "WWWWW",
   )
 u13 = User.create(
   first_name: "Tessa",
@@ -329,7 +329,7 @@ u13 = User.create(
   wins: 6,
   losses: 6,
   elo: 1050,
-  form: "WWWWw",
+  form: "WWWLLW",
   )
 
 u14 = User.create(
@@ -464,7 +464,7 @@ u20 = User.create(
   )
 
 
-u8.save
+
 
 ch1 = Challenge.create(player1_id:1, centre_id:1,court_id:1, status: 'pending')    
 ch2 = Challenge.create(player1_id:1, centre_id:1,court_id:2, status: 'pending')    

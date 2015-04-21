@@ -121,3 +121,112 @@
 </div> -->
 
 <!-- <div ng-controller="MapController"></div>
+
+
+
+
+// CentreService.getCentres()
+  // .then(function(response) {
+  //   $scope.centres = response.data;
+  //   // console.log($scope.centre);
+  // });
+
+  // filter all the courts  
+
+  // $scope.courts = []
+  // CentreService.getCentres()
+  //   .then(function(response) {
+  //     $scope.centre = response.data;
+  //     angular.forEach($scope.centre, function(value, key){ 
+  //     $scope.courts.push(value.courts);   
+  //     });
+  //   $scope.allcourts = _.flatten($scope.courts)  
+  //   // console.log($scope.allcourts); 
+  // });
+
+
+  // CourtService.getCourts()
+  // .then(function(response){
+  //   // console.log(response.data)
+  // })
+
+  
+
+
+  // function to filter courts by availability 
+  // $scope.av = []
+  // CourtService.getCourts()
+  // .then(function(response){
+  //   // console.log(response.data)
+  //   $scope.temp = response.data
+  //   angular.forEach($scope.temp, function(value, key){ 
+  //     // Here we create a new variable with only courts that are free
+  //     if (value.availability == 'free')
+  //       $scope.av.push(value);
+  //   });
+  //   // console.log($scope.av);
+  //   angular.forEach($scope.av, function(value, key){ 
+  //     // console.log(value.availability, value.centre.location, value.court_no, basicFormat(value.start_time), basicFormat(value.end_time));
+  //     });
+  // })
+
+
+
+/*.bookedCourt {
+  border: .2em black solid;
+  width: 800px;
+  padding: 10px;
+  margin: 10px;
+  margin-right: 0;
+  margin-left: 2.5em;
+  font-size: 2em;
+}
+
+.court-info {
+  text-align: center;
+  font-size: 1em;
+  text-decoration: none;
+}
+.court-button {
+  width: 20em;
+  font-size: 2.8em;
+}
+.find-court-button {
+  background-color: #AF4FDD;
+}
+.all_courts {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 3px;
+  margin-top: 1em;
+  font-size: 2em;
+}*/
+
+/*.container-4.main-page-courts, .main-page-challenges {
+  width:20%;
+  display: inline-block !important;
+}
+*/
+/*.main-wrapper {
+  width: 100%;
+  height: 2000px;
+  margin: 10px auto 0 auto;
+}
+.fixed-map {
+
+  height:600px;
+}
+.fixed-map img {
+  width:100%;
+/*  height:600px;*/
+
+
+/*.find-opponent-button {
+  width: 20em;
+  font-size: 2.8em;
+  margin-bottom: 1em;
+  background-color: #E449A1;
+}
+*/
+
+// Getting the current user id 
