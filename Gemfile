@@ -27,6 +27,8 @@ gem 'gon'
 gem 'elo'
 gem 'normalize-rails'
 gem "rails-assets-ngDialog"
+gem 'faye'
+gem 'thin'
 
 source "https://rails-assets.org"
 
