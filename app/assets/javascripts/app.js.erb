@@ -43,10 +43,10 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
   .when('/match', {
     controller: 'MatchController',
     templateUrl: "<%= asset_path('match.html') %>"
-  })
-  .otherwise({
-    redirectTo: '/home'
   });
+  // .otherwise({
+  //   redirectTo: '/home'
+  // });
 
   // $locationProvider.html5Mode(true);
 
