@@ -30,6 +30,7 @@ gem "rails-assets-ngDialog"
 gem 'faye'
 gem 'thin'
 
+
 source "https://rails-assets.org"
 
 # gem 'ngannotate-rails'
