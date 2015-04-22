@@ -1,4 +1,4 @@
-
+Squash-Match
 ==============
 
 **About**
@@ -8,17 +8,19 @@ This is a project initiated while I (Iain Watt) was a student at GA. The idea is
 **Stack**
 
 Rails 4.2.0
+
 Ruby 2.1.4
+
 Angular 1.3.15
+
 postgreSQL 9.4.0
+
 This was my first Angular.js project so please excuse some best-practice transgressions that have certainly been committed. It was built on rails, a choice made as it was a framework I was most familiar with at the time.
 
 
 **On Heroku:**
 
-https://vast-cliffs-6728.herokuapp.com
-
-
+https://squash-match-app.herokuapp.com
 
 
 
@@ -36,8 +38,4 @@ Install the above dependencies, clone and run:
 App will be served on localhost:3000 by default.
 
 
-
-
-    
-App will be served on localhost:3000 by default.
 
