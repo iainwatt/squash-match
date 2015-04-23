@@ -681,8 +681,80 @@ users/edit
 <!--      </ul>
  </div>  --> 
 
+/*.bookedCourt {
+  border: .2em black solid;
+  width: 800px;
+  padding: 10px;
+  margin: 10px;
+  margin-right: 0;
+  margin-left: 2.5em;
+  font-size: 2em;
+}
+
+.court-info {
+  text-align: center;
+  font-size: 1em;
+  text-decoration: none;
+}
+.court-button {
+  width: 20em;
+  font-size: 2.8em;
+}
+.find-court-button {
+  background-color: #AF4FDD;
+}
+.all_courts {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 3px;
+  margin-top: 1em;
+  font-size: 2em;
+}*/
+
+/*.container-4.main-page-courts, .main-page-challenges {
+  width:20%;
+  display: inline-block !important;
+}
+*/
+/*.main-wrapper {
+  width: 100%;
+  height: 2000px;
+  margin: 10px auto 0 auto;
+}
+.fixed-map {
+
+  height:600px;
+}
+.fixed-map img {
+  width:100%;
+/*  height:600px;*/
+
+
+
+    // if (position == null) {
+    //   alert("If you are reading this message then we cannot find your locaiton, please enable location services on you browser or the default location (which determines the people you will be matched with) will be used. This is currently set for Oxford Circus, London")
+    //   $scope.meLat = '51.520151399999996',
+    //   $scope.meLong = '-0.0704819'
+    // } else if (position != null) {
+    //   $scope.meLat = position.coords.latitude, 
+    //   $scope.meLong = position.coords.longitude;
+    // }
 
 
 
 
-
+  // $scope.centers = []
+  // var iterator = 0
+  // for (i = 0; i < response.data.length: i++) {
+  //   $timeout 
+  //   $scope.centres.push(response.data.length)
+  //   50 
+  // }
+//     $scope.centres = []
+//     var iterator = 0
+//     for (i = 0; i < response.data.length; i++)
+//       $timeout(function(){
+//         $scope.centres.push(response.data[iterator++])
+//       }, 50);
+        // });
+    

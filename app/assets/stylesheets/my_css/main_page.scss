@@ -95,14 +95,80 @@ section.module.parallax-4 {
           background-color:#404B57;
           border-radius:.2em;     
         }
+        label {
+          display: inline-block;
+          background-color:#404B57;
+          border-radius:.2em;
+        }
+        .check-box {
+          display: inline-block;
+
+          border-radius:.2em;
+          margin: 0 auto;
+          margin: 80px 0;
+          text-align: center;
+            input[type='checkbox'] {
+/*              display:block;*/
+              margin: 0 auto;
+
+              -webkit-appearance: button;
+              border:none;
+              background: url(http://www.pixelslip.be/img/check.png) no-repeat 0 0 transparent;
+              background-color: #ccc;
+              width: 90px;
+              height: 40px;
+              border-radius: 3px;
+              box-shadow: inset 0 1px 4px rgba(0,0,0,.2);
+              cursor: pointer;
+              position: relative;
+              transition: background-color 1s;
+            }
+            input[type='checkbox'].error{
+               background-color: #c63d3d;
+            }
+            input[type='checkbox']:after{
+              content: "";
+              display: block;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 45%;
+              height: 80%;
+              background-color: #fdfdfd;
+              margin: 4%;
+              border-radius: 3px;
+              box-shadow: 0 1px 2px rgba(0,0,0,.2);
+              
+              background: rgb(255,255,255);
+            background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(243,243,243,1) 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(243,243,243,1)));
+            background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 100%);
+            background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 100%);
+            background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 100%);
+            background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(243,243,243,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f3f3f3',GradientType=0 );
+
+             transition: .5s all;
+            }
+
+            input[type='checkbox']:checked{
+              background-color: #79d122;
+            } 
+
+            input[type='checkbox']:checked:after {
+              left: 45%;
+            }    
+        }
     }
     
       .main-page-courts {
         display: none;
         float:left; 
         width:40%;
+        margin-left: 10px;
           button.find-court-button {
-            margin: 1em 20em 5em 0 ;
+            
+            margin-left: 40px;
             font-family: 'Montserrat', sans-serif;
             font-size: 2em;
             word-spacing:.2em;
@@ -113,13 +179,23 @@ section.module.parallax-4 {
             width:40%;   
           }
           .av-courts {
-            font-family: 'Inconsolata', sans-serif;
+           /* font-family: 'Inconsolata', sans-serif;*/
             font-size:1.2em;
             list-style-type: none;
             margin: .1em 0 .1em 0;        
               ul { 
-                } li {                    
-                    padding-top:1em;
+                } li {
+                    position: relative;
+                    min-height: 20px;
+                    padding: 10px;
+                    margin: 20px 15px 20px;
+                    background-color: #f5f5f5;
+                    border: 1px solid #e3e3e3;
+                    border-radius: 4px;
+                    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+                    box-shadow: inset 0 1px 1px rgba(0,0,0,.05); 
+                    background-color:#EAF8EA;                      
+                   /* padding-top:1em;
                     padding-left:1em;
                     text-align:left;  
                     margin: 2% 0 2% 0;
@@ -127,17 +203,21 @@ section.module.parallax-4 {
                     margin:0;
                     border-bottom: .1em dashed #434B6B;
                     border-radius: .5em;
-                    background-color:#EAF8EA;
+                    background-color:#EAF8EA;*/
                       button {
+                        float: right;
                         color: #fff;
                         background-color: #337ab7;
                         border-color: #2e6da4;
                         border: 1px solid transparent;
                         border-radius: 4px;
-                        padding: 6px 12px;
                       }
 
                   }         
+          }
+          .clearfix {
+            overflow: auto; 
+            zoom: 1;
           }
           .bookedCourt {
             font-size:2em;
@@ -156,97 +236,65 @@ section.module.parallax-4 {
       .main-challenge-info {
         display: none;
         float:left;
-        width:50%;
+        width:40%;
         margin-top: 2em; 
         .find-opponent-button {
           margin-top: 2em;
           margin:0;
+          margin-left: 40px;
           width:50%;
           /*margin-left: 10em;*/
           font-family: 'Montserrat', sans-serif;
-          font-size: 3em;
+          font-size: 2em;
           word-spacing:.2em;
           color:#1777E2;
           opacity:.9;
           background-color:#2B3745;
           border-radius:.2em;     
         }
-        .challenge_list {
-          font-family: 'Inconsolata', sans-serif;
-          font-size:1.5em;
-          list-style-type: none;
-          margin: .1em 0 .1em 0;
-        }
-        .success-challenge-message {
-          margin-top: 2em;
-          font-size:1.5em;
-          background-color:#DFF0D8;
-          margin-left:20px;
+        ul {
+          position: relative;
           min-height: 20px;
           padding: 10px;
-          font-family: 'Montserrat', sans-serif;
+          margin: 20px 15px 20px;
+          background-color: #f5f5f5;
           border: 1px solid #e3e3e3;
           border-radius: 4px;
           -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
-          box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
-          width:60%;
-        }
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.05); 
+          background-color:#EAF8EA;                      
+            .challenge_list {        
+              font-size:1.2em;
+              list-style-type: none;
+
+            }
+            .challenge_list .opponent {
+              background-color: rgba(209, 233, 245, 1.0);
+            }
+            .success-challenge-message {
+              margin-top: 2em;
+              font-size:1.5em;
+              background-color:#DFF0D8;
+              margin-left:20px;
+              min-height: 20px;
+              padding: 10px;
+              font-family: 'Montserrat', sans-serif;
+              border: 1px solid #e3e3e3;
+              border-radius: 4px;
+              -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+              box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+              width:60%;
+            }
+         }   
       }
 }
 
 
 
-/*.bookedCourt {
-  border: .2em black solid;
-  width: 800px;
-  padding: 10px;
-  margin: 10px;
-  margin-right: 0;
-  margin-left: 2.5em;
-  font-size: 2em;
-}
-
-.court-info {
-  text-align: center;
-  font-size: 1em;
-  text-decoration: none;
-}
-.court-button {
-  width: 20em;
-  font-size: 2.8em;
-}
-.find-court-button {
-  background-color: #AF4FDD;
-}
-.all_courts {
-  text-decoration: none;
-  list-style-type: none;
-  padding: 3px;
-  margin-top: 1em;
-  font-size: 2em;
-}*/
-
-/*.container-4.main-page-courts, .main-page-challenges {
-  width:20%;
-  display: inline-block !important;
-}
-*/
-/*.main-wrapper {
-  width: 100%;
-  height: 2000px;
-  margin: 10px auto 0 auto;
-}
-.fixed-map {
-
-  height:600px;
-}
-.fixed-map img {
-  width:100%;
-/*  height:600px;*/
 
 
 .map {
-  display: none;
+/*  display: none;*/
    height: 600px; 
    width: 1000px;
 /*   margin-left: auto;
@@ -257,7 +305,28 @@ section.module.parallax-4 {
    padding-right: 1em;
 }
 .map-hide {
-  display:none;
+/*  display:none;*/
   float:right;
   width:50%;
+}
+
+.animate-if {
+/*  background:white;
+  border:1px solid black;
+  padding:10px;*/
+}
+
+.animate-if.ng-enter, .animate-if.ng-leave {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+}
+
+.animate-if.ng-enter,
+.animate-if.ng-leave.ng-leave-active {
+  opacity:0;
+}
+
+.animate-if.ng-leave,
+.animate-if.ng-enter.ng-enter-active {
+  opacity:1;
 }

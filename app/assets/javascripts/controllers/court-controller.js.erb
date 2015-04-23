@@ -6,6 +6,7 @@ app.controller('CourtController', ['$scope', '$http', 'CourtService', 'Challenge
 $scope.findCourts = function () {
 var x = []
 var y = []
+
 CourtService.getCourts()
   .then(function(response){ 
     console.log(response);

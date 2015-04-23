@@ -19,12 +19,18 @@
   <div class="toggle-buttons">
     <button class="find-court-button">Find a Court</button>
     <button class="find-opponent-button">Find an Opponent</button>
+    <div class="check-box">
+    <label>Map</label>   
+      <input type="checkbox" ng-model="checked" ng-init="checked=false" /></label>
+    </div>
   </div> 
 
-  <div class"map-and-challenge-wrapper clearfix">
-
+ 
+  <div class="map-and-challenge-wrapper clearfix"> 
+      <span ng-if="checked" class="animate-if">
     <div class="map-hide">
-      <map class="map" lazy-load
+    <div map-lazy-load="http://maps.google.com/maps/api/js">
+      <map class="map"
         zoom="13"
         center="68 Hanbury Street, London">    
          <marker position="[{{meLat}},{{meLong}}]" 
@@ -34,10 +40,12 @@
          <marker ng-repeat="centre in centres" position="{{ centre.latitude }},{{ centre.longitude}}"
          title="{{centre.name}}" on-click="showInfoWindow(event, 'marker-info')"></marker>
          <info-window id="marker-info">
-            <h4></h4>
+            <h4>{{centre.name}}</h4>
          </info-window>
       </map>  
+      </div>
     </div>
+    </span>
     
     <div class="main-page-courts">
       <div ng-controller="CourtController" class="court-cont">
@@ -46,7 +54,7 @@
           SEARCH COURTS
         </button>
         <ul class="av-courts" ng-hide="bookedCourt">
-          <li ng-repeat="court in courtsAndDistances | orderBy:['dist','start_time'] | filter:'!booked' | limitTo:10 " >{{ court.centre.name }} | {{ court.start_time | customtime }} | Distance: {{ court.dist | number:1 }}km's 
+          <li class"well clearfix" ng-repeat="court in courtsAndDistances | orderBy:['dist','start_time'] | filter:'!booked' | limitTo:10 " >{{ court.centre.name }} | {{ court.start_time | customtime }} | Distance: {{ court.dist | number:1 }}km's 
           <button class"btn" ng-click="bookCourt(court)">Book Now</button>               
           </li>
         </ul>  
@@ -64,7 +72,7 @@
           ng-click="findOpponent()">
           SEARCH OPPONENTS
        </button>
-          <ul ng-hide="challengeOffered" ng-repeat="challenge in challengesAndDistances | orderBy:'dist' | limitTo:6">
+          <ul class="well" ng-hide="challengeOffered" ng-repeat="challenge in challengesAndDistances | orderBy:'dist' | limitTo:6">
             <li class="challenge_list">
             <strong>location: </strong> 
               {{ challenge.court.start_time | customtime }} | {{ challenge.centre.name }} | {{ challenge.dist | number:1}}km's 

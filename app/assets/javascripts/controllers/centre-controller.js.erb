@@ -20,8 +20,9 @@ app.controller('CentreController', ['$scope', '$http', '$timeout', '$location', 
 // Getting info on all courts
   CentreService.getCentres()
   .then(function(response) {
-    $scope.centres = response.data;
+    $scope.centres = response.data
   });
+
 
 // The function that controls the pulse 
   var size = 140;
@@ -43,13 +44,16 @@ app.controller('CentreController', ['$scope', '$http', '$timeout', '$location', 
     $( ".pulse" ).clone().appendTo( "body" );
   })
 
+
 // these show and hide the lists of users and courts and also move the screen to the right area
   $('.find-court-button').click(function() {
     $("html, body").animate({ scrollTop: $('.main-footer').offset().top }, 1000);
     $('.main-page-courts').show(200);
     $('.main-challenge-info').hide(600);
-    $('.map-hide').show(200);
+    // $('.map-hide').show(200);
   });
+
+
 
   $('.find-opponent-button').click(function() {
     $("html, body").animate({ scrollTop: $('.main-footer').offset().top }, 1000);

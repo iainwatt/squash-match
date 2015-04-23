@@ -18,30 +18,30 @@ app.controller('ChallengeController', ['$route', '$scope', '$http', 'ChallengeSe
    .then(function(position) {
     $scope.meLat = position.coords.latitude, 
     $scope.meLong = position.coords.longitude;
-     console.log($scope.meLat);
-     console.log($scope.meLong);
+     // console.log($scope.meLat);
+     // console.log($scope.meLong);
   });
 
 
  
 $scope.findOpponent = function() {
-var x_allChallenges = []
-var y_dist = []
-ChallengeService.getChallenges()
-  .then(function(response){ 
-  x_allChallenges = response.data
-  return x_allChallenges
-  }).then(function(x_allChallenges){
-    dataArray = [];
-    for (var i = 0; i < x_allChallenges.length; i++) {  
-      y_dist = getDistanceFromLatLonInKm(x_allChallenges[i].centre.latitude, x_allChallenges[i].centre.longitude, $scope.meLat, $scope.meLong)
-      dataArray.push(y_dist);
-    }
-    return dataArray
-  }).then(function(){  
-    $scope.challengesAndDistances = distanceHelper(x_allChallenges, dataArray);
-    console.log($scope.challengesAndDistances)
-  });
+  var x_allChallenges = []
+  var y_dist = []
+  ChallengeService.getChallenges()
+    .then(function(response){ 
+    x_allChallenges = response.data
+    return x_allChallenges
+    }).then(function(x_allChallenges){
+      dataArray = [];
+      for (var i = 0; i < x_allChallenges.length; i++) {  
+        y_dist = getDistanceFromLatLonInKm(x_allChallenges[i].centre.latitude, x_allChallenges[i].centre.longitude, $scope.meLat, $scope.meLong)
+        dataArray.push(y_dist);
+      }
+      return dataArray
+    }).then(function(){  
+      $scope.challengesAndDistances = distanceHelper(x_allChallenges, dataArray);
+      console.log($scope.challengesAndDistances)
+    });
 }
 
 
