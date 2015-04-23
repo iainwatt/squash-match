@@ -30,6 +30,8 @@ gem "rails-assets-ngDialog"
 gem 'faye'
 gem 'thin'
 
+gem "jquery-scrollto-rails"
+
 
 source "https://rails-assets.org"
 

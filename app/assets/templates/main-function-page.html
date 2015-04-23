@@ -24,18 +24,18 @@
   <div class"map-and-challenge-wrapper clearfix">
 
     <div class="map-hide">
-    <map class="map" lazy-load
-          zoom="13"
-          center="68 Hanbury Street, London">    
-           <marker position="[{{meLat}},{{meLong}}]" 
-           title="My Current Location"
-           animation="Animation.BOUNCE"
-           ></marker>
-           <marker ng-repeat="centre in centres" position="{{ centre.latitude }},{{ centre.longitude}}"
-           title="{{centre.name}}" on-click="showInfoWindow(event, 'marker-info')"></marker>
-           <info-window id="marker-info">
-              <h4></h4>
-            </info-window>
+      <map class="map" lazy-load
+        zoom="13"
+        center="68 Hanbury Street, London">    
+         <marker position="[{{meLat}},{{meLong}}]" 
+         title="My Current Location"
+         animation="Animation.BOUNCE"
+         ></marker>
+         <marker ng-repeat="centre in centres" position="{{ centre.latitude }},{{ centre.longitude}}"
+         title="{{centre.name}}" on-click="showInfoWindow(event, 'marker-info')"></marker>
+         <info-window id="marker-info">
+            <h4></h4>
+         </info-window>
       </map>  
     </div>
     

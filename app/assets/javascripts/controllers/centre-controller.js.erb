@@ -2,100 +2,81 @@
 app.controller('CentreController', ['$scope', '$http', '$timeout', '$location', 'CentreService', 'CourtService', 'NavigatorGeolocation', 'GeoCoder', function($scope, $http, $timeout, $location, CentreService, CourtService, NavigatorGeolocation, GeoCoder){
   
 
-$http.get('/users/current_user_profile')
- .success(function(data){
- 
-  $scope.user = data
- })
+  $http.get('/users/current_user_profile')
+   .success(function(data){ 
+    $scope.user = data
+   })
 
+  $scope.current_user = gon.current_user
 
- // passing the displayTime() function from moment.js file so we can display a clock, and including the $timeout Angular service
-  var updateTime = function() {
-    $scope.displayTime = displayTime();
-    $timeout(function() {
-      updateTime();
-    }, 1000);
-  }
-  updateTime();
-
-NavigatorGeolocation.getCurrentPosition()
+// Geolocating
+  NavigatorGeolocation.getCurrentPosition()
    .then(function(position) {
     $scope.meLat = position.coords.latitude; 
     $scope.meLong = position.coords.longitude;
     $scope.me = position.coords.latitude, position.coords.longitude;
-     // console.log($scope.meLat);
-     // console.log($scope.meLong);
-
   });
 
+// Getting info on all courts
   CentreService.getCentres()
   .then(function(response) {
     $scope.centres = response.data;
-    });
+  });
 
-  //   $scope.showInfoWindow = function (event, p) {
+// The function that controls the pulse 
+  var size = 140;
+  setInterval(function(){
+    $('.pulse').width(size).height(size);
+    size++;
+    if(size > 200){
+      $('.pulse').css('opacity', $('.pulse').css('opacity')-0.001);
+    }
+    if(size > 500){
+      size = 50;
+    $('.pulse').width(size).height(size);
+      $('.pulse').css('opacity', '0.3');
+    }
+  },0); 
 
-  //     var infowindow = new google.maps.InfoWindow();
-  //     var center = new google.maps.LatLng(centre.latitude,centre.longitude);
+  $('.photo').click(function(){
+    console.log('CLick'); 
+    $( ".pulse" ).clone().appendTo( "body" );
+  })
 
-  //     infowindow.setContent(
-  //         '<h3>' + p + '</h3>');
+// these show and hide the lists of users and courts and also move the screen to the right area
+  $('.find-court-button').click(function() {
+    $("html, body").animate({ scrollTop: $('.main-footer').offset().top }, 1000);
+    $('.main-page-courts').show(200);
+    $('.main-challenge-info').hide(600);
+    $('.map-hide').show(200);
+  });
 
-  //     infowindow.setPosition(center);
-  //     infowindow.open($scope.objMapa);
-  //   };
+  $('.find-opponent-button').click(function() {
+    $("html, body").animate({ scrollTop: $('.main-footer').offset().top }, 1000);
+    $('.main-challenge-info').show(200);
+    $('.main-page-courts').hide(700);
+  });
 
 
-// setTimeout(function(){
-//   console.log($scope.centre);
-// },2000);
 
-$scope.current_user = gon.current_user
-
-var size = 140;
-setInterval(function(){
-  $('.pulse').width(size).height(size);
-  size++;
-  if(size > 200){
-    $('.pulse').css('opacity', $('.pulse').css('opacity')-0.001);
-  }
-  if(size > 500){
-    size = 50;
-  $('.pulse').width(size).height(size);
-    $('.pulse').css('opacity', '0.3');
-  }
-},0); 
-
-$('.photo').click(function(){
-  console.log('CLick'); 
-  $( ".pulse" ).clone().appendTo( "body" );
-})
-
-$('.find-court-button').click(function() {
-  $('.main-page-courts').show(200);
-  $('.main-challenge-info').hide(600);
-  $('.map-hide').show(200);
-});
-
-$('.find-opponent-button').click(function() {
-  $('.main-challenge-info').show(200);
-  $('.main-page-courts').hide(700);
-});
-
-$('.launchConfirm').on('click', function (e) {
-  console.log(e);
+// A modal function not yet working but close
+  $('.launchConfirm').on('click', function (e) {
+    console.log(e);
     $('#confirm')
-        .modal({ backdrop: 'static', keyboard: false })
-        .one('click', '[data-value]', function (e) {
-            if($(this).data('value')) {
-                alert('confirmed');
-            } else {
-                alert('canceled');
-            }
-        });
-});
+    .modal({ backdrop: 'static', keyboard: false })
+    .one('click', '[data-value]', function (e) {
+      if($(this).data('value')) {
+          alert('confirmed');
+      } else {
+          alert('canceled');
+      }
+    });
+  });
 
 }]);
+
+
+
 
 
 

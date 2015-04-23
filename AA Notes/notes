@@ -83,12 +83,603 @@ users/edit
     <!-- **** This is the message and info that is shown once you have booked a court  **** --> 
 
 
+<!-- <li class="opponent_list">
+    <strong>Opponent:</strong> 
+    {{ challenge.player1.first_name }} {{ challenge.player1.last_name }} | level: {{ challenge.player1.level}} 
+
+    <button  
+      ng-click="getUserProfile(challenge.player1_id)">
+      <a href="profile/{{ challenge.player1_id }}">View Profile</a>
+    </button> 
+
+   <button 
+      ng-click="acceptChallenge(challenge)">
+       Accept
+    </button> 
+
+     <button 
+      ng-click="declineChallenge(challenge)"> 
+       Decline
+    </button>           
+
+     <button 
+      ng-click="destroyChallenge(challenge)">
+      Cancel Match
+    </button> 
+
+    <button 
+      ng-click="logWin(challenge)">
+      Log Win 
+    </button>
+    
+    <button 
+      ng-click="logLoss(challenge)">
+      Log Loss
+    </button>  -->
+
+   
+<!-- <div class="bookings">
+  <h2>My Bookings</h2>
+  <ul ng-repeat="court in myCourts | limitTo:2">
+    <li class="booked-courts-list">
+      {{ court.start_time | customtime }} | {{ court.centre.name }} 
+
+      <button 
+        type="button" 
+        class="btn btn-info btn-sm">
+        Find Opponent
+      </button> 
+
+      <button 
+        type="button" 
+        class="btn btn-warning btn-sm">
+        Cancel Booking
+      </button> 
+
+    </li>
+  </ul>     
+</div> -->
+
+<!-- <div class="challenges">
+<h2>My Matches</h2>
+<ul ng-repeat="challenge in myChallenges | limitTo:2">
+
+  <li class="opponent_list"> 
+    <strong>Booking:</strong> 
+    {{ challenge.court.start_time | customtime }} | {{ challenge.centre.name }}  
+  </li>
+ 
+  <li class="opponent_list">
+    <strong>Opponent:</strong> 
+    {{ challenge.player1.first_name }} {{ challenge.player1.last_name }} | level: {{ challenge.player1.level}} 
+
+    <button 
+      type="button" 
+      class="btn btn-info btn-xs" 
+      ng-click="getUserProfile(challenge.player1_id)">
+      <a href="profile/{{ challenge.player1_id }}">View Profile</a>
+    </button> 
+
+   <button 
+      type="button" 
+      class="btn btn-success btn-xs"
+      ng-click="acceptChallenge(challenge)">
+       Accept
+    </button> 
+
+     <button 
+      type="button" 
+      class="btn btn-warning btn-xs"
+      ng-click="declineChallenge(challenge)"> 
+       Decline
+    </button>           
+
+     <button 
+      type="button" 
+      class="btn btn-danger btn-xs"
+      ng-click="destroyChallenge(challenge)">
+      Cancel Match
+    </button> 
+
+    <button 
+      type="button" 
+      class="btn btn-success btn-xs" 
+      ng-click="logWin(challenge)">
+      Log Win 
+    </button>
+    
+    <button 
+      type="button" 
+      class="btn btn-warning btn-xs"
+      ng-click="logLoss(challenge)">
+      Log Loss
+    </button> 
+
+  </li>
+</ul>
+</div>
+</div>
+</div>
+</div> 
+ -->
+
+
+ <!-- <p>ELO: {{ user.elo }}</p>
+    <div id="win-loss-bar">
+      <p class="win-loss-info">W: {{ user.wins}}</p>
+      <p class="win-loss-info">L: {{ user.losses }}</p>
+      <p class="win-loss-info">Win %: {{ (user.wins/(user.losses + user.wins)) * 100 | number:0 }}%</p>
+      <! <p class="win-loss-info">ELO: {{ user.elo }}</p> -->
+
+
+
+
+
+<!-- <div id="test-wrap">
+    <div id="test-div-1">
+        <div class="profile-header">
+            <h1>Full Name</h1>
+
+            <h2>Tagline...</h2>
+
+            <div class="profile-image"><img></div>
+        </div>
+
+        <div class="profile-social-links">
+            <a class="info-circle blu"></a> <a class=
+            "info-circle lblu"></a> <a class="info-circle dblu"></a>
+            <a class="info-circle red"></a>
+        </div>
+
+        <div class="profile-footer">
+            <a class="profile-btn" href="#">Follow</a>
+        </div>
+    </div>
+
+    <div id="test-div-2">
+        <div class="profile-info-header">
+            <div class="booking-info">
+                <h2>BOOKINGS</h2>
+            </div>
+
+            <div class="challenge-info">
+                <h2>CHALLENGES</h2>
+            </div>
+        </div> -->
+
+       <!--  <div class="booking-card-wrap">
+            <div class="booking-card">
+                <div class="booking-title">
+                    <h2>COURT BOOKED <span class="fa fa-ticket" style=
+                    "font-style: italic"></span></h2>
+                </div>
+
+                <div class="booking-details clearfix">
+                    <div class="item">
+                        <div class="title">
+                            DATE
+                        </div>
+
+                        <div class="value">
+                            16/04
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="title">
+                            TIME
+                        </div>
+
+                        <div class="value">
+                            18.45
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <div class="title">
+                            LOCATION
+                        </div>
+
+                        <div class="value">
+                            Clissold
+                        </div>
+                    </div>
+                </div> -->
+<!-- 
+                <div class="booking-links">
+                    <a class="info-circle calendar fa fa-calendar" style=
+                    "font-style: italic"></a> <a class=
+                    "info-circle pay fa fa-credit-card" style=
+                    "font-style: italic"></a> <a class=
+                    "info-circle message fa fa-envelope-o" style=
+                    "font-style: italic"></a> <a class=
+                    "info-circle map-icon fa fa-map-marker" style=
+                    "font-style: italic"></a>
+                </div>
+
+                <div class="btn btn-continue">
+                    CONTINUE
+                </div>
+            </div>
+        </div>
+
+        <div class="challenge-card">
+            <div class="challenge-title">
+                <h2>CHALLENGES <span class="fa fa-user-plus" style=
+                "font-style: italic"></span></h2>
+            </div>
+
+            <div class="challenge-booking-details clearfix">
+                <div class="item">
+                    <div class="title">
+                        DATE
+                    </div>
+
+                    <div class="value">
+                        16/04
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="title">
+                        TIME
+                    </div>
+
+                    <div class="value">
+                        18.45
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="title">
+                        LOCATION
+                    </div>
+
+                    <div class="value">
+                        Clissold
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="challenge-info-button">
+                        <h2>More Info</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="challenger-details clearfix">
+                <div class="challenger-item ch-image">
+                    <div class="challenge-circle"></div>
+                </div>
+
+                <div class="challenger-item ch-name">
+                    <h2>Colin Durbin</h2>
+                </div>
+
+                <div class="challenger-item ch-info">
+                    <div class="title">
+                        ELO
+                    </div>
+
+                    <div class="value">
+                        1849
+                    </div>
+                </div>
+
+                <div class="challenger-item ch-rank">
+                    <div class="title">
+                        Rank
+                    </div>
+
+                    <div class="value">
+                        109th
+                    </div>
+                </div>
+
+                <div class="challenger-item ch-form">
+                    <div class="title">
+                        Form
+                    </div>
+
+                    <div class="value">
+                        WLW
+                    </div>
+                </div>
+
+                <div class="challenger-item ch-profile">
+                    <h2>View</h2>
+                </div>
+
+                <div class="challenger-item accept">
+                    <h2>Accept</h2>
+                </div>
+
+                <div class="challenger-item decline">
+                    <h2>Decline</h2>
+                </div>
+            </div>
+
+            <div class="challenger-details two clearfix">
+                <div class="challenger-item ch-image">
+                    <div class="challenge-circle"></div>
+                </div>
+
+                <div class="challenger-item ch-name">
+                    <h2>Marco Polo</h2>
+                </div>
+
+                <div class="challenger-item ch-info">
+                    <div class="title">
+                        ELO
+                    </div>
+
+                    <div class="value">
+                        1239
+                    </div>
+                </div>
+
+                <div class="challenger-item ch-rank">
+                    <div class="title">
+                        Rank
+                    </div>
+
+                    <div class="value">
+                        123rd
+                    </div>
+                </div>
+
+                <div class="challenger-item ch-form">
+                    <div class="title">
+                        Form
+                    </div>
+
+                    <div class="value">
+                        WLW
+                    </div>
+                </div>
+
+                <div class="challenger-item ch-profile">
+                    <h2>View</h2>
+                </div> <div class="challenger-item accept">
+        <h2>Accept</h2>
+      </div>
+      <div class="challenger-item decline">
+        <h2>Decline</h2>
+      </div> -->
+            <!-- </div>
+
+            <div class="challenger-details three clearfix">
+                <div class="challenger-item ch-image">
+                    <div class="challenge-circle"></div>
+                </div>
+
+                <div class="challenger-item ch-name">
+                    <h2>Freddy Star</h2>
+                </div>
+
+                <div class="challenger-item ch-info">
+                    <div class="title">
+                        ELO
+                    </div>
+
+                    <div class="value">
+                        1169
+                    </div>
+                </div>
+
+                <div class="challenger-item ch-rank">
+                    <div class="title">
+                        Rank
+                    </div>
+
+                    <div class="value">
+                        374th
+                    </div>
+                </div>
+
+                <div class="challenger-item ch-form">
+                    <div class="title">
+                        Form
+                    </div>
+
+                    <div class="value">
+                        WLW
+                    </div>
+                </div>
+
+                <div class="challenger-item ch-profile">
+                    <h2>View</h2>
+                </div> --><!--        <div class="challenger-item accept">
+        <h2>Accept</h2>
+      </div>
+      <div class="challenger-item decline">
+        <h2>Decline</h2>
+      </div> -->
+<!--             </div>
+        </div>
+    </div> -->
+<!-- </div>  -->
+<!-- 
+          <div class="challenger-links">
+            <a class="info-circle info"><i class="fa fa-info-circle"></i></a>
+            <a class="info-circle gender"><i class="fa fa-male"></i></a>
+            <a class="info-circle play"><i class="fa fa-check fa-1x"></i></a>
+            <a class="info-circle cancel"><i class="fa fa-times-circle-o"></i></a>
+          </div> -->
+
+
+ <!-- <div class="challenger-details clearfix">
+          <div class="challenger-img">
+            <a class="info-circle challenger-img"><i class="fa fa-user"></i></a>
+            <! <img ng-src="{{ user.user_image.url }}"/> -->
+         <!--  </div>
+          <div class="challenger-name">
+            <h2>Mike Fischer</h2>
+          </div>
+          <a class="challenger-info"><i class="fa fa-info-circle"></i></a>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>   -->
+
+
+
+<!-- <div id="profile-wrapper">
+<div id="profile-center">
+
+  <div class="profile">
+    <img class="user-image pb-pattern o-lines-light" 
+      ng-src="{{ user.user_image.url }}"/>
+    <p>{{ user.first_name }} {{ user.last_name}}</p>
+    <! <p> aka '{{ user.profile_name}}'</p> -->
+    <!-- <p>ELO: {{ user.elo }}</p>
+    <div id="win-loss-bar">
+      <p class="win-loss-info">W: {{ user.wins}}</p>
+      <p class="win-loss-info">L: {{ user.losses }}</p>
+      <p class="win-loss-info">Win %: {{ (user.wins/(user.losses + user.wins)) * 100 | number:0 }}%</p>
+      <! <p class="win-loss-info">ELO: {{ user.elo }}</p> -->
+   <!--  </div>
+  </div> -->   
 
 
 
 
 
 
+
+
+
+<!--   <div class="my-profile-info"> -->
+
+   
+
+<!-- <div class="challenges">
+<h2>My Matches</h2>
+<ul ng-repeat="challenge in myChallenges | limitTo:2">
+
+  <li class="opponent_list"> 
+    <strong>Booking:</strong> 
+    {{ challenge.court.start_time | customtime }} | {{ challenge.centre.name }}  
+  </li>
+ 
+  <li class="opponent_list">
+    <strong>Opponent:</strong> 
+    {{ challenge.player1.first_name }} {{ challenge.player1.last_name }} | level: {{ challenge.player1.level}} 
+
+    <button 
+      type="button" 
+      class="btn btn-info btn-xs" 
+      ng-click="getUserProfile(challenge.player1_id)">
+      <a href="profile/{{ challenge.player1_id }}">View Profile</a>
+    </button> 
+
+   <button 
+      type="button" 
+      class="btn btn-success btn-xs"
+      ng-click="acceptChallenge(challenge)">
+       Accept
+    </button> 
+
+     <button 
+      type="button" 
+      class="btn btn-warning btn-xs"
+      ng-click="declineChallenge(challenge)"> 
+       Decline
+    </button>           
+
+     <button 
+      type="button" 
+      class="btn btn-danger btn-xs"
+      ng-click="destroyChallenge(challenge)">
+      Cancel Match
+    </button> 
+
+    <button 
+      type="button" 
+      class="btn btn-success btn-xs" 
+      ng-click="logWin(challenge)">
+      Log Win 
+    </button>
+    
+    <button 
+      type="button" 
+      class="btn btn-warning btn-xs"
+      ng-click="logLoss(challenge)">
+      Log Loss
+    </button> 
+
+  </li>
+</ul>
+</div>
+</div>
+</div>
+</div>  -->
+
+
+
+  
+
+  //   $scope.showInfoWindow = function (event, p) {
+
+  //     var infowindow = new google.maps.InfoWindow();
+  //     var center = new google.maps.LatLng(centre.latitude,centre.longitude);
+
+  //     infowindow.setContent(
+  //         '<h3>' + p + '</h3>');
+
+  //     infowindow.setPosition(center);
+  //     infowindow.open($scope.objMapa);
+  //   };
+
+
+
+   
+    <%# if !user_signed_in? %>
+    <%#= link_to "Login", new_user_session_path %>
+    <%#= link_to "Sign Up", new_user_registration_path%>
+    <%#= yield %>
+    <%# end %>
+   
+   <%# if user_signed_in? %>
+
+      <%# end %>
+<!--    </div>  -->
+
+
+   <%# if !user_signed_in? %>
+    <%#= link_to "Login", new_user_session_path %>
+    <%#= link_to "Sign Up", new_user_registration_path%>
+    <%#= yield %>
+    <%# end %>
+
+
+<!-- <h2 class="title-pen"> Player Profile <span>UI</span></h2>
+
+<div class="user-profile">
+    <img class="avatar" ng-src="{{ userInfo.user_image.url }}"/>
+    <div class="user-username">
+      <div class="username">{{ userInfo.first_name }} {{ userInfo.last_name}}</div>
+      <div class="bio">{{ userInfo.tagline }}</div>
+      <div class="user-elo">ELO: {{ userInfo.elo}}</div>
+    </div>
+     <ul class="data">
+        <li>
+          W:
+          <span>{{ userInfo.wins }}</span>
+        </li>
+        <li>
+        L:
+          <span>{{ userInfo.losses }}</span>
+        </li>
+        <li>
+         W%: -->
+        <!--   <span>{{ (userInfo.losses/userInfo.wins) * 100 | number:0 }}%</span>
+        </li> -->
+       <!--  <li>
+          <span>{{ (userInfo.losses/userInfo.wins) * 100 | number:0 }}%</span>
+        </li> -->
+<!--      </ul>
+ </div>  --> 
 
 
 

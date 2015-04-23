@@ -1,22 +1,22 @@
 
-
 <div class="up-wrapper">
   <div cladd="hack-dr54"></div>
   <div class="up-card">
     <div class="bumper"></div>
-    <div class="up-picture">
-     <img ng-src="{{ userInfo.user_image.url }}"/> 
-     </div>
-    <div class="up-user-name"><h1> {{ userInfo.first_name }} {{ userInfo.last_name}} </h1></div>
-    <div class="up-user-description">
-      <p id="up-tagline">{{ userInfo.tagline }}</p>
-    </div>
-
-    <div class="up-details clearfix">
-      <div class="up-item elo">
-        <div class="title">ELO</div>
-        <div class="value">{{ userInfo.elo}}</div>
+    <div class="pic-and-elo-wrapper clearfix">
+      <div class="up-picture">
+       <img ng-src="{{ userInfo.user_image.url }}"/> 
       </div>
+      <div class="big-elo">
+        <div class="big-title">ELO</div>
+        <div class="big-value">{{ userInfo.elo}}</div>
+      </div>
+    </div>
+    <div class="name-age-wrapper clearfix">
+      <div class="up-user-name"><h2> {{ userInfo.first_name }} {{ userInfo.last_name}} </h1></div>
+      <div class="user-age"><h2>{{ userInfo.age }}</h2></div>
+    </div>
+    <div class="up-details clearfix">
       <div class="up-item rank">
         <div class="title">Rank</div>
         <div class="value">109th</div>
@@ -45,28 +45,8 @@
       <a class="info-circle"><i class="fa fa-map-marker"></i></a>
       </div>
     </div>
-
-    <div class="up-links link-2 clearfix">
-      <div class="up-item teams">
-        <a class="info-circle"><i class="fa fa-users"></i></a>
-      </div>
-      <div class="up-item history">
-        <a class="info-circle"><i class="fa fa-history"></i></a>
-      </div>
-      <div class="up-item trophy">
-        <a class="info-circle"><i class="fa fa-trophy"></i></a>
-      </div>
-      <div class="up-item up-phone">
-      <a class="info-circle"><i class="fa fa-phone"></i></a>
-      </div>
-    </div>
-   
-
-
   </div>
-
-  </div>
-
+</div>
 
 
 
@@ -95,33 +75,8 @@
 
 
 
-<!-- <h2 class="title-pen"> Player Profile <span>UI</span></h2>
 
-<div class="user-profile">
-    <img class="avatar" ng-src="{{ userInfo.user_image.url }}"/>
-    <div class="user-username">
-      <div class="username">{{ userInfo.first_name }} {{ userInfo.last_name}}</div>
-      <div class="bio">{{ userInfo.tagline }}</div>
-      <div class="user-elo">ELO: {{ userInfo.elo}}</div>
-    </div>
-     <ul class="data">
-        <li>
-          W:
-          <span>{{ userInfo.wins }}</span>
-        </li>
-        <li>
-        L:
-          <span>{{ userInfo.losses }}</span>
-        </li>
-        <li>
-         W%: -->
-        <!--   <span>{{ (userInfo.losses/userInfo.wins) * 100 | number:0 }}%</span>
-        </li> -->
-       <!--  <li>
-          <span>{{ (userInfo.losses/userInfo.wins) * 100 | number:0 }}%</span>
-        </li> -->
-<!--      </ul>
- </div>  --> 
+
 
  
 

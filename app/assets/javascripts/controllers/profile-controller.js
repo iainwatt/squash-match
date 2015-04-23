@@ -135,20 +135,29 @@ $scope.acceptChallenge = function(challenge) {
     })
   }; 
 
-$('#toggle-bookings').click(function() {
-  $('#my-booked-courts-wrap').show(200);
-  $('#my-challengers-list').hide(600);
-});
 
-$('#toggle-challenges').click(function() {
-  $('#my-challengers-list').show(200);
-  $('#my-booked-courts-wrap').hide(700);
+$(document).ready(function() {
+  $('#toggle-bookings').click(function() {
+    $('#my-booked-courts-wrap').show(200);
+    $('#my-challengers-list').hide(600);
+  });
+
+  $('#toggle-challenges').click(function() {
+    $('#my-challengers-list').show(200);
+    $('#my-booked-courts-wrap').hide(700);
+  });
+
+  $('.Title a').popover({ container: 'body',html:true } ) 
+
 });
+console.log("hello");
+
+
 
 // $(".Title a").popover({
 //   placement : 'auto'
 // });
-$('.Title a').popover({ container: 'body',html:true } ) 
+
   
 }]);
 

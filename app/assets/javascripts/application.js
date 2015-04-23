@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.scrollTo
 //= require jquery_ujs
 //= require moment
 //= require angular-route-1-2-0
