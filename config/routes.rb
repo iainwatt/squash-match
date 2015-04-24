@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :courts
   resources :challenges
 
-  get '/test/landing' => 'static#index', as: 'landing'
+  # get '/test/landing' => 'static#index', as: 'landing'
 
   get '/test/search' => 'static#search'
 
