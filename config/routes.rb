@@ -27,6 +27,8 @@ Rails.application.routes.draw do
 
   get 'users/user_profile/:id' => 'users#user_profile'
 
+  get 'users/new_profile' => 'users#new_profile'
+
   get 'users/phone_profile' => 'users#phone_profile'
 
   get 'users/all_users' => 'users#all_users'

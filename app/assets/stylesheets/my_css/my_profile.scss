@@ -7,6 +7,7 @@ body {
   margin: 0px auto;
   width: 100%;
 
+
 }
 
 #test-div-1, #test-div-2 {
@@ -17,6 +18,7 @@ body {
   background: #fafaff;
   border-radius: .5em;
   font-family: 'Montserrat', sans-serif;
+
 }
 .popover {
   margin-left:90px;
@@ -51,7 +53,7 @@ body {
 
 #test-div-1 #my-profile-card {
   width:60%;
-  height:47em;
+/*  height:34em;*/
   margin: 5% auto 5% auto;
   border-radius: 1em;
   opacity:1;
@@ -71,7 +73,7 @@ body {
       color:#25CF87;
       width: 2.5em;
       font-family: 'Inconsolata', sans-serif;
-      font-size: 3em;
+      font-size: 1em;
       cursor:pointer;       
     }
     .edit-link:hover {
@@ -88,7 +90,7 @@ body {
       text-align: center;
 
         h2 {
-          font-size: 2em;
+          font-size: 1em;
           letter-spacing:.4em; 
           margin:2% 0 2% 0;
           color:white;      
@@ -97,7 +99,7 @@ body {
     .my-profile-img-and-elo-wrap {
       width:90%;
         .my-profile-picture {
-          width:50%;  
+          width:40%;  
           float:left; 
           position: relative;
           min-height: 20px;
@@ -110,8 +112,8 @@ body {
           box-shadow: inset 0 1px 1px rgba(0,0,0,.05);   
             img {
               text-align: center;
-              width:230px;
-              height: 350px;
+              width:150px;
+              height: 229px;
               vertical-align: middle;
               -webkit-border-radius: 6px;
                -moz-border-radius: 6px;
@@ -131,9 +133,9 @@ body {
           border-radius: 4px;
           -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
           box-shadow: inset 0 1px 1px rgba(0,0,0,.05);   
-          height: 350px;
+          height: 230px;
           vertical-align: middle;
-          font-size: 4em;
+          font-size: 1.5em;
             .title {
                 padding-top: 60px;
               }
@@ -149,7 +151,7 @@ body {
     }
     .my-profile-name {
       font-family: 'Montserrat', sans-serif;
-      font-size: 4em;
+      font-size: 2em;
       color:white;
       width:100%;
       text-align:center;
@@ -177,7 +179,7 @@ body {
           font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
           text-align: center;
           font-weight: 200;
-          font-size: 1.5em;
+          font-size: 1em;
             .title {
               padding-top: 1.5em;
               padding-bottom:1em; 
@@ -194,7 +196,7 @@ body {
     .my-profile-links {
       min-height: 20px;
       padding: 10px;
-      margin: 0 auto 20px auto;
+      margin: 0 auto;
       background-color: #f5f5f5;
       border: 1px solid #e3e3e3;
       border-radius: 4px;
@@ -209,7 +211,7 @@ body {
           float:left;
           font-family: 'Inconsolata', sans-serif;
           text-align: center;
-          font-size: 1.5em;
+          font-size: 1em;
             .info-circle {
               height:3em;
               width:3em;
@@ -458,12 +460,7 @@ body {
 }
 
 
-/*#my-profile-card .my-profile-picture {
-  margin: 5% auto 5% auto;
-  height:10em;
-  width:10em;
-  background-color: #39D68E;
-}*/
+
 
 #test-div-1 .profile-header {
   padding: 30px 0 30px;
@@ -561,11 +558,7 @@ body {
   background-color: #3E5871;
   color:#FD8586;
 }
-/*#test-div-2 h2 {
-  padding:0;
-  font-size: 14px;
-  font-weight:300;
-}*/
+
 
 /*this is for the booked court stub*/
 #test-div-2 .booking-card-wrap {
@@ -804,67 +797,6 @@ a .info-circle .map {
   border-radius: 5px;
   background-color: #E64C65;
 }
-
-/*#test-div-2 .challenger-links {
-  width: 94%;
-  padding: 5px 0 5px 0;
-  margin: 5px auto 5px auto;
-  background: #4da6cf;
-  border-radius: 5px;
-}
-
-#test-div-2 .challenger-links .info-circle {
-  background-color: #fff;
-  display: inline-block;
-  width: 36px;
-  height: 36px;
-  line-height: 36px;
-  border: 1px solid black;
-  border-radius: 100%;
-   padding: 0 15px; 
-  margin: 5px 20px;
-}
-
-
-
-/*#test-div-2 .challenger-details .challenger-img {
-  width: 20%;
-  float: left;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  border: 1px solid black;
-}
-
-#test-div-2 .challenger-details .challenger-img i {
-  margin: 0 auto 0 auto;
-  vertical-align: center;
-}
-#test-div-2 .challenger-details .challenger-name {
-  width: 20%;
-  float: left;
-}
-#test-div-2 .challenger-details .challenger-info {
-  width: 20%;
-  float: left;
-  margin: 0 auto 0 auto;
-}
-*/
-/*#test-div-2 .challenger-details .challenger-img img {
-  border-radius: 50%;
-  border: 1px solid black;
-}*/
-
-
-
-
-
-
-
-
-
-
-
 
 
 #profile-wrapper {

@@ -22,6 +22,10 @@ class UsersController < ApplicationController
 
   end
 
+  def new_profile
+
+  end
+
   def log_win
     log_win = User.find(params[:id])
     log_win.wins = params[:challenge][:wins]

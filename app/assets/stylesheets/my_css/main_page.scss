@@ -14,18 +14,18 @@ body,
 
 section.module.parallax-4 {
   background-image: url("https://s3-eu-west-1.amazonaws.com/squash-bucket/uploads/user/user_image/london-map.jpg");
-  height: 800px;
+  height: 400px;
   margin-top:0;
   z-index: -2;
 }
 .animation-photo{
   position:absolute;
-  top:40%;
+  top:35%;
   left:50%;
   transform:translateX(-50%) translateY(-50%);
   border-radius:1000px;
-  width:280px;
-  height:280px;
+  width:200px;
+  height:200px;
   padding:5px;
   /*border:2px solid #efefef;*/
   background:#064D54;
@@ -45,10 +45,10 @@ section.module.parallax-4 {
 
 #loading {
   position:absolute;
-  top:44%;
+  top:34%;
   left:14%;
   font-family: 'Montserrat', sans-serif;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 30px;
   color:#F0E797;
   letter-spacing: 7px;
@@ -58,10 +58,10 @@ section.module.parallax-4 {
 .pulse{
   position:absolute;
   left:50%;
-  top:40%;
-  width:800px;
+  top:35%;
+  width:500px;
   height:500px;
-  background:radial-gradient(white 40%, orange);
+  background:radial-gradient(white 30%, orange);
   z-index:2;
   transform:translateY(-50%) translateX(-50%);
   border-radius:1000px;
@@ -77,10 +77,9 @@ section.module.parallax-4 {
   min-height:60em;
   margin-bottom: 5em;
     .toggle-buttons {
-      margin-top: 1em;
       text-align: center;
       font-family: 'Montserrat', sans-serif;
-      font-size: 3em;
+      font-size: 2em;
       word-spacing:.2em;
       color:#1777E2;
       border-radius:.5em;
@@ -88,7 +87,7 @@ section.module.parallax-4 {
         .find-court-button {
           display: inline-block;
           background-color:#404B57;
-          border-radius:.2em;     
+          border-radius:.2em;  
         }
        .find-opponent-button {
           display: inline-block;
@@ -102,15 +101,14 @@ section.module.parallax-4 {
         }
         .check-box {
           display: inline-block;
-
+          margin-top:10px;
           border-radius:.2em;
-          margin: 0 auto;
-          margin: 80px 0;
+
           text-align: center;
             input[type='checkbox'] {
 /*              display:block;*/
               margin: 0 auto;
-
+                padding-top: 10px;
               -webkit-appearance: button;
               border:none;
               background: url(http://www.pixelslip.be/img/check.png) no-repeat 0 0 transparent;
@@ -170,7 +168,7 @@ section.module.parallax-4 {
             
             margin-left: 40px;
             font-family: 'Montserrat', sans-serif;
-            font-size: 2em;
+            font-size: 1em;
             word-spacing:.2em;
             color:#1777E2;
             opacity:.9;
@@ -245,7 +243,7 @@ section.module.parallax-4 {
           width:50%;
           /*margin-left: 10em;*/
           font-family: 'Montserrat', sans-serif;
-          font-size: 2em;
+          font-size: 1em;
           word-spacing:.2em;
           color:#1777E2;
           opacity:.9;
