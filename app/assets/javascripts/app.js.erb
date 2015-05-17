@@ -47,7 +47,7 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
   .when('/users/new_profile', { 
     controller: 'NewProfileController',
     templateUrl: "<%= asset_path('new-profile.html') %>"
-  }
+  })
   .otherwise({
     redirectTo: '/home'
   });
