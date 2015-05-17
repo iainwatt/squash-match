@@ -4,7 +4,7 @@
   margin: 0 auto 0 auto;
   background-color: #E4E4E4;
   width:40%;
-  min-height:55em;
+  min-height:40em;
     .hack-dr54 {
       height:2em;
     }
@@ -15,7 +15,8 @@
       font-family: 'Montserrat', sans-serif;
       min-height: 60px;
       border-radius: 1em;
-      min-height: 840px;
+/*      min-height: 840px;*/
+      border-bottom: 1em;
       }
       .bumper {
         height:2em;
@@ -46,7 +47,7 @@
           }
           .big-elo {
             float:left;
-            width:35%;
+            width:30%;
             text-align: center;
             position: relative;
             min-height: 20px;
@@ -59,7 +60,7 @@
             box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
             height: 350px;
             vertical-align: middle;
-            font-size: 4em;
+            font-size: 2em;
               .big-title {
                 padding-top: 50px;
               }
@@ -168,7 +169,8 @@
       }  
       .back-button {
         text-align: center;
-      }     
+      } 
+          
 }
 
 
