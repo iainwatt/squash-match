@@ -64,18 +64,18 @@ app.controller('CentreController', ['$scope', '$http', '$timeout', '$location', 
 
 
 // A modal function not yet working but close
-  $('.launchConfirm').on('click', function (e) {
-    console.log(e);
-    $('#confirm')
-    .modal({ backdrop: 'static', keyboard: false })
-    .one('click', '[data-value]', function (e) {
-      if($(this).data('value')) {
-          alert('confirmed');
-      } else {
-          alert('canceled');
-      }
-    });
-  });
+  // $('.launchConfirm').on('click', function (e) {
+  //   console.log(e);
+  //   $('#confirm')
+  //   .modal({ backdrop: 'static', keyboard: false })
+  //   .one('click', '[data-value]', function (e) {
+  //     if($(this).data('value')) {
+  //         alert('confirmed');
+  //     } else {
+  //         alert('canceled');
+  //     }
+  //   });
+  // });
 
 }]);
 
