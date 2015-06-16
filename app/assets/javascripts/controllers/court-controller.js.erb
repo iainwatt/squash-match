@@ -2,27 +2,27 @@
 app.controller('CourtController', ['$scope', '$http', 'CourtService', 'ChallengeService', 'gps', 'ngDialog', function($scope, $http, CourtService, ChallengeService, gps, ngDialog){
 
 
+// requeting all the court data 
+  $scope.findCourts = function () { 
+  var x = []
+  var y = []
 
-$scope.findCourts = function () {
-var x = []
-var y = []
-
-CourtService.getCourts()
-  .then(function(response){ 
-    console.log(response);
-  x = response.data
-  return x
-  }).then(function(x){
-    dataArray = [];
-    for (var i = 0; i < x.length; i++) {  
-      y = getDistanceFromLatLonInKm(x[i].centre.latitude, x[i].centre.longitude, gps.userLat ,gps.userLon)
-      dataArray.push(y);
-    }
-    return dataArray
-  }).then(function(){
-    $scope.courtsAndDistances = distanceHelper(x, dataArray);
-  });
-}
+  CourtService.getCourts()
+    .then(function(response){ 
+      console.log(response);
+    x = response.data
+    return x
+    }).then(function(x){
+      dataArray = [];
+      for (var i = 0; i < x.length; i++) {  
+        y = getDistanceFromLatLonInKm(x[i].centre.latitude, x[i].centre.longitude, gps.userLat ,gps.userLon)
+        dataArray.push(y);
+      }
+      return dataArray
+    }).then(function(){
+      $scope.courtsAndDistances = distanceHelper(x, dataArray);
+    });
+  }
 
   // issuing a challenge that is associated with the courts that this person has booked //
   // create challenge request with the id of this court that is booked and the centre
@@ -47,7 +47,6 @@ CourtService.getCourts()
     $scope.court_id = court.id
     $scope.user_id = gon.current_user.id
 
-    // console.log($scope.selectedCourt)
     CourtService.putCourts($scope.court_id, $scope.user_id)
     .then(function(response){
       console.log(response)
@@ -58,30 +57,29 @@ CourtService.getCourts()
 // ###### function that books a court ###### //
 
 
-// $scope.clickToOpenMatch = function () {
-  function clickToOpenMatch() {
-  // $scope.modalArtist = artist;
-  ngDialog.open({ 
-    templateUrl: "<%= asset_path('booking-confirmation.html') %>",
-    scope: $scope,
-    appendTo: "(.bookedCourt)"
-  });
- }
 
-$('.launchConfirm').on('click', function(e) {
-  $('#confirm')
-    .modal({
-      backdrop: 'static',
-      keyboard: false
-    })
-    .one('click', '[data-value]', function(e) {
-      if ($(this).data('value')) {
-        alert('confirmed');
-      } else {
-        alert('canceled');
-      }
+  function clickToOpenMatch() {
+    ngDialog.open({ 
+      templateUrl: "<%= asset_path('booking-confirmation.html') %>",
+      scope: $scope,
+      appendTo: "(.bookedCourt)"
     });
-});
+  }
+
+  $('.launchConfirm').on('click', function(e) {
+    $('#confirm')
+      .modal({
+        backdrop: 'static',
+        keyboard: false
+      })
+      .one('click', '[data-value]', function(e) {
+        if ($(this).data('value')) {
+          alert('confirmed');
+        } else {
+          alert('canceled');
+        }
+      });
+  });
 
 
 
